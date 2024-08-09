@@ -31,10 +31,8 @@ export const DragView = (props: Props) => {
         if (props.onHoverStart) {
           props.onHoverStart();
         }
-      } else {
-        if (props.onHoverEnd) {
-          props.onHoverEnd();
-        }
+      } else if (props.onHoverEnd) {
+        props.onHoverEnd();
       }
 
       Animated.spring(pan, {

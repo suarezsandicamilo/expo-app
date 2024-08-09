@@ -133,9 +133,9 @@ const InDragAndDropTask = (props: InProps) => {
     setOptions(shuffle(props.options ?? []));
   }, []);
 
-  return options.map((option, index) => {
+  return options.map((option) => {
     return (
-      <Card key={index} size={128}>
+      <Card key={option.text} size={128}>
         <SpeechView speech={option.text}>
           <DragView
             onHoverStart={() => {

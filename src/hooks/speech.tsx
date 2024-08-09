@@ -24,10 +24,10 @@ export const useSpeech = () => {
       Speech.speak(text, {
         language: 'es',
 
-        onError: () => {
+        onError: (error) => {
           lock.setIsLocked(false);
 
-          reject();
+          reject(error);
         },
 
         onDone: () => {

@@ -2,7 +2,7 @@
 
 // React
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useMemo, useState } from 'react';
 
 // React Native
 
@@ -22,13 +22,15 @@ type LockProviderProps = React.PropsWithChildren<object>;
 export const LockProvider = (props: LockProviderProps) => {
   const [isLocked, setIsLocked] = useState<boolean>(false);
 
+  const value = useMemo(() => {
+    return {
+      isLocked,
+      setIsLocked,
+    };
+  }, [isLocked, setIsLocked]);
+
   return (
-    <LockContext.Provider
-      value={{
-        isLocked,
-        setIsLocked,
-      }}
-    >
+    <LockContext.Provider value={value}>
       <View
         style={{
           flex: 1,
