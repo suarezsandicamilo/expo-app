@@ -13,6 +13,9 @@ type Props = React.PropsWithChildren<{
   onPress?: () => void;
 }>;
 
+/**
+ * @deprecated
+ */
 export const SpeechView = (props: Props) => {
   const { speak } = useSpeech();
 
