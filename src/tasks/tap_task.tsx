@@ -6,13 +6,11 @@ import { Image, StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card, SpeechView } from '@/components';
+import { Card } from '@/components';
 
-import { useSound } from '@/hooks';
+import { useSound, useSpeech } from '@/hooks';
 
-import { delay } from '@/_';
-
-import { getImage, images } from '@/../assets/images';
+import { getImage, ImageSource } from '@/../assets/images';
 
 const styles = StyleSheet.create({
   container: {
@@ -32,27 +30,29 @@ const styles = StyleSheet.create({
 type Props = {
   next: () => void;
   text?: string;
-  image?: keyof typeof images;
+  image?: ImageSource;
+  feedback?: string;
 };
 
 export const TapTask = (props: Props) => {
   const correct = useSound('correct');
 
+  const { speak } = useSpeech();
+
   return (
     <View style={styles.container}>
-      <Card>
-        <SpeechView
-          speech={props.text}
-          onPress={() => {
-            correct.play();
+      <Card
+        onPress={async () => {
+          await speak(props.text);
 
-            delay(1250).then(() => {
-              props.next();
-            });
-          }}
-        >
-          <Image style={styles.image} source={getImage(props.image)} />
-        </SpeechView>
+          await speak(props.feedback);
+
+          await correct.play();
+
+          props.next();
+        }}
+      >
+        <Image style={styles.image} source={getImage(props.image)} />
       </Card>
     </View>
   );

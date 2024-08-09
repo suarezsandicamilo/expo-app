@@ -7,7 +7,8 @@
       "instruction": "Toca la carta con la imagen y escucha la oración.",
       "data": {
         "text": "La abeja zumba.",
-        "image": "La abeja zumba"
+        "image": "La abeja zumba",
+        "feedback": "¡Buen trabajo!"
       }
     },
     {
@@ -18,6 +19,10 @@
         "instruction": "Selecciona la carta de abajo que tiene la palabra que escuchaste.",
         "text": "La abeja zumba.",
         "image": "La abeja zumba",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es abeja.",
+          "incorrect": "Casi, intenta otra vez."
+        },
         "options": [
           {
             "text": "Abeja",
@@ -50,6 +55,10 @@
         "instruction": "Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.",
         "text": "La abeja zumba.",
         "image": "La abeja zumba",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es abeja.",
+          "incorrect": "Casi, intenta otra vez."
+        },
         "options": [
           {
             "text": "Abeja",
@@ -83,7 +92,7 @@
         "text": "La abeja zumba.",
         "image": "La abeja zumba",
         "count": 3,
-        "feedback": "La oración tiene 3 palabras."
+        "feedback": "¡Buen trabajo! La oración tiene 3 palabras."
       }
     },
     {
