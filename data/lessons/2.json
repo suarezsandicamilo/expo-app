@@ -1,0 +1,14 @@
+{
+  "id": 2,
+  "tasks": [
+    {
+      "id": 1,
+      "type": "tap",
+      "instruction": "...",
+      "data": {
+        "text": "...",
+        "image": "..."
+      }
+    }
+  ]
+}
