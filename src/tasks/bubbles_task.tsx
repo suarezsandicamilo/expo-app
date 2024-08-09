@@ -10,13 +10,11 @@ import { Animated, Image, Pressable, StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card, SpeechView } from '@/components';
+import { Card } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
-import { delay } from '@/_';
-
-import { images, getImage } from '@/../assets/images';
+import { getImage, ImageSource } from '@/../assets/images';
 
 const styles = StyleSheet.create({
   bubble: {
@@ -68,7 +66,7 @@ type Props = {
   next: () => void;
   instruction?: string;
   text?: string;
-  image?: keyof typeof images;
+  image?: ImageSource;
   count?: number;
   feedback?: string;
 };
@@ -85,35 +83,38 @@ export const BubblesTask = (props: Props) => {
   const { speak } = useSpeech();
 
   useEffect(() => {
-    const c = props.count ?? 1;
+    const fn = async () => {
+      const c = props.count ?? 1;
 
-    if (c === count) {
-      speak(props.feedback).then(() => {
-        correct.play();
+      if (c === count) {
+        await speak(props.feedback);
 
-        delay(1250).then(() => {
-          props.next();
-        });
-      });
-    }
+        await correct.play();
+
+        props.next();
+      }
+    };
+
+    fn();
   }, [count]);
 
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <Card>
-          <SpeechView
-            speech={`${props.text} ${props.instruction}`}
-            onPress={() => {
-              Animated.timing(anim, {
-                toValue: 0,
-                duration: 250,
-                useNativeDriver: false,
-              }).start();
-            }}
-          >
-            <Image style={styles.image} source={getImage(props.image)} />
-          </SpeechView>
+        <Card
+          onPress={async () => {
+            await speak(props.text);
+
+            await speak(props.instruction);
+
+            Animated.timing(anim, {
+              toValue: 0,
+              duration: 250,
+              useNativeDriver: false,
+            }).start();
+          }}
+        >
+          <Image style={styles.image} source={getImage(props.image)} />
         </Card>
       </View>
       <Animated.View
@@ -124,7 +125,7 @@ export const BubblesTask = (props: Props) => {
             <Pressable
               key={index}
               style={[styles.bubble, popped ? styles.popped : {}]}
-              onPress={() => {
+              onPress={async () => {
                 const c = props.count ?? 1;
 
                 if (popped || c === count) {
@@ -141,7 +142,7 @@ export const BubblesTask = (props: Props) => {
                   return [...array];
                 });
 
-                speak(`${count + 1}`).then();
+                await speak(`${count + 1}`);
               }}
             ></Pressable>
           );

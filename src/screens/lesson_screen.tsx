@@ -98,7 +98,11 @@ const InLessonScreen = () => {
   const anim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    speak(task.instruction).then();
+    const fn = async () => {
+      await speak(task.instruction);
+    };
+
+    fn();
   }, [task]);
 
   const next = async () => {
@@ -111,15 +115,15 @@ const InLessonScreen = () => {
         useNativeDriver: true,
       }).start();
 
-      delay(500).then(() => {
-        setProgress(p);
+      await delay(500);
 
-        Animated.timing(anim, {
-          toValue: 0,
-          duration: 500,
-          useNativeDriver: true,
-        }).start();
-      });
+      setProgress(p);
+
+      Animated.timing(anim, {
+        toValue: 0,
+        duration: 500,
+        useNativeDriver: true,
+      }).start();
     } else {
       const lessonIndex = route.params.lessonIndex;
 

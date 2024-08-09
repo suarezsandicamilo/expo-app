@@ -71,17 +71,21 @@ const InVictoryScreen = () => {
   const lessonIndex = route.params.lessonIndex;
 
   useEffect(() => {
-    Db.get('progress', 1000).then((progress) => {
+    const fn = async () => {
+      const progress = await Db.get('progress', 1000);
+
       if (progress === lessonIndex) {
-        Db.set('progress', lessonIndex + 1).then();
+        await Db.set('progress', lessonIndex + 1);
       }
 
-      correct.play().then();
+      await correct.play();
 
-      delay(1250).then(() => {
-        navigation.navigate('Home');
-      });
-    });
+      await delay(1250);
+
+      navigation.navigate('Home');
+    };
+
+    fn();
   }, [lessonIndex]);
 
   return (

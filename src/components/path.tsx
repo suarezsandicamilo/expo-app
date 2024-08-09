@@ -69,9 +69,13 @@ export const Path = () => {
   const lessons = Lessons as Lesson[];
 
   useFocusEffect(() => {
-    Db.get('progress', 1).then((progress) => {
+    const fn = async () => {
+      const progress = await Db.get('progress', 1);
+
       setProgress(progress);
-    });
+    };
+
+    fn();
   });
 
   return (
