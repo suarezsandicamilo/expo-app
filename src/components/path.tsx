@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 // React Native
 
-import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 // Expo
 
@@ -20,6 +20,8 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import { Lesson } from '@/types';
 
+import { Button } from '@/components';
+
 import { Db } from '@/db';
 
 import { Lessons } from '@/../data';
@@ -29,14 +31,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#8bc34a',
   },
   button: {
-    alignItems: 'center',
     backgroundColor: '#9e9e9e',
+    borderWidth: 0,
     borderRadius: 48,
-    elevation: 2,
     height: 96,
-    justifyContent: 'center',
-    margin: 8,
-    padding: 8,
     width: 96,
   },
   container_1: {
@@ -85,18 +83,15 @@ export const Path = () => {
           const active = progress > index;
 
           return (
-            <Pressable
+            <Button
               key={lesson.id}
-              style={(state) => {
-                return [
-                  styles.button,
-                  active ? styles.active : {},
-                  active && state.pressed ? styles.pressed : {},
-                  {
-                    left: sine(index),
-                  },
-                ];
-              }}
+              style={[
+                styles.button,
+                active ? styles.active : {},
+                {
+                  left: sine(index),
+                },
+              ]}
               onPress={() => {
                 if (active) {
                   navigation.navigate('Lesson', {
@@ -107,7 +102,7 @@ export const Path = () => {
               }}
             >
               <Icon name='star' color='#ffffff' size={32} />
-            </Pressable>
+            </Button>
           );
         })}
       </View>
