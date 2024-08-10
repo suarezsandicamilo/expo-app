@@ -140,15 +140,13 @@ const InLessonScreen = () => {
         <StatusBar style='auto' />
         <View style={styles.container_2}>
           <Progress value={progress / tasks.length} />
-          <Button style={styles.button}>
-            <Icon
-              name='question-mark'
-              color='#ffffff'
-              size={20}
-              onPress={() => {
-                speak(task.instruction);
-              }}
-            />
+          <Button
+            style={styles.button}
+            onPress={() => {
+              speak(task.instruction);
+            }}
+          >
+            <Icon name='question-mark' color='#ffffff' size={20} />
           </Button>
         </View>
         <Animated.View
