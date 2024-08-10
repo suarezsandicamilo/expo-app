@@ -17,15 +17,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     margin: 8,
   },
-  pressed: {
-    //
-  },
 });
 
 type Props = React.PropsWithChildren<{
   size?: number;
   style?: StyleProp<ViewStyle>;
   onPress?: () => void;
+  onPressIn?: () => void;
+  onPressOut?: () => void;
 }>;
 
 export const Card = (props: Props) => {
@@ -42,6 +41,8 @@ export const Card = (props: Props) => {
         props.style,
       ]}
       onPress={props.onPress}
+      onPressIn={props.onPressIn}
+      onPressOut={props.onPressOut}
     >
       {props.children}
     </Pressable>
