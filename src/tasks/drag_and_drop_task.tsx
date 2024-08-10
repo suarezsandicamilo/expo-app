@@ -165,15 +165,15 @@ const InDragAndDropTask = (props: InProps) => {
             await speak(option.text);
 
             if (option.correct) {
-              await speak(props.feedback?.correct);
-
               await correct.play();
+
+              await speak(props.feedback?.correct);
 
               props.next();
             } else {
-              await speak(props.feedback?.incorrect);
-
               await incorrect.play();
+
+              await speak(props.feedback?.incorrect);
             }
           }}
         >

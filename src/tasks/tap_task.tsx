@@ -2,11 +2,11 @@
 
 // React Native
 
-import { Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card } from '@/components';
+import { ImageCard } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
@@ -19,11 +19,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     width: '100%',
-  },
-  image: {
-    borderRadius: 8,
-    height: 256,
-    width: 256,
   },
 });
 
@@ -41,19 +36,18 @@ export const TapTask = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <Card
+      <ImageCard
+        image={getImage(props.image)}
         onPress={async () => {
           await speak(props.text);
 
-          await speak(props.feedback);
-
           await correct.play();
+
+          await speak(props.feedback);
 
           props.next();
         }}
-      >
-        <Image style={styles.image} source={getImage(props.image)} />
-      </Card>
+      />
     </View>
   );
 };

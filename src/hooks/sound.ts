@@ -47,7 +47,7 @@ export const useSound = (name: SoundSource) => {
     const status = await sound.playAsync();
 
     if (status.isLoaded) {
-      await delay(1000);
+      await delay(500);
     }
 
     setIsLocked(false);

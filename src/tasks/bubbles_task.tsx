@@ -87,9 +87,9 @@ export const BubblesTask = (props: Props) => {
       const c = props.count ?? 1;
 
       if (c === count) {
-        await speak(props.feedback);
-
         await correct.play();
+
+        await speak(props.feedback);
 
         props.next();
       }
