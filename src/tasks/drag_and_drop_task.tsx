@@ -8,9 +8,13 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Animated, Image, StyleSheet, View } from 'react-native';
 
+// Expo
+
+import { MaterialIcons as Icon } from '@expo/vector-icons';
+
 // App
 
-import { Card, DragView, ImageCard } from '@/components';
+import { Button, Card, DragView } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
@@ -94,8 +98,7 @@ export const DragAndDropTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <ImageCard
-          image={getImage(props.image)}
+        <Button
           size={128}
           onPress={async () => {
             await speak(props.text, 'esd');
@@ -108,7 +111,9 @@ export const DragAndDropTask = (props: Props) => {
               useNativeDriver: true,
             }).start();
           }}
-        />
+        >
+          <Icon name='volume-up' color='#ffffff' size={64} />
+        </Button>
       </View>
       <View style={styles.container_3}>
         <Card
