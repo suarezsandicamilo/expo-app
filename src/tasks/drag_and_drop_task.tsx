@@ -98,7 +98,7 @@ export const DragAndDropTask = (props: Props) => {
           image={getImage(props.image)}
           size={128}
           onPress={async () => {
-            await speak(props.text);
+            await speak(props.text, 'esd');
 
             await speak(props.instruction);
 
@@ -155,7 +155,7 @@ const InDragAndDropTask = (props: InProps) => {
         onDrop={async () => {
           props.setHover(false);
 
-          await speak(option.text);
+          await speak(option.text, 'esd');
 
           if (option.correct) {
             await correct.play();
@@ -173,7 +173,7 @@ const InDragAndDropTask = (props: InProps) => {
         <Card
           size={128}
           onPress={async () => {
-            await speak(option.text);
+            await speak(option.text, 'esd');
           }}
         >
           <Image style={styles.image} source={getImage(option.image)} />

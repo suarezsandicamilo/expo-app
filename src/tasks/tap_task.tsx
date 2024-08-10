@@ -39,7 +39,7 @@ export const TapTask = (props: Props) => {
       <ImageCard
         image={getImage(props.image)}
         onPress={async () => {
-          await speak(props.text);
+          await speak(props.text, 'esd');
 
           await correct.play();
 

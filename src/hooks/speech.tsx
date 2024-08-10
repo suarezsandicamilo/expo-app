@@ -8,10 +8,12 @@ import * as Speech from 'expo-speech';
 
 import { useLock } from './lock';
 
+type SpeechVariant = 'esc' | 'esd' | 'esf' | 'sfb';
+
 export const useSpeech = () => {
   const lock = useLock();
 
-  const speak = (text?: string) => {
+  const speak = (text?: string, variant: SpeechVariant = 'esc') => {
     return new Promise<void>((resolve, reject) => {
       if (!text) {
         resolve();
@@ -22,7 +24,7 @@ export const useSpeech = () => {
       lock.setIsLocked(true);
 
       Speech.speak(text, {
-        language: 'es',
+        voice: `es-us-x-${variant}-local`,
 
         onError: (error) => {
           lock.setIsLocked(false);

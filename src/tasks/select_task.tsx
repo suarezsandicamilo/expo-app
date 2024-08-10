@@ -74,7 +74,7 @@ export const SelectTask = (props: Props) => {
         <ImageCard
           image={getImage(props.image)}
           onPress={async () => {
-            await speak(props.text);
+            await speak(props.text, 'esd');
 
             await speak(props.instruction);
 
@@ -115,7 +115,7 @@ const InSelectTask = (props: Props) => {
         image={getImage(option.image)}
         size={128}
         onPress={async () => {
-          await speak(option.text);
+          await speak(option.text, 'esd');
 
           if (option.correct) {
             await correct.play();
