@@ -1,6 +1,6 @@
 //
 
-export const images = {};
+const images = {};
 
 export type ImageSource = keyof typeof images;
 

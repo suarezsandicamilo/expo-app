@@ -16,16 +16,22 @@ import { delay } from '@/_';
 
 import { sounds } from '@/../assets/sounds';
 
-export const useSound = (name: keyof typeof sounds) => {
+type SoundSource = keyof typeof sounds;
+
+export const useSound = (name: SoundSource) => {
   const [sound, setSound] = useState<Audio.Sound | undefined>();
 
   const { setIsLocked } = useLock();
 
   useEffect(() => {
-    return () => {
+    const fn = async () => {
       if (sound != undefined) {
-        sound.unloadAsync().then();
+        await sound.unloadAsync();
       }
+    };
+
+    return () => {
+      fn().then();
     };
   }, [sound]);
 
@@ -41,10 +47,10 @@ export const useSound = (name: keyof typeof sounds) => {
     const status = await sound.playAsync();
 
     if (status.isLoaded) {
-      await delay(status.durationMillis ?? 500);
-
-      setIsLocked(false);
+      await delay(1000);
     }
+
+    setIsLocked(false);
   };
 
   return { play };
