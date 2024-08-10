@@ -4,21 +4,19 @@
     {
       "id": 1,
       "type": "tap",
-      "instruction": "Toca la carta con la imagen y escucha la oración.",
+      "instruction": "Toca la carta y escucha la oración.",
       "data": {
         "text": "La abeja zumba.",
-        "image": "La abeja zumba",
         "feedback": "¡Buen trabajo!"
       }
     },
     {
       "id": 2,
       "type": "select",
-      "instruction": "Toca la carta con la imagen y escucha la oración.",
+      "instruction": "Toca la carta y escucha la oración.",
       "data": {
         "instruction": "Selecciona la carta de abajo que tiene la palabra que escuchaste.",
         "text": "La abeja zumba.",
-        "image": "La abeja zumba",
         "feedback": {
           "correct": "¡Buen trabajo! La palabra es abeja.",
           "incorrect": "Casi, intenta otra vez."
@@ -50,11 +48,10 @@
     {
       "id": 3,
       "type": "drag_and_drop",
-      "instruction": "Toca la carta con la imagen de arriba y escucha la oración.",
+      "instruction": "Toca la carta de arriba y escucha la oración.",
       "data": {
         "instruction": "Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.",
         "text": "La abeja zumba.",
-        "image": "La abeja zumba",
         "feedback": {
           "correct": "¡Buen trabajo! La palabra es abeja.",
           "incorrect": "Casi, intenta otra vez."
@@ -86,11 +83,10 @@
     {
       "id": 4,
       "type": "bubbles",
-      "instruction": "Toca la carta con la imagen y escucha la oración.",
+      "instruction": "Toca la carta y escucha la oración.",
       "data": {
         "instruction": "Estalla las burbujas de acuerdo al número de palabras en la oración.",
         "text": "La abeja zumba.",
-        "image": "La abeja zumba",
         "count": 3,
         "feedback": "¡Buen trabajo! La oración tiene 3 palabras."
       }
@@ -98,10 +94,9 @@
     {
       "id": 5,
       "type": "tap",
-      "instruction": "Toca la carta con la imagen.",
+      "instruction": "Toca la carta y escucha la oración.",
       "data": {
-        "text": "...",
-        "image": "..."
+        "text": "..."
       }
     }
   ]

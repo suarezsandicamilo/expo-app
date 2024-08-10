@@ -8,13 +8,15 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Animated, Pressable, StyleSheet, View } from 'react-native';
 
+// Expo
+
+import { MaterialIcons as Icon } from '@expo/vector-icons';
+
 // App
 
-import { ImageCard } from '@/components';
+import { Button } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
-
-import { getImage, ImageSource } from '@/../assets/images';
 
 const styles = StyleSheet.create({
   bubble: {
@@ -61,7 +63,6 @@ type Props = {
   next: () => void;
   instruction?: string;
   text?: string;
-  image?: ImageSource;
   count?: number;
   feedback?: string;
 };
@@ -96,8 +97,7 @@ export const BubblesTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <ImageCard
-          image={getImage(props.image)}
+        <Button
           onPress={async () => {
             await speak(props.text, 'esd');
 
@@ -109,7 +109,9 @@ export const BubblesTask = (props: Props) => {
               useNativeDriver: false,
             }).start();
           }}
-        />
+        >
+          <Icon name='volume-up' color='#ffffff' size={128} />
+        </Button>
       </View>
       <Animated.View
         style={[styles.container_3, { transform: [{ translateX: anim }] }]}

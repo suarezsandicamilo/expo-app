@@ -80,7 +80,6 @@ type Props = {
   next: () => void;
   instruction?: string;
   text?: string;
-  image?: ImageSource;
   feedback?: {
     correct?: string;
     incorrect?: string;
