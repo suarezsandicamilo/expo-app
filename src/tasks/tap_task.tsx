@@ -1,31 +1,18 @@
 //
 
-// React Native
+// Expo
 
-import { StyleSheet, View } from 'react-native';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 
 // App
 
-import { ImageCard } from '@/components';
+import { Button } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
-
-import { getImage, ImageSource } from '@/../assets/images';
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    flex: 1,
-    justifyContent: 'center',
-    width: '100%',
-  },
-});
 
 type Props = {
   next: () => void;
   text?: string;
-  image?: ImageSource;
   feedback?: string;
 };
 
@@ -35,19 +22,18 @@ export const TapTask = (props: Props) => {
   const { speak } = useSpeech();
 
   return (
-    <View style={styles.container}>
-      <ImageCard
-        image={getImage(props.image)}
-        onPress={async () => {
-          await speak(props.text, 'esd');
+    <Button
+      onPress={async () => {
+        await speak(props.text, 'esd');
 
-          await correct.play();
+        await correct.play();
 
-          await speak(props.feedback);
+        await speak(props.feedback);
 
-          props.next();
-        }}
-      />
-    </View>
+        props.next();
+      }}
+    >
+      <Icon name='volume-up' color='#ffffff' size={128} />
+    </Button>
   );
 };
