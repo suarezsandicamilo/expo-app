@@ -40,8 +40,8 @@ export const Button = (props: Props) => {
             height: size,
             width: size,
           },
-          state.pressed ? styles.pressed : {},
           props.style,
+          state.pressed ? styles.pressed : {},
         ];
       }}
       onPress={props.onPress}
