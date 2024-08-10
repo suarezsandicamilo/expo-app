@@ -6,11 +6,11 @@ import { useEffect, useRef, useState } from 'react';
 
 // React Native
 
-import { Animated, Image, Pressable, StyleSheet, View } from 'react-native';
+import { Animated, Pressable, StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card } from '@/components';
+import { ImageCard } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
@@ -50,11 +50,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 64,
     width: '100%',
-  },
-  image: {
-    borderRadius: 8,
-    height: 256,
-    width: 256,
   },
   popped: {
     backgroundColor: '#ffffff',
@@ -101,7 +96,8 @@ export const BubblesTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <Card
+        <ImageCard
+          image={getImage(props.image)}
           onPress={async () => {
             await speak(props.text);
 
@@ -113,9 +109,7 @@ export const BubblesTask = (props: Props) => {
               useNativeDriver: false,
             }).start();
           }}
-        >
-          <Image style={styles.image} source={getImage(props.image)} />
-        </Card>
+        />
       </View>
       <Animated.View
         style={[styles.container_3, { transform: [{ translateX: anim }] }]}
