@@ -43,16 +43,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
   },
-  image_1: {
-    borderRadius: 8,
-    height: 256,
-    width: 256,
-  },
-  image_2: {
-    borderRadius: 8,
-    height: 128,
-    width: 128,
-  },
 });
 
 type Option = {

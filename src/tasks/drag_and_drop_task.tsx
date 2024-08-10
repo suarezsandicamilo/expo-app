@@ -10,7 +10,7 @@ import { Animated, Image, StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card, DragView } from '@/components';
+import { Card, DragView, ImageCard } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
@@ -94,7 +94,8 @@ export const DragAndDropTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <Card
+        <ImageCard
+          image={getImage(props.image)}
           size={128}
           onPress={async () => {
             await speak(props.text);
@@ -107,9 +108,7 @@ export const DragAndDropTask = (props: Props) => {
               useNativeDriver: true,
             }).start();
           }}
-        >
-          <Image style={styles.image} source={getImage(props.image)} />
-        </Card>
+        />
       </View>
       <View style={styles.container_3}>
         <Card
@@ -145,41 +144,41 @@ const InDragAndDropTask = (props: InProps) => {
 
   return options.map((option) => {
     return (
-      <Card
+      <DragView
         key={option.text}
-        size={128}
-        onPress={async () => {
+        onHoverStart={() => {
+          props.setHover(true);
+        }}
+        onHoverEnd={() => {
+          props.setHover(false);
+        }}
+        onDrop={async () => {
+          props.setHover(false);
+
           await speak(option.text);
+
+          if (option.correct) {
+            await correct.play();
+
+            await speak(props.feedback?.correct);
+
+            props.next();
+          } else {
+            await incorrect.play();
+
+            await speak(props.feedback?.incorrect);
+          }
         }}
       >
-        <DragView
-          onHoverStart={() => {
-            props.setHover(true);
-          }}
-          onHoverEnd={() => {
-            props.setHover(false);
-          }}
-          onDrop={async () => {
-            props.setHover(false);
-
+        <Card
+          size={128}
+          onPress={async () => {
             await speak(option.text);
-
-            if (option.correct) {
-              await correct.play();
-
-              await speak(props.feedback?.correct);
-
-              props.next();
-            } else {
-              await incorrect.play();
-
-              await speak(props.feedback?.incorrect);
-            }
           }}
         >
           <Image style={styles.image} source={getImage(option.image)} />
-        </DragView>
-      </Card>
+        </Card>
+      </DragView>
     );
   });
 };
