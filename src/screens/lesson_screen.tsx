@@ -30,7 +30,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Task } from '@/types';
 
-import { Progress } from '@/components';
+import { Button, Progress } from '@/components';
 
 import { LockProvider, useSpeech } from '@/hooks';
 
@@ -40,14 +40,8 @@ import { delay } from '@/_';
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
-    backgroundColor: '#8bc34a',
     borderRadius: 48,
-    elevation: 2,
     height: 40,
-    justifyContent: 'center',
-    margin: 8,
-    padding: 8,
     width: 40,
   },
   container_1: {
@@ -146,7 +140,7 @@ const InLessonScreen = () => {
         <StatusBar style='auto' />
         <View style={styles.container_2}>
           <Progress value={progress / tasks.length} />
-          <View style={styles.button}>
+          <Button style={styles.button}>
             <Icon
               name='question-mark'
               color='#ffffff'
@@ -155,7 +149,7 @@ const InLessonScreen = () => {
                 speak(task.instruction);
               }}
             />
-          </View>
+          </Button>
         </View>
         <Animated.View
           style={[styles.container_3, { transform: [{ translateX: anim }] }]}
