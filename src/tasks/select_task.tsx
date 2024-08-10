@@ -6,11 +6,11 @@ import { useEffect, useRef, useState } from 'react';
 
 // React Native
 
-import { Animated, Image, StyleSheet, View } from 'react-native';
+import { Animated, StyleSheet, View } from 'react-native';
 
 // App
 
-import { Card } from '@/components';
+import { ImageCard } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
@@ -81,7 +81,8 @@ export const SelectTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <Card
+        <ImageCard
+          image={getImage(props.image)}
           onPress={async () => {
             await speak(props.text);
 
@@ -93,9 +94,7 @@ export const SelectTask = (props: Props) => {
               useNativeDriver: true,
             }).start();
           }}
-        >
-          <Image style={styles.image_1} source={getImage(props.image)} />
-        </Card>
+        />
       </View>
       <Animated.View
         style={[styles.container_3, { transform: [{ translateX: anim }] }]}
@@ -121,8 +120,9 @@ const InSelectTask = (props: Props) => {
 
   return options.map((option) => {
     return (
-      <Card
+      <ImageCard
         key={option.text}
+        image={getImage(option.image)}
         size={128}
         onPress={async () => {
           await speak(option.text);
@@ -139,9 +139,7 @@ const InSelectTask = (props: Props) => {
             await speak(props.feedback?.incorrect);
           }
         }}
-      >
-        <Image style={styles.image_2} source={getImage(option.image)} />
-      </Card>
+      />
     );
   });
 };
