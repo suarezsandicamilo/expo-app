@@ -66,7 +66,7 @@ const InVictoryScreen = () => {
   const navigation = useNavigation<any>();
   const route = useRoute<any>();
 
-  const correct = useSound('correct');
+  const victory = useSound('victory');
 
   const lessonIndex = route.params.lessonIndex;
 
@@ -80,7 +80,7 @@ const InVictoryScreen = () => {
 
       await delay(500);
 
-      await correct.play();
+      await victory.play();
     };
 
     fn();

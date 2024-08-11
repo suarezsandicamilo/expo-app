@@ -20,7 +20,7 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import { Lesson } from '@/types';
 
-import { Button } from '@/components';
+import { Button } from './button';
 
 import { Db } from '@/db';
 
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 const sine = (step: number) => {
   const a = 100;
   const s = 8;
-  const f = (2 * Math.PI * 1) / s;
+  const f = (Math.PI * 2) / s;
 
   return a * Math.sin(f * step);
 };
