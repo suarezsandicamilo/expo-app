@@ -76,7 +76,7 @@ export const SelectTask = (props: Props) => {
       <View style={styles.container_2}>
         <Button
           onPress={async () => {
-            await speak(props.text, 'esd');
+            await speak(props.text);
 
             await speak(props.instruction);
 
@@ -119,7 +119,7 @@ const InSelectTask = (props: Props) => {
         image={getImage(option.image)}
         size={128}
         onPress={async () => {
-          await speak(option.text, 'esd');
+          await speak(option.text);
 
           if (option.correct) {
             await correct.play();

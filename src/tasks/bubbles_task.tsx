@@ -99,7 +99,7 @@ export const BubblesTask = (props: Props) => {
       <View style={styles.container_2}>
         <Button
           onPress={async () => {
-            await speak(props.text, 'esd');
+            await speak(props.text);
 
             await speak(props.instruction);
 

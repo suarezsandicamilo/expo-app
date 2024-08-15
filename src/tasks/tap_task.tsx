@@ -24,7 +24,7 @@ export const TapTask = (props: Props) => {
   return (
     <Button
       onPress={async () => {
-        await speak(props.text, 'esd');
+        await speak(props.text);
 
         await correct.play();
 
