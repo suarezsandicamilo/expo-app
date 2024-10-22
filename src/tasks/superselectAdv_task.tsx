@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: '#ffffff',
       flex: 1,
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
+      paddingTop: 20,
       width: '100%',
     },
     container_3: {
@@ -45,6 +46,11 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       width: '100%',
     },
+    staticImageContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20,
+    },
   });
 
 type Option = {
@@ -56,7 +62,11 @@ correct: boolean;
 type Props = {
 next: () => void;
 instruction?: string;
+instruction2?: string;
+instruction3?: string;
+instruction4?: string;
 text?: string;
+staticImage?: ImageSource;
 feedback?: {
     correct: string;
     incorrect: string;
@@ -65,36 +75,44 @@ options?: Option[];
 };
 
 export const SuperSelectAdvTask = (props: Props) => {
-    const anim = useRef(new Animated.Value(-500)).current;
-  
-    const { speak } = useSpeech();
-  
-    return (
-      <View style={styles.container_1}>
-        <View style={styles.container_2}>
-          <Button
-            onPress={async () => {
-              await speak(props.text);
-  
-              await speak(props.instruction);
-  
-              Animated.timing(anim, {
-                duration: 250,
-                toValue: 0,
-                useNativeDriver: true,
-              }).start();
-            }}
-          >
-            <Icon name='volume-up' color='#ffffff' size={128} />
-          </Button>
-        </View>
-        <Animated.View
-          style={[styles.container_3, { transform: [{ translateX: anim }] }]}
+  const anim = useRef(new Animated.Value(-500)).current;
+
+  const { speak } = useSpeech();
+
+  return (
+    <View style={styles.container_1}>
+      <View style={styles.container_2}>
+        <Button
+        size={100}
+          onPress={async () => {
+            await speak(props.instruction);           
+            await speak(props.text);  
+            await speak(props.instruction2);
+            await speak(props.instruction3);
+            await speak(props.instruction4);
+
+            Animated.timing(anim, {
+              duration: 250,
+              toValue: 0,
+              useNativeDriver: true,
+            }).start();
+          }}
+          style={{ marginBottom: 40 }}
         >
-          <InSuperSelectAdvTask {...props} />
-        </Animated.View>
+          <Icon name='volume-up' color='#ffffff' size={70} />
+        </Button>
+        <ImageCard
+          image={getImage(props.staticImage)}
+          size={150}
+        />
       </View>
-    );
+      <Animated.View
+        style={[styles.container_3, { transform: [{ translateX: anim }] }]}
+      >
+        <InSuperSelectAdvTask {...props} />
+      </Animated.View>
+    </View>
+  );
 };
 
 const InSuperSelectAdvTask = (props: Props) => {
@@ -135,5 +153,3 @@ const InSuperSelectAdvTask = (props: Props) => {
       );
     });
 };
-
-
