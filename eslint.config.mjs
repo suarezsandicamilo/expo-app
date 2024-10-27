@@ -1,10 +1,10 @@
 //
 
+import js from '@eslint/js';
 import globals from 'globals';
-
-import typescript from 'typescript-eslint';
-
 import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from 'typescript-eslint';
 
 export default [
   {
@@ -15,12 +15,15 @@ export default [
       globals: globals.node,
     },
   },
+  js.configs.recommended,
   ...typescript.configs.recommended,
   react.configs.flat.recommended,
   {
+    plugins: {
+      'react-hooks': reactHooks,
+    },
     rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-require-imports': 'off',
+      ...reactHooks.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
     },
   },
