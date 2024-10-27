@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 // React Native
 
 import { Animated, StyleSheet, View } from 'react-native';
+import { ScrollView } from 'react-native';
 
 // Expo
 
@@ -71,7 +72,9 @@ const styles = StyleSheet.create({
 export const LessonScreen = () => {
   return (
     <LockProvider>
-      <InLessonScreen />
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <InLessonScreen />
+      </ScrollView>
     </LockProvider>
   );
 };
