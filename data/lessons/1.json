@@ -98,6 +98,45 @@
       "data": {
         "text": "..."
       }
+    },
+    {
+      "id": 6,
+      "type": "superselectAdv",
+      "instruction": "Presiona el boton para escuchar la",
+      "data": {
+        "instruction": "Si a la palabra",
+        "instruction2": "le agrego",
+        "instruction3": "da",
+        "instruction4": "al final, que queda?, selecciona la opcion que crees que es la correcta.",
+        "text": "Pan",
+        "staticImage": "Pan",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es panda.",
+          "incorrect": "Casi, intenta otra vez."
+        },
+        "options": [
+          {
+            "text": "Panda",
+            "image": "Panda",
+            "correct": true
+          },
+          {
+            "text": "Panza",
+            "image": "Panza",
+            "correct": false
+          },
+          {
+            "text": "Pancha",
+            "image": "Pancha",
+            "correct": false
+          },
+          {
+            "text": "Pando",
+            "image": "Pando",
+            "correct": false
+          }
+        ]
+      }
     }
   ]
 }
