@@ -16,6 +16,9 @@ type Props = {
   image?: ImageSource;
   image2?: ImageSource;
   feedback?: string;
+  feedback2?: string;
+  feedback4?: string;
+  feedback3?: string;
 };
 
 const styles = StyleSheet.create({
@@ -55,39 +58,40 @@ export const SuperTapTask = (props: Props) => {
           style={{ marginBottom: 40 }}
         >
           <Icon name="volume-up" color="#ffffff" size={70} />
-        </Button>
-        {showFirstButton && (
-          <ImageCard
-            image={getImage(props.image)}
-            size={175}
-            style={styles.buttonStyle}
-            onPress={async () => {
-              await speak(props.text);
-              setShowSecondButton(true); // Muestra el segundo botón
-            }}
-          />
-        )}
+      </Button>
+      {showFirstButton && (
+        <ImageCard
+          image={getImage(props.image)}
+          size={175}
+          style={styles.buttonStyle}
+          onPress={async () => {
+            await speak(props.text);
+            setShowSecondButton(true);
+          }}
+        />
+      )}
 
+      {showSecondButton && (
+        <ImageCard
+          image={getImage(props.image2)}
+          size={175}
+          style={styles.buttonStyle}
+          onPress={async () => {
+            await speak(props.text2);
+            setShowConfirmationButton(true); 
+          }}
+        />
+      )}
 
-        {showSecondButton && (
-          <ImageCard
-            image={getImage(props.image2)}
-            size={175}
-            style={styles.buttonStyle}
-            onPress={async () => {
-              await speak(props.text2);
-              setShowConfirmationButton(true); // Muestra el segundo botón
-            }}
-          />
-        )}
-
-      {/* Botón de confirmación */}
       {showConfirmationButton && (
         <View style={{ marginTop: 10, paddingHorizontal: 20, paddingVertical: 10, marginBottom: 30 }}>
           <ConfirmationButton
             onPress={async () => {
               await correct.play();
               await speak(props.feedback);
+              await speak(props.feedback2);
+              await speak(props.feedback3);
+              await speak(props.feedback4);
               await props.next();
             }}
           />
