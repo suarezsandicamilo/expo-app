@@ -3,145 +3,140 @@
   "tasks": [
     {
       "id": 1,
-      "tasks": [
-        {
-          "id": 1,
-          "type": "tap",
-          "instruction": "Toca la carta y escucha la oración.",
-          "data": {
-            "text": "La abeja zumba.",
-            "feedback": "¡Buen trabajo!"
-          }
+      "type": "tap",
+      "instruction": "Toca la carta y escucha la oración.",
+      "data": {
+        "text": "La abeja zumba.",
+        "feedback": "¡Buen trabajo!"
+      }
+    },
+    {
+      "id": 2,
+      "type": "select",
+      "instruction": "Toca la carta y escucha la oración.",
+      "data": {
+        "instruction": "Selecciona la carta de abajo que tiene la palabra que escuchaste.",
+        "text": "La abeja zumba.",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es abeja.",
+          "incorrect": "Casi, intenta otra vez."
         },
-        {
-          "id": 2,
-          "type": "select",
-          "instruction": "Toca la carta y escucha la oración.",
-          "data": {
-            "instruction": "Selecciona la carta de abajo que tiene la palabra que escuchaste.",
-            "text": "La abeja zumba.",
-            "feedback": {
-              "correct": "¡Buen trabajo! La palabra es abeja.",
-              "incorrect": "Casi, intenta otra vez."
-            },
-            "options": [
-              {
-                "text": "Abeja",
-                "image": "Abeja",
-                "correct": true
-              },
-              {
-                "text": "Avión",
-                "image": "Avión",
-                "correct": false
-              },
-              {
-                "text": "Árbol",
-                "image": "Árbol",
-                "correct": false
-              },
-              {
-                "text": "Ave",
-                "image": "Ave",
-                "correct": false
-              }
-            ]
+        "options": [
+          {
+            "text": "Abeja",
+            "image": "Abeja",
+            "correct": true
+          },
+          {
+            "text": "Avión",
+            "image": "Avión",
+            "correct": false
+          },
+          {
+            "text": "Árbol",
+            "image": "Árbol",
+            "correct": false
+          },
+          {
+            "text": "Ave",
+            "image": "Ave",
+            "correct": false
           }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": "drag_and_drop",
+      "instruction": "Toca la carta de arriba y escucha la oración.",
+      "data": {
+        "instruction": "Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.",
+        "text": "La abeja zumba.",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es abeja.",
+          "incorrect": "Casi, intenta otra vez."
         },
-        {
-          "id": 3,
-          "type": "drag_and_drop",
-          "instruction": "Toca la carta de arriba y escucha la oración.",
-          "data": {
-            "instruction": "Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.",
-            "text": "La abeja zumba.",
-            "feedback": {
-              "correct": "¡Buen trabajo! La palabra es abeja.",
-              "incorrect": "Casi, intenta otra vez."
-            },
-            "options": [
-              {
-                "text": "Abeja",
-                "image": "Abeja",
-                "correct": true
-              },
-              {
-                "text": "Avión",
-                "image": "Avión",
-                "correct": false
-              },
-              {
-                "text": "Árbol",
-                "image": "Árbol",
-                "correct": false
-              },
-              {
-                "text": "Ave",
-                "image": "Ave",
-                "correct": false
-              }
-            ]
+        "options": [
+          {
+            "text": "Abeja",
+            "image": "Abeja",
+            "correct": true
+          },
+          {
+            "text": "Avión",
+            "image": "Avión",
+            "correct": false
+          },
+          {
+            "text": "Árbol",
+            "image": "Árbol",
+            "correct": false
+          },
+          {
+            "text": "Ave",
+            "image": "Ave",
+            "correct": false
           }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "type": "bubbles",
+      "instruction": "Toca la carta y escucha la oración.",
+      "data": {
+        "instruction": "Estalla las burbujas de acuerdo al número de palabras en la oración.",
+        "text": "La abeja zumba.",
+        "count": 3,
+        "feedback": "¡Buen trabajo! La oración tiene 3 palabras."
+      }
+    },
+    {
+      "id": 5,
+      "type": "tap",
+      "instruction": "Toca la carta y escucha la oración.",
+      "data": {
+        "text": "..."
+      }
+    },
+    {
+      "id": 6,
+      "type": "superselectAdv",
+      "instruction": "Presiona el boton para escuchar la",
+      "data": {
+        "instruction": "Si a la palabra",
+        "instruction2": "le agrego",
+        "instruction3": "da",
+        "instruction4": "al final, que queda?, selecciona la opcion que crees que es la correcta.",
+        "text": "Pan",
+        "staticImage": "Pan",
+        "feedback": {
+          "correct": "¡Buen trabajo! La palabra es panda.",
+          "incorrect": "Casi, intenta otra vez."
         },
-        {
-          "id": 4,
-          "type": "bubbles",
-          "instruction": "Toca la carta y escucha la oración.",
-          "data": {
-            "instruction": "Estalla las burbujas de acuerdo al número de palabras en la oración.",
-            "text": "La abeja zumba.",
-            "count": 3,
-            "feedback": "¡Buen trabajo! La oración tiene 3 palabras."
+        "options": [
+          {
+            "text": "Panda",
+            "image": "Panda",
+            "correct": true
+          },
+          {
+            "text": "Panza",
+            "image": "Panza",
+            "correct": false
+          },
+          {
+            "text": "Pancha",
+            "image": "Pancha",
+            "correct": false
+          },
+          {
+            "text": "Pando",
+            "image": "Pando",
+            "correct": false
           }
-        },
-        {
-          "id": 5,
-          "type": "tap",
-          "instruction": "Toca la carta y escucha la oración.",
-          "data": {
-            "text": "..."
-          }
-        },
-        {
-          "id": 6,
-          "type": "superselectAdv",
-          "instruction": "Presiona el boton para escuchar la",
-          "data": {
-            "instruction": "Si a la palabra",
-            "instruction2": "le agrego",
-            "instruction3": "da",
-            "instruction4": "al final, que queda?, selecciona la opcion que crees que es la correcta.",
-            "text": "Pan",
-            "staticImage": "Pan",
-            "feedback": {
-              "correct": "¡Buen trabajo! La palabra es panda.",
-              "incorrect": "Casi, intenta otra vez."
-            },
-            "options": [
-              {
-                "text": "Panda",
-                "image": "Panda",
-                "correct": true
-              },
-              {
-                "text": "Panza",
-                "image": "Panza",
-                "correct": false
-              },
-              {
-                "text": "Pancha",
-                "image": "Pancha",
-                "correct": false
-              },
-              {
-                "text": "Pando",
-                "image": "Pando",
-                "correct": false
-              }
-            ]
-          }
-        }
-      ]
+        ]
+      }
     },
     {
       "id": 7,
