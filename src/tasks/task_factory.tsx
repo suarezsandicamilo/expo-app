@@ -16,6 +16,8 @@ import { SuperSelectAdvTask } from './superselectAdv_task';
 
 import { SuperTapTask } from './supertap_task';
 
+import { SelectAudioTask } from './selectaudio_task';
+
 const create = (task: Task, next: () => void) => {
   switch (task.type) {
     case 'bubbles':
@@ -28,8 +30,10 @@ const create = (task: Task, next: () => void) => {
       return <SuperSelectAdvTask next={next} {...task.data} />;
     case 'tap':
       return <TapTask next={next} {...task.data} />;
-      case 'superTap':
-        return <SuperTapTask next={next} {...task.data} />;
+    case 'superTap':
+      return <SuperTapTask next={next} {...task.data} />;
+    case 'selectaudio':
+      return <SelectAudioTask next={next} {...task.data} />;
     default:
       return <></>;
   }
