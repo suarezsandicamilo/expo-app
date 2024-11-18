@@ -16,6 +16,7 @@ type Props = {
   style?: StyleProp<ViewStyle>;
   height?: number;
   width?: number;
+  disabled?: boolean;
 };
 
 export const ConfirmationButton: React.FC<Props> = ({
