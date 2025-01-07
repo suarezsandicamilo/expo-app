@@ -2,47 +2,18 @@
 
 // React
 
-import { createContext, useContext, useMemo, useState } from 'react';
-
-// React Native
-
-import { View } from 'react-native';
+import { useContext } from 'react';
 
 // App
 
-type LockContextType = {
-  isLocked: boolean;
-  setIsLocked: (isLocked: boolean) => void;
-};
-
-export const LockContext = createContext<LockContextType>(undefined!);
-
-type LockProviderProps = React.PropsWithChildren<object>;
-
-export const LockProvider = (props: LockProviderProps) => {
-  const [isLocked, setIsLocked] = useState<boolean>(false);
-
-  const value = useMemo(() => {
-    return {
-      isLocked,
-      setIsLocked,
-    };
-  }, [isLocked, setIsLocked]);
-
-  return (
-    <LockContext.Provider value={value}>
-      <View
-        style={{
-          flex: 1,
-          pointerEvents: !isLocked ? 'auto' : 'none',
-        }}
-      >
-        {props.children}
-      </View>
-    </LockContext.Provider>
-  );
-};
+import { LockContext } from '@/contexts';
 
 export const useLock = () => {
-  return useContext(LockContext);
+  const lock = useContext(LockContext);
+
+  if (lock == undefined) {
+    throw new Error('The LockContext has to be used in a LockProvider');
+  }
+
+  return lock;
 };
