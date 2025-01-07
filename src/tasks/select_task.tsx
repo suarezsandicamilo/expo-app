@@ -18,7 +18,7 @@ import { Button, ImageCard } from '@/components';
 
 import { useSound, useSpeech } from '@/hooks';
 
-import { shuffle } from '@/_';
+import { shuffle } from '@/shared';
 
 import { getImage, ImageSource } from '@/../assets/images';
 

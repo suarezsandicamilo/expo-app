@@ -37,7 +37,7 @@ import { LockProvider, useSpeech } from '@/hooks';
 
 import { TaskFactory } from '@/tasks';
 
-import { delay } from '@/_';
+import { delay } from '@/shared';
 
 const styles = StyleSheet.create({
   button: {

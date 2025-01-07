@@ -12,7 +12,7 @@ import { Audio } from 'expo-av';
 
 import { useLock } from './lock';
 
-import { delay } from '@/_';
+import { delay } from '@/shared';
 
 import { sounds } from '@/../assets/sounds';
 

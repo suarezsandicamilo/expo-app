@@ -30,7 +30,7 @@ import { Db } from '@/db';
 
 import { LockProvider, useSound } from '@/hooks';
 
-import { delay } from '@/_';
+import { delay } from '@/shared';
 
 const styles = StyleSheet.create({
   button: {

@@ -4,7 +4,7 @@ import { Animated, StyleSheet, View } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { Button, ImageCard, ConfirmationButton } from '@/components';
 import { useSound, useSpeech } from '@/hooks';
-import { shuffle } from '@/_';
+import { shuffle } from '@/shared';
 import { getImage, ImageSource } from '@/../assets/images';
 
 const styles = StyleSheet.create({
