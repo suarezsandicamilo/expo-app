@@ -96,7 +96,7 @@ const InLessonScreen = () => {
 
   useEffect(() => {
     const fn = async () => {
-      await speak(task.instruction);
+      await speak(task.instructions[0]);
     };
 
     fn();
@@ -146,7 +146,7 @@ const InLessonScreen = () => {
           <Button
             style={styles.button}
             onPress={() => {
-              speak(task.instruction);
+              speak(task.instructions[0]);
             }}
           >
             <Icon name='question-mark' color='#ffffff' size={20} />

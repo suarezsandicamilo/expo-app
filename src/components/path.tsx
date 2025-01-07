@@ -24,7 +24,7 @@ import { Button } from './button';
 
 import { Db } from '@/db';
 
-import { Lessons } from '@/../data';
+import { Lessons } from '@/data';
 
 const styles = StyleSheet.create({
   active: {
