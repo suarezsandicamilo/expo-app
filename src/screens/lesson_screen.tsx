@@ -32,8 +32,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Task } from '@/types';
 
 import { Button, Progress } from '@/components';
-
-import { LockProvider, useSpeech } from '@/hooks';
+import { LockProvider } from '@/contexts';
+import { useSpeech } from '@/hooks';
 
 import { TaskFactory } from '@/tasks';
 
