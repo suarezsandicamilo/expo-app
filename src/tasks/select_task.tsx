@@ -15,16 +15,18 @@ import { useAudio, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '@/../assets/images';
 
+type Option = {
+  text: string;
+  image: string;
+  correct: boolean;
+};
+
 type Props = {
   instructions: string[];
   button: {
     text: string;
   };
-  options: {
-    text: string;
-    image: string;
-    correct: boolean;
-  }[];
+  options: Option[];
   feedback: {
     correct: string;
     incorrect: string;
@@ -33,13 +35,13 @@ type Props = {
 };
 
 export const SelectTask = (props: Props) => {
-  const options = useRef(props.options);
-
   const anim = useAnimatedValue(-500);
 
   const { play } = useAudio();
 
   const { speak } = useSpeech();
+
+  const options = useRef(props.options);
 
   useEffect(() => {
     options.current = shuffle(props.options);

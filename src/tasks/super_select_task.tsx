@@ -15,17 +15,19 @@ import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '../../assets/images';
 
+type Option = {
+  text: string;
+  image: string;
+  correct: boolean;
+};
+
 type Props = {
   instructions: string[];
   button: {
     text: string[];
   };
   count: number;
-  options: {
-    text: string;
-    image: string;
-    correct: boolean;
-  }[];
+  options: Option[];
   feedback: {
     correct: string;
     incorrect: string;
@@ -34,8 +36,6 @@ type Props = {
 };
 
 export const SuperSelectTask = (props: Props) => {
-  const options = useRef(props.options);
-
   const [count, setCount] = useState(0);
 
   const [array, setArray] = useState([...Array(4)].map(() => false));
@@ -45,6 +45,8 @@ export const SuperSelectTask = (props: Props) => {
   const { play } = useAudio();
 
   const { speak } = useSpeech();
+
+  const options = useRef(props.options);
 
   useEffect(() => {
     options.current = shuffle(props.options);
@@ -91,7 +93,12 @@ export const SuperSelectTask = (props: Props) => {
       >
         {options.current.map((option, index) => {
           return (
-            <View key={index} style={array[index] ? styles.opacity : {}}>
+            <View
+              key={index}
+              style={{
+                opacity: array[index] ? 0.25 : 1,
+              }}
+            >
               <ImageButton
                 source={option.image as ImageKey}
                 size={120}
@@ -151,8 +158,5 @@ const styles = StyleSheet.create({
     gap: 24,
     justifyContent: 'center',
     width: '75%',
-  },
-  opacity: {
-    opacity: 0.25,
   },
 });
