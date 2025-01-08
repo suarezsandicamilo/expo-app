@@ -151,7 +151,9 @@ const Drag = (props: DragProps) => {
         return;
       }
 
-      props.onHover();
+      if (event.translationY < -100) {
+        props.onHover();
+      }
 
       anim.setValue({
         x: event.translationX,
