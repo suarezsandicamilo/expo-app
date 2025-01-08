@@ -170,11 +170,11 @@ export const Lessons: Lesson[] = [
             {
               text: 'Árbol',
               image: 'arbol',
-              correct: true,
+              correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! Las palabra es panda.',
+            correct: '¡Buen trabajo! La palabra es panda.',
             incorrect: 'Casi, intenta otra vez.',
           },
         },
@@ -371,11 +371,11 @@ export const Lessons: Lesson[] = [
             {
               text: 'Árbol',
               image: 'arbol',
-              correct: true,
+              correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! Las palabra es panda.',
+            correct: '¡Buen trabajo! La palabra es panda.',
             incorrect: 'Casi, intenta otra vez.',
           },
         },
