@@ -1,5 +1,15 @@
 //
 
+// App
+
+import { Lesson } from './types';
+
+export type RootStackParamList = {
+  home: undefined;
+  lesson: { lesson: Lesson };
+  end: undefined;
+};
+
 export const delay = (ms: number) => {
   return new Promise<number>((resolve) => {
     return setTimeout(resolve, ms);
