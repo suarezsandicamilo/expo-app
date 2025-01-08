@@ -41,9 +41,11 @@ const InEndScreen = (props: Props) => {
         name="verified"
         size={192}
         onPress={async () => {
-          const p = await Db.get('progress', 0);
+          // const p = await Db.get('progress', 0);
 
-          await Db.set('progress', p + 1);
+          // await Db.set('progress', p + 1);
+
+          await Db.set('progress', 0);
 
           props.navigation.navigate('home');
         }}
