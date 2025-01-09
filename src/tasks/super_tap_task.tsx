@@ -6,12 +6,14 @@ import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
 
 // App
 
-import { IconButton } from '@/components';
+import { ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
+import { ImageKey } from '../../assets/images';
 
 type Props = {
   buttons: {
     text: string;
+    image?: string;
   }[];
   feedback: {
     correct: string[];
@@ -28,8 +30,8 @@ export const SuperTapTask = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <IconButton
-        name="volume-up"
+      <ImageButton
+        source={(props.buttons[0].image ?? props.buttons[0].text) as ImageKey}
         size={192}
         onPress={async () => {
           await speak(props.buttons[0].text);
@@ -50,8 +52,8 @@ export const SuperTapTask = (props: Props) => {
           ],
         }}
       >
-        <IconButton
-          name="volume-up"
+        <ImageButton
+          source={(props.buttons[1].image ?? props.buttons[1].text) as ImageKey}
           size={192}
           onPress={async () => {
             await speak(props.buttons[1].text);
