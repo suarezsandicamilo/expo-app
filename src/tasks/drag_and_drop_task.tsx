@@ -8,9 +8,9 @@ import { useEffect, useRef, useState } from 'react';
 
 import {
   Animated,
+  Dimensions,
   StyleSheet,
   useAnimatedValue,
-  useWindowDimensions,
   View,
 } from 'react-native';
 
@@ -38,15 +38,13 @@ type Layout = {
 };
 
 const intersects = (layout_1: Layout, layout_2: Layout) => {
-  const intersectsX =
-    layout_1.x < layout_2.x + layout_2.w &&
-    layout_1.x + layout_1.w > layout_2.x;
+  const x_1 = layout_1.x <= layout_2.x + layout_2.w;
+  const x_2 = layout_1.x + layout_1.w >= layout_2.x;
 
-  const intersectsY =
-    layout_1.y < layout_2.y + layout_2.h &&
-    layout_1.y + layout_1.h > layout_2.y;
+  const y_1 = layout_1.y <= layout_2.y + layout_2.h;
+  const y_2 = layout_1.y + layout_1.h >= layout_2.y;
 
-  return intersectsX && intersectsY;
+  return x_1 && x_2 && y_1 && y_2;
 };
 
 type Option = {
@@ -168,8 +166,6 @@ type DragProps = {
 };
 
 const Drag = (props: DragProps) => {
-  const { width, height } = useWindowDimensions();
-
   const anim = useRef(new Animated.ValueXY()).current;
 
   const { isLocked } = useLock();
@@ -177,21 +173,26 @@ const Drag = (props: DragProps) => {
   const gesture = Gesture.Pan()
     .onUpdate((event) => {
       if (isLocked) {
+        anim.setValue({
+          x: 0,
+          y: 0,
+        });
+
         return;
       }
 
       const layout_1 = {
-        x: width / 2 - 60,
-        y: height / 2 - 60,
-        w: 120,
-        h: 120,
+        x: Dimensions.get('screen').width / 2 - 80,
+        y: Dimensions.get('screen').height / 2 - 160,
+        w: 160,
+        h: 160,
       };
 
       const layout_2 = {
-        x: event.absoluteX - 30,
-        y: event.absoluteY - 30,
-        w: 60,
-        h: 60,
+        x: event.absoluteX - 60,
+        y: event.absoluteY - 60,
+        w: 120,
+        h: 120,
       };
 
       if (intersects(layout_1, layout_2)) {
@@ -206,11 +207,20 @@ const Drag = (props: DragProps) => {
       });
     })
     .onEnd((event) => {
+      if (isLocked) {
+        anim.setValue({
+          x: 0,
+          y: 0,
+        });
+
+        return;
+      }
+
       const layout_1 = {
-        x: width / 2 - 60,
-        y: height / 2 - 60,
-        w: 120,
-        h: 120,
+        x: Dimensions.get('screen').width / 2 - 80,
+        y: Dimensions.get('screen').height / 2 - 160,
+        w: 160,
+        h: 160,
       };
 
       const layout_2 = {
