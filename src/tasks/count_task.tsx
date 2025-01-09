@@ -10,13 +10,15 @@ import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
 
 // App
 
-import { IconButton, Pop } from '@/components';
+import { ImageButton, Pop } from '@/components';
 import { useEffectAsync, useSpeech } from '@/hooks';
+import { ImageKey } from '../../assets/images';
 
 type Props = {
   instructions: string[];
   button: {
     text: string;
+    image?: string;
   };
   count: number;
   feedback: {
@@ -45,8 +47,8 @@ export const CountTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <IconButton
-          name="volume-up"
+        <ImageButton
+          source={(props.button.image ?? props.button.text) as ImageKey}
           size={192}
           onPress={async () => {
             await speak(props.button.text);
