@@ -6,7 +6,13 @@ import { useEffect, useRef, useState } from 'react';
 
 // React Native
 
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
+import {
+  Animated,
+  StyleSheet,
+  useAnimatedValue,
+  useWindowDimensions,
+  View,
+} from 'react-native';
 
 // React Native Gesture Handler
 
@@ -23,6 +29,25 @@ import { Colors } from '@/constants';
 import { useAudio, useLock, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '@/../assets/images';
+
+type Layout = {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+};
+
+const intersects = (layout_1: Layout, layout_2: Layout) => {
+  const intersectsX =
+    layout_1.x < layout_2.x + layout_2.w &&
+    layout_1.x + layout_1.w > layout_2.x;
+
+  const intersectsY =
+    layout_1.y < layout_2.y + layout_2.h &&
+    layout_1.y + layout_1.h > layout_2.y;
+
+  return intersectsX && intersectsY;
+};
 
 type Option = {
   text: string;
@@ -143,6 +168,8 @@ type DragProps = {
 };
 
 const Drag = (props: DragProps) => {
+  const { width, height } = useWindowDimensions();
+
   const anim = useRef(new Animated.ValueXY()).current;
 
   const { isLocked } = useLock();
@@ -153,12 +180,50 @@ const Drag = (props: DragProps) => {
         return;
       }
 
+      const layout_1 = {
+        x: width / 2 - 60,
+        y: height / 2 - 60,
+        w: 120,
+        h: 120,
+      };
+
+      const layout_2 = {
+        x: event.absoluteX - 30,
+        y: event.absoluteY - 30,
+        w: 60,
+        h: 60,
+      };
+
+      if (intersects(layout_1, layout_2)) {
+        props.onHoverIn();
+      } else {
+        props.onHoverOut();
+      }
+
       anim.setValue({
         x: event.translationX,
         y: event.translationY,
       });
     })
-    .onEnd(() => {
+    .onEnd((event) => {
+      const layout_1 = {
+        x: width / 2 - 60,
+        y: height / 2 - 60,
+        w: 120,
+        h: 120,
+      };
+
+      const layout_2 = {
+        x: event.absoluteX - 30,
+        y: event.absoluteY - 30,
+        w: 60,
+        h: 60,
+      };
+
+      if (intersects(layout_1, layout_2)) {
+        props.onDrop();
+      }
+
       Animated.spring(anim, {
         toValue: {
           x: 0,
