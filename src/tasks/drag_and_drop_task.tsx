@@ -172,15 +172,6 @@ const Drag = (props: DragProps) => {
 
   const gesture = Gesture.Pan()
     .onUpdate((event) => {
-      if (isLocked) {
-        anim.setValue({
-          x: 0,
-          y: 0,
-        });
-
-        return;
-      }
-
       const layout_1 = {
         x: Dimensions.get('screen').width / 2 - 80,
         y: Dimensions.get('screen').height / 2 - 160,
@@ -207,15 +198,6 @@ const Drag = (props: DragProps) => {
       });
     })
     .onEnd((event) => {
-      if (isLocked) {
-        anim.setValue({
-          x: 0,
-          y: 0,
-        });
-
-        return;
-      }
-
       const layout_1 = {
         x: Dimensions.get('screen').width / 2 - 80,
         y: Dimensions.get('screen').height / 2 - 160,
@@ -244,7 +226,7 @@ const Drag = (props: DragProps) => {
     });
 
   return (
-    <GestureDetector gesture={gesture}>
+    <GestureDetector gesture={!isLocked ? gesture : Gesture.Tap()}>
       <Animated.View
         style={{
           transform: anim.getTranslateTransform(),
