@@ -2,13 +2,13 @@
 
 // React Native
 
-import { StyleSheet } from 'react-native';
+import { Animated, StyleSheet, useAnimatedValue } from 'react-native';
 
 // App
 
 import { Colors } from '@/constants';
 import { LockPressable } from './lock_pressable';
-import { Icon } from './icon';
+import { useEffect } from 'react';
 
 type Props = {
   pressed: boolean;
@@ -16,30 +16,44 @@ type Props = {
 };
 
 export const Pop = (props: Props) => {
-  const color_1 = !props.pressed ? Colors['theme-1'] : Colors['text-2'];
-  const color_2 = !props.pressed ? Colors['text-2'] : Colors['theme-1'];
+  const anim = useAnimatedValue(1);
+
+  useEffect(() => {
+    if (props.pressed) {
+      Animated.timing(anim, {
+        toValue: 0,
+        duration: 250,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [anim, props.pressed]);
 
   return (
-    <LockPressable
-      style={[
-        styles.container,
-        {
-          backgroundColor: color_1,
-        },
-      ]}
-      onPress={props.onPress}
+    <Animated.View
+      style={{
+        transform: [
+          {
+            scale: anim,
+          },
+        ],
+      }}
     >
-      <Icon color={color_2} name="star" size={36} />
-    </LockPressable>
+      <LockPressable style={styles.container} onPress={props.onPress} />
+    </Animated.View>
   );
 };
 
 export const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
+    backgroundColor: Colors['theme-4-light'],
+    borderColor: Colors['theme-4'],
+    borderWidth: 2,
     borderRadius: 36,
+    elevation: 2,
     height: 72,
     justifyContent: 'center',
+    opacity: 0.5,
     width: 72,
   },
 });
