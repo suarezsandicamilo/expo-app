@@ -2,7 +2,7 @@
 
 // React
 
-import { useEffect, useRef } from 'react';
+import { useState } from 'react';
 
 // React Native
 
@@ -10,42 +10,37 @@ import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
 
 // App
 
-import { IconButton, ImageButton } from '@/components';
-import { useAudio, useSpeech } from '@/hooks';
-import { shuffle } from '@/shared';
-import { ImageKey } from '@/../assets/images';
-
-type Option = {
-  text: string;
-  image: string;
-  correct: boolean;
-};
+import { IconButton, Pop } from '@/components';
+import { useEffectAsync, useSpeech } from '@/hooks';
 
 type Props = {
   instructions: string[];
   button: {
     text: string;
   };
-  options: Option[];
+  count: number;
   feedback: {
     correct: string;
-    incorrect: string;
   };
   next: () => void;
 };
 
-export const SelectTask = (props: Props) => {
-  const anim = useAnimatedValue(-500);
+export const CountTask = (props: Props) => {
+  const [count, setCount] = useState(0);
 
-  const { play } = useAudio();
+  const [array, setArray] = useState([...Array(9)].map(() => false));
+
+  const anim = useAnimatedValue(-500);
 
   const { speak } = useSpeech();
 
-  const options = useRef(props.options);
+  useEffectAsync(async () => {
+    if (props.count === count) {
+      await speak(props.feedback.correct);
 
-  useEffect(() => {
-    options.current = shuffle(props.options);
-  }, [props.options]);
+      props.next();
+    }
+  }, [count]);
 
   return (
     <View style={styles.container_1}>
@@ -78,26 +73,27 @@ export const SelectTask = (props: Props) => {
           },
         ]}
       >
-        {options.current.map((option, index) => {
+        {array.map((pressed, index) => {
           return (
-            <ImageButton
+            <Pop
               key={index}
-              source={option.image as ImageKey}
-              size={120}
+              pressed={pressed}
               onPress={async () => {
-                await speak(option.text);
-
-                if (option.correct) {
-                  await play('correct');
-
-                  await speak(props.feedback.correct);
-
-                  props.next();
-                } else {
-                  await play('incorrect');
-
-                  await speak(props.feedback.incorrect);
+                if (props.count === count) {
+                  return;
                 }
+
+                setCount((c) => c + 1);
+
+                setArray((b) => {
+                  const next = [...b];
+
+                  next[index] = true;
+
+                  return next;
+                });
+
+                await speak(`${count + 1}`);
               }}
             />
           );

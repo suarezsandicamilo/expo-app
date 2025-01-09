@@ -2,109 +2,86 @@
 
 // React
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // React Native
 
 import { ScrollView, StyleSheet, View } from 'react-native';
 
-// Expo
-
-import { MaterialIcons as Icon } from '@expo/vector-icons';
-
 // React Navigation
 
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Lesson } from '@/types';
-
-import { Button } from './button';
-
+import { Lessons } from '@/data';
 import { Db } from '@/db';
+import { useEffectAsync } from '@/hooks';
+import { RootStackParamList } from '@/shared';
+import { PathButton } from './path_button';
 
-import { Lessons } from '@/../data';
-
-const styles = StyleSheet.create({
-  active: {
-    backgroundColor: '#8bc34a',
-  },
-  button: {
-    backgroundColor: '#9e9e9e',
-    borderRadius: 48,
-    height: 96,
-    width: 96,
-  },
-  container_1: {
-    flex: 1,
-    width: '100%',
-  },
-  container_2: {
-    alignItems: 'center',
-    flex: 1,
-    width: '100%',
-  },
-  pressed: {
-    backgroundColor: '#689f38',
-  },
-});
-
-const sine = (step: number) => {
-  const a = 100;
+const sin = (step: number) => {
+  const a = 96;
   const s = 8;
   const f = (Math.PI * 2) / s;
 
   return a * Math.sin(f * step);
 };
 
-export const Path = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'home'>;
+
+export const Path = (props: Props) => {
   const [progress, setProgress] = useState(0);
 
-  const navigation = useNavigation<any>();
+  const ref = useRef<ScrollView>(undefined!);
 
-  const lessons = Lessons as Lesson[];
+  useEffect(() => {
+    ref.current?.scrollTo({
+      y: Math.max(0, progress * 96),
+    });
+  }, [progress]);
 
-  useFocusEffect(() => {
-    const fn = async () => {
-      const progress = await Db.get('progress', 1);
-
-      setProgress(progress);
-    };
-
-    fn();
-  });
+  useEffectAsync(async () => {
+    setProgress(await Db.get('progress', 0));
+  }, []);
 
   return (
-    <ScrollView style={styles.container_1}>
-      <View style={styles.container_2}>
-        {lessons.map((lesson, index) => {
-          const active = progress > index;
-
+    <ScrollView
+      ref={ref}
+      style={{
+        width: '100%',
+      }}
+    >
+      <View style={styles.container}>
+        {Lessons.map((lesson, index) => {
           return (
-            <Button
+            <View
               key={lesson.id}
-              style={[
-                styles.button,
-                active ? styles.active : {},
-                {
-                  left: sine(index),
-                },
-              ]}
-              onPress={() => {
-                if (active) {
-                  navigation.navigate('Lesson', {
-                    lesson,
-                    lessonIndex: index + 1,
-                  });
-                }
+              style={{
+                left: sin(index),
               }}
             >
-              <Icon name='star' color='#ffffff' size={32} />
-            </Button>
+              <PathButton
+                progress={progress}
+                index={index}
+                onPress={() => {
+                  if (lesson.tasks.length > 0) {
+                    props.navigation.navigate('lesson', { lesson });
+                  }
+                }}
+              />
+            </View>
           );
         })}
       </View>
     </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+  },
+});

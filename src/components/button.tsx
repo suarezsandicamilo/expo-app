@@ -2,50 +2,47 @@
 
 // React Native
 
-import { Pressable, StyleProp, StyleSheet, ViewStyle } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 // App
+
+import { Colors } from '@/constants';
+import { LockPressable } from './lock_pressable';
+
+type Props = {
+  text: string;
+  onPress?: () => void;
+};
+
+export const Button = (props: Props) => {
+  return (
+    <LockPressable
+      onPress={props.onPress}
+      style={(state) => {
+        return [styles.container, state.pressed && styles.pressed];
+      }}
+    >
+      <Text style={styles.text}>{props.text}</Text>
+    </LockPressable>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#8bc34a',
-    borderColor: '#9e9e9e',
+    backgroundColor: Colors['theme-1'],
     borderRadius: 8,
-    elevation: 2,
+    height: 48,
     justifyContent: 'center',
-    margin: 8,
+    width: 192,
   },
   pressed: {
-    backgroundColor: '#689f38',
+    backgroundColor: Colors['theme-1-dark'],
+  },
+  text: {
+    color: Colors['text-2'],
+    fontFamily: 'PatrickHand',
+    fontSize: 16,
+    textTransform: 'uppercase',
   },
 });
-
-type Props = React.PropsWithChildren<{
-  size?: number;
-  style?: StyleProp<ViewStyle>;
-  onPress?: () => void;
-}>;
-
-export const Button = (props: Props) => {
-  const size = props.size ?? 256;
-
-  return (
-    <Pressable
-      style={(state) => {
-        return [
-          styles.container,
-          {
-            height: size,
-            width: size,
-          },
-          props.style,
-          state.pressed ? styles.pressed : {},
-        ];
-      }}
-      onPress={props.onPress}
-    >
-      {props.children}
-    </Pressable>
-  );
-};

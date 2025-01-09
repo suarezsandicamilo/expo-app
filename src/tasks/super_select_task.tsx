@@ -2,7 +2,7 @@
 
 // React
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // React Native
 
@@ -11,9 +11,9 @@ import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
 // App
 
 import { IconButton, ImageButton } from '@/components';
-import { useAudio, useSpeech } from '@/hooks';
+import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
-import { ImageKey } from '@/../assets/images';
+import { ImageKey } from '../../assets/images';
 
 type Option = {
   text: string;
@@ -24,8 +24,9 @@ type Option = {
 type Props = {
   instructions: string[];
   button: {
-    text: string;
+    text: string[];
   };
+  count: number;
   options: Option[];
   feedback: {
     correct: string;
@@ -34,7 +35,11 @@ type Props = {
   next: () => void;
 };
 
-export const SelectTask = (props: Props) => {
+export const SuperSelectTask = (props: Props) => {
+  const [count, setCount] = useState(0);
+
+  const [array, setArray] = useState([...Array(4)].map(() => false));
+
   const anim = useAnimatedValue(-500);
 
   const { play } = useAudio();
@@ -47,6 +52,14 @@ export const SelectTask = (props: Props) => {
     options.current = shuffle(props.options);
   }, [props.options]);
 
+  useEffectAsync(async () => {
+    if (count === props.options.filter((o) => o.correct).length) {
+      await speak(props.feedback.correct);
+
+      props.next();
+    }
+  }, [count]);
+
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
@@ -54,7 +67,7 @@ export const SelectTask = (props: Props) => {
           name="volume-up"
           size={192}
           onPress={async () => {
-            await speak(props.button.text);
+            await speak(...props.button.text);
 
             await speak(...props.instructions);
 
@@ -80,26 +93,42 @@ export const SelectTask = (props: Props) => {
       >
         {options.current.map((option, index) => {
           return (
-            <ImageButton
+            <View
               key={index}
-              source={option.image as ImageKey}
-              size={120}
-              onPress={async () => {
-                await speak(option.text);
-
-                if (option.correct) {
-                  await play('correct');
-
-                  await speak(props.feedback.correct);
-
-                  props.next();
-                } else {
-                  await play('incorrect');
-
-                  await speak(props.feedback.incorrect);
-                }
+              style={{
+                opacity: array[index] ? 0.25 : 1,
               }}
-            />
+            >
+              <ImageButton
+                source={option.image as ImageKey}
+                size={120}
+                onPress={async () => {
+                  if (array[index]) {
+                    return;
+                  }
+
+                  await speak(option.text);
+
+                  if (option.correct) {
+                    await play('correct');
+
+                    setCount((c) => c + 1);
+
+                    setArray((s) => {
+                      const next = [...s];
+
+                      next[index] = true;
+
+                      return next;
+                    });
+                  } else {
+                    await play('incorrect');
+
+                    await speak(props.feedback.incorrect);
+                  }
+                }}
+              />
+            </View>
           );
         })}
       </Animated.View>

@@ -6,27 +6,15 @@ import { StyleSheet, View } from 'react-native';
 
 // App
 
-const styles = StyleSheet.create({
-  container_1: {
-    backgroundColor: '#8bc34a',
-    borderRadius: 4,
-    height: 8,
-    margin: 8,
-    width: 256,
-  },
-  container_2: {
-    backgroundColor: '#33691e',
-    borderRadius: 4,
-    height: 8,
-  },
-});
+import { Colors } from '@/constants';
 
 type Props = {
-  value?: number;
+  progress: number;
+  count: number;
 };
 
 export const Progress = (props: Props) => {
-  const value = props.value ?? 0.5;
+  const width = (props.progress / props.count) * 100;
 
   return (
     <View style={styles.container_1}>
@@ -34,10 +22,24 @@ export const Progress = (props: Props) => {
         style={[
           styles.container_2,
           {
-            width: `${value * 100}%`,
+            width: `${width}%`,
           },
         ]}
       />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container_1: {
+    backgroundColor: Colors['theme-1-light'],
+    borderRadius: 8,
+    height: 12,
+    width: '100%',
+  },
+  container_2: {
+    backgroundColor: Colors['theme-1-dark'],
+    borderRadius: 8,
+    height: 12,
+  },
+});
