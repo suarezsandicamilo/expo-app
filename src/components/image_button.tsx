@@ -19,7 +19,7 @@ export const ImageButton = (props: Props) => {
       style={(state) => {
         if (state.pressed) {
           return {
-            opacity: 0.5,
+            opacity: 0.25,
           };
         }
       }}

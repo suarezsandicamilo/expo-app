@@ -61,7 +61,7 @@ export const SelectTask = (props: Props) => {
             Animated.timing(anim, {
               toValue: 0,
               duration: 250,
-              useNativeDriver: true,
+              useNativeDriver: false,
             }).start();
           }}
         />

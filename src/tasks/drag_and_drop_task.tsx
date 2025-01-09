@@ -80,7 +80,7 @@ export const DragAndDropTask = (props: Props) => {
               Animated.timing(anim, {
                 toValue: 0,
                 duration: 250,
-                useNativeDriver: true,
+                useNativeDriver: false,
               }).start();
             }}
           />
@@ -120,8 +120,11 @@ export const DragAndDropTask = (props: Props) => {
                     await speak(props.feedback.incorrect);
                   }
                 }}
-                onHover={() => {
+                onHoverIn={() => {
                   setHover(true);
+                }}
+                onHoverOut={() => {
+                  setHover(false);
                 }}
               />
             );
@@ -133,13 +136,10 @@ export const DragAndDropTask = (props: Props) => {
 };
 
 type DragProps = {
-  option: {
-    text: string;
-    image: string;
-    correct: boolean;
-  };
+  option: Option;
   onDrop: () => void;
-  onHover: () => void;
+  onHoverIn: () => void;
+  onHoverOut: () => void;
 };
 
 const Drag = (props: DragProps) => {
@@ -153,24 +153,18 @@ const Drag = (props: DragProps) => {
         return;
       }
 
-      if (event.translationY < -100) {
-        props.onHover();
-      }
-
       anim.setValue({
         x: event.translationX,
         y: event.translationY,
       });
     })
     .onEnd(() => {
-      props.onDrop();
-
       Animated.spring(anim, {
         toValue: {
           x: 0,
           y: 0,
         },
-        useNativeDriver: true,
+        useNativeDriver: false,
       }).start();
     });
 

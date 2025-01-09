@@ -31,5 +31,6 @@ export const createTask = (props: Props) => {
     throw new Error('Unknown task type');
   }
 
+  // @ts-expect-error Ignore
   return <Component next={props.next} {...props.task.data} />;
 };
