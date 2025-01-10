@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
-import { MaterialIcons as Icon } from '@expo/vector-icons';
-import { Button, ImageButton, IconButton } from '@/components';
+import { ImageButton, IconButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { ImageKey } from '@/../assets/images';
 
@@ -142,11 +141,11 @@ const InRhymeSelectTask = (props: Props) => {
               name="check"
               size={100}
               onPress={() => handleSelection('Sí')}
-              // style={{
-              //   alignItems: 'center',
-              //   justifyContent: 'center',
-              //   backgroundColor: '#4CAF50', // Fondo verde para "Sí"
-              // }}
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#4CAF50', // Fondo verde para "Sí"
+              }}
             >
             </IconButton>
           </View>
@@ -164,11 +163,11 @@ const InRhymeSelectTask = (props: Props) => {
               name="close"
               size={100}
               onPress={() => handleSelection('No')}
-              // style={{
-              //   alignItems: 'center',
-              //   justifyContent: 'center',
-              //   backgroundColor: '#F44336', // Fondo rojo para "No"
-              // }}
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#F44336', // Fondo rojo para "No"
+              }}
             >
             </IconButton>
           </View>

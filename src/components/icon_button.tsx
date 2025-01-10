@@ -2,7 +2,7 @@
 
 // React Native
 
-import { StyleSheet } from 'react-native';
+import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 
 // Expo
 
@@ -19,6 +19,7 @@ type Props = {
   name?: keyof typeof MaterialIcons.glyphMap;
   size?: number;
   onPress?: () => void;
+  style?: StyleProp<ViewStyle>;
 };
 
 export const IconButton = (props: Props) => {
@@ -30,6 +31,7 @@ export const IconButton = (props: Props) => {
       style={(state) => {
         return [
           styles.container,
+          props.style,
           props.onPress != undefined && state.pressed && styles.pressed,
           {
             height: size,
