@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
-import { Button, ImageCard, ConfirmationButton } from '@/components';
-import { useSound, useSpeech } from '@/hooks';
-import { getImage, ImageSource } from '@/../assets/images';
+import { Button, ImageButton, IconButton } from '@/components';
+import { useAudio, useSpeech } from '@/hooks';
+import { ImageKey } from '@/../assets/images';
 
 const styles = StyleSheet.create({
   container_1: {
@@ -40,18 +40,18 @@ const styles = StyleSheet.create({
 
 type Word = {
   text: string;
-  image: ImageSource;
+  image: ImageKey;
 };
 
 type Props = {
   next: () => void;
-  instruction?: string;
-  instruction2?: string;
-  instruction3?: string;
-  instruction4?: string;
-  text?: string;
-  staticImage?: ImageSource;
-  feedback?: {
+  instruction: string;
+  instruction2: string;
+  instruction3: string;
+  instruction4: string;
+  text: string;
+  staticImage?: ImageKey;
+  feedback: {
     correct: string;
     incorrect: string;
   };
@@ -65,7 +65,8 @@ export const Correct_IncorrectTask = (props: Props) => {
   return (
     <View style={styles.container_1}>
       <View style={styles.container_2}>
-        <Button
+        <IconButton
+          name="volume-up"
           size={100}
           onPress={async () => {
             await speak(props.instruction);
@@ -80,12 +81,10 @@ export const Correct_IncorrectTask = (props: Props) => {
               useNativeDriver: true,
             }).start();
           }}
-          style={{ marginBottom: 30 }}
         >
-          <Icon name="volume-up" color="#ffffff" size={70} />
-        </Button>
-        <ImageCard 
-            image={getImage(props.staticImage)} 
+        </IconButton>
+        <ImageButton 
+            source={props.staticImage as ImageKey} 
             size={180}
             onPress={async () => {
                 if (props.instruction2) await speak(props.instruction2);
@@ -105,8 +104,8 @@ export const Correct_IncorrectTask = (props: Props) => {
 const InRhymeSelectTask = (props: Props) => {
     const { speak } = useSpeech();
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
-    const correct = useSound('correct');
-    const incorrect = useSound('incorrect');
+
+    const { play } = useAudio();
   
     const handleSelection = (option: string) => {
       setSelectedOption(option); // Establecer la opción seleccionada
@@ -116,11 +115,11 @@ const InRhymeSelectTask = (props: Props) => {
     const validateSelection = async () => {
       const correctAnswer = 'Sí';
       if (selectedOption === correctAnswer) {
-        await correct.play();
+        await play('correct');
         await speak(props.feedback?.correct);
         props.next();
       } else {
-        await incorrect.play();
+        await play('incorrect');
         await speak(props.feedback?.incorrect);
       }
     };
@@ -139,17 +138,17 @@ const InRhymeSelectTask = (props: Props) => {
               borderRadius: 8, // Bordes redondeados para el borde externo
             }}
           >
-            <Button
+            <IconButton
+              name="check"
               size={100}
               onPress={() => handleSelection('Sí')}
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#4CAF50', // Fondo verde para "Sí"
-              }}
+              // style={{
+              //   alignItems: 'center',
+              //   justifyContent: 'center',
+              //   backgroundColor: '#4CAF50', // Fondo verde para "Sí"
+              // }}
             >
-              <Icon name="check" color="#ffffff" size={50} />
-            </Button>
+            </IconButton>
           </View>
   
           {/* Contenedor para el botón "No" */}
@@ -161,23 +160,25 @@ const InRhymeSelectTask = (props: Props) => {
               borderRadius: 8, // Bordes redondeados para el borde externo
             }}
           >
-            <Button
+            <IconButton
+              name="close"
               size={100}
               onPress={() => handleSelection('No')}
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#F44336', // Fondo rojo para "No"
-              }}
+              // style={{
+              //   alignItems: 'center',
+              //   justifyContent: 'center',
+              //   backgroundColor: '#F44336', // Fondo rojo para "No"
+              // }}
             >
-              <Icon name="close" color="#ffffff" size={50} />
-            </Button>
+            </IconButton>
           </View>
         </View>
   
         {/* Botón de confirmación */}
         <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-          <ConfirmationButton onPress={validateSelection} />
+          <IconButton
+            name = "check"
+            onPress={validateSelection} />
         </View>
       </View>
     );

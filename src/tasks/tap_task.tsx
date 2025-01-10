@@ -1,39 +1,40 @@
 //
 
-// Expo
-
-import { MaterialIcons as Icon } from '@expo/vector-icons';
-
 // App
 
-import { Button } from '@/components';
-
-import { useSound, useSpeech } from '@/hooks';
+import { ImageButton } from '@/components';
+import { useAudio, useSpeech } from '@/hooks';
+import { ImageKey } from '../../assets/images';
 
 type Props = {
+  button: {
+    text: string;
+    image?: string;
+  };
+  feedback: {
+    correct: string;
+  };
   next: () => void;
-  text?: string;
-  feedback?: string;
 };
 
 export const TapTask = (props: Props) => {
-  const correct = useSound('correct');
+  const { play } = useAudio();
 
   const { speak } = useSpeech();
 
   return (
-    <Button
+    <ImageButton
+      source={(props.button.image ?? props.button.text) as ImageKey}
+      size={192}
       onPress={async () => {
-        await speak(props.text);
+        await speak(props.button.text);
 
-        await correct.play();
+        await play('correct');
 
-        await speak(props.feedback);
+        await speak(props.feedback.correct);
 
         props.next();
       }}
-    >
-      <Icon name='volume-up' color='#ffffff' size={128} />
-    </Button>
+    />
   );
 };
