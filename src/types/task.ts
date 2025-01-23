@@ -6,7 +6,8 @@ export type TaskType =
   | 'drag_and_drop'
   | 'count'
   | 'super_tap'
-  | 'super_select';
+  | 'super_select'
+  | 'correct_incorrect';
 
 export type Task = {
   id: number;

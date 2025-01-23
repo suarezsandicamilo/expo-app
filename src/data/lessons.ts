@@ -179,6 +179,27 @@ export const Lessons: Lesson[] = [
           },
         },
       },
+      {
+        id: 7,
+        type: 'correct_incorrect',
+        instructions: ['Toca la carta de arriba'],
+        data: {
+          instruction: 'Repite conmigo',
+          instruction2: 'ana',
+          instruction3: 'come',
+          instruction4: 'banana.',
+          text: 'Las palabras, ana, y, banana, riman?',
+          feedback: {
+            correct: '¡Excelente! Muy buen trabajo.',
+            incorrect: 'Intenatalo nuevamente.',
+          },
+          words: [
+            { text: 'Ana', image: 'Ana' },
+            { text: 'Banana', image: 'Banana' },
+          ],
+          staticImage: 'Ana_Come_Banana',
+        },
+      },
     ],
   },
   {
@@ -384,7 +405,30 @@ export const Lessons: Lesson[] = [
   },
   {
     id: 8,
-    tasks: [],
+    tasks: [
+      {
+        id: 1,
+        type: 'correct_incorrect',
+        instructions: ['Toca la carta de arriba'],
+        data: {
+          instruction: 'Repite conmigo',
+          instruction2: 'ana',
+          instruction3: 'come',
+          instruction4: 'banana.',
+          text: 'Las palabras, ana, y, banana, riman?',
+          correct_answer: 'Sí',
+          feedback: {
+            correct: '¡Excelente! Muy buen trabajo.',
+            incorrect: 'Lo siento, intentalo de nuevo.',
+          },
+          words: [
+            { text: 'Ana', image: 'Ana' },
+            { text: 'Banana', image: 'Banana' },
+          ],
+          staticImage: 'Ana_Come_Banana',
+        },
+      },
+    ],
   },
   {
     id: 9,
