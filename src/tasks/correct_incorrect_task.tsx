@@ -3,6 +3,7 @@ import { Animated, StyleSheet, View } from 'react-native';
 import { ImageButton, IconButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { ImageKey } from '@/../assets/images';
+import { Colors } from '@/constants';
 
 const styles = StyleSheet.create({
   container_1: {
@@ -48,6 +49,7 @@ type Props = {
   instruction2: string;
   instruction3: string;
   instruction4: string;
+  correct_answer: string;
   text: string;
   staticImage?: ImageKey;
   feedback: {
@@ -108,14 +110,14 @@ const InRhymeSelectTask = (props: Props) => {
 
     const { play } = useAudio();
   
-    const handleSelection = (option: string) => {
+    const handleSelection = async (option: string) => {
       setSelectedOption(option); // Establecer la opción seleccionada
-      speak(option); // Reproducir la selección
+      await speak(option); // Reproducir la selección
     };
   
-    const validateSelection = async () => {
-      const correctAnswer = 'Sí';
-      if (selectedOption === correctAnswer) {
+    const validateSelection = async (option: string) => {
+      const correctAnswer = props.correct_answer;
+      if (option === correctAnswer) {
         await play('correct');
         await speak(props.feedback?.correct);
         props.next();
@@ -142,14 +144,15 @@ const InRhymeSelectTask = (props: Props) => {
             <IconButton
               name="check"
               size={100}
-              onPress={() => {
-                handleSelection('Sí'); // Primera acción
-                validateSelection();   // Segunda acción
+              onPress={async () => {
+                const option = 'Sí';
+                await handleSelection(option);
+                await validateSelection(option);
               }}
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: 'theme-1', // Fondo verde para "Sí"
+                backgroundColor: Colors['theme-1'], // Fondo verde para "Sí"
               }}
             >
             </IconButton>
@@ -167,9 +170,10 @@ const InRhymeSelectTask = (props: Props) => {
             <IconButton
               name="close"
               size={100}
-              onPress={() => {
-                handleSelection('No'); // Primera acción
-                validateSelection();   // Segunda acción
+              onPress={async () => {
+                const option = 'No';
+                await handleSelection(option);
+                await validateSelection(option);
               }}
               style={{
                 alignItems: 'center',
