@@ -11,7 +11,8 @@ import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
 // App
 
 import { ImageButton, Pop } from '@/components';
-import { useEffectAsync, useSpeech } from '@/hooks';
+import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
+import { delay } from '@/shared';
 import { ImageKey } from '../../assets/images';
 
 type Props = {
@@ -34,10 +35,16 @@ export const CountTask = (props: Props) => {
 
   const anim = useAnimatedValue(-500);
 
+  const { play } = useAudio();
+
   const { speak } = useSpeech();
 
   useEffectAsync(async () => {
     if (props.count === count) {
+      await delay(500);
+
+      await play('correct');
+
       await speak(props.feedback.correct);
 
       props.next();

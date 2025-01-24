@@ -15,7 +15,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // App
 
-import { EndScreen, HomeScreen, LessonScreen } from '@/screens';
+import { CreditsScreen, EndScreen, HomeScreen, LessonScreen } from '@/screens';
 import { RootStackParamList } from '@/shared';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -40,6 +40,7 @@ const App = () => {
         <RootStack.Screen name="home" component={HomeScreen} />
         <RootStack.Screen name="lesson" component={LessonScreen} />
         <RootStack.Screen name="end" component={EndScreen} />
+        <RootStack.Screen name="credits" component={CreditsScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

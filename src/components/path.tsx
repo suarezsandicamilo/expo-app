@@ -46,12 +46,7 @@ export const Path = (props: Props) => {
   }, []);
 
   return (
-    <ScrollView
-      ref={ref}
-      style={{
-        width: '100%',
-      }}
-    >
+    <ScrollView ref={ref} style={{ width: '100%' }}>
       <View style={styles.container}>
         {Lessons.map((lesson, index) => {
           return (

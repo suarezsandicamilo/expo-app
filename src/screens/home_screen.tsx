@@ -27,6 +27,7 @@ import { Db } from '@/db';
 import { useEffectAsync } from '@/hooks';
 import { RootStackParamList } from '@/shared';
 import { PathScreen } from './path_screen';
+import { IconButton } from '@/components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'home'>;
 
@@ -93,7 +94,14 @@ export const InHomeScreen = (props: Props) => {
   return (
     <>
       <StatusBar style="auto" backgroundColor={Colors['theme-1']} />
-      <View style={styles.container_2}></View>
+      <View style={styles.container_2}>
+        <IconButton
+          name="menu"
+          onPress={() => {
+            props.navigation.navigate('credits');
+          }}
+        />
+      </View>
       <View style={styles.container_3}>
         <PathScreen {...props} />
       </View>
