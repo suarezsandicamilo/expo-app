@@ -117,12 +117,13 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   header: {
-    fontSize: 16,
+    fontSize: 20,
     marginBottom: 12,
     textDecorationLine: 'underline',
   },
   text: {
     fontFamily: 'PatrickHand',
+    fontSize: 16,
     marginLeft: 24,
     width: '100%',
   },
