@@ -91,11 +91,7 @@ const InLessonScreen = (props: Props) => {
             props.navigation.navigate('home');
           }}
         />
-        <View
-          style={{
-            width: '50%',
-          }}
-        >
+        <View style={{ width: '50%' }}>
           <Progress progress={progress} count={lesson.tasks.length} />
         </View>
         <IconButton
