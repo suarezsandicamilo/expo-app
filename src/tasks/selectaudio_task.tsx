@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
-import { MaterialIcons as Icon } from '@expo/vector-icons';
-import { Button, ImageCard, ConfirmationButton } from '@/components';
-import { useSound, useSpeech } from '@/hooks';
-import { shuffle } from '@/_';
-import { getImage, ImageSource } from '@/../assets/images';
+import { ImageButton, IconButton  } from '@/components';
+import { useAudio, useSpeech } from '@/hooks';
+import { shuffle } from '@/shared';
+import { ImageKey  } from '@/../assets/images';
 
 const styles = StyleSheet.create({
   container_1: {
@@ -46,17 +45,17 @@ type Option = {
 
 type Props = {
   next: () => void;
-  instruction?: string;
-  instruction2?: string;
-  instruction3?: string;
-  instruction4?: string;
-  instruction5?: string;
-  staticImage?: ImageSource;
-  feedback?: {
+  instruction: string;
+  instruction2: string;
+  instruction3: string;
+  instruction4: string;
+  instruction5: string;
+  staticImage: ImageKey ;
+  feedback: {
     correct: string;
     incorrect: string;
   };
-  options?: Option[];
+  options: Option[];
 };
 
 export const SelectAudioTask = (props: Props) => {
@@ -67,7 +66,8 @@ export const SelectAudioTask = (props: Props) => {
     return (
       <View style={styles.container_1}>
         <View style={styles.container_2}>
-          <Button
+          <IconButton
+            name="volume-up"
             size={100}
             onPress={async () => {
               await speak(props.instruction);
@@ -87,9 +87,10 @@ export const SelectAudioTask = (props: Props) => {
             }}
             style={{ marginBottom: 40 }}
           >
-            <Icon name="volume-up" color="#ffffff" size={70} />
-          </Button>
-          <ImageCard image={getImage(props.staticImage)} size={150} />
+          </IconButton>
+          <ImageButton 
+            source={props.staticImage as ImageKey} 
+            size={180} />
         </View>
         <Animated.View style={[styles.container_3, { transform: [{ translateX: anim }] }]}>
           <InSuperSelectAdvTask {...props} isAnimatingOptions={isAnimatingOptions} />
@@ -98,11 +99,9 @@ export const SelectAudioTask = (props: Props) => {
     );
   };
   
-const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) => {
+  const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) => {
     const [options, setOptions] = useState<Option[]>([]);
-    const [selectedOptions, setSelectedOptions] = useState<Set<string>>(new Set());
-    const correct = useSound('correct');
-    const incorrect = useSound('incorrect');
+    const { play } = useAudio();
     const { speak } = useSpeech();
     const animations = useRef<Animated.Value[]>([]).current;
 
@@ -113,99 +112,69 @@ const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) =>
         // Inicializar animaciones
         animations.length = shuffledOptions.length;
         shuffledOptions.forEach((_, i) => {
-        animations[i] = new Animated.Value(0); // Inicia con opacidad 0
+            animations[i] = new Animated.Value(0); // Inicia con opacidad 0
         });
 
-        // Si está habilitado animar las opciones
+        // Animar opciones si está habilitado
         if (props.isAnimatingOptions) {
-        const animateAndSpeak = async () => {
-            for (let i = 0; i < shuffledOptions.length; i++) {
-            Animated.timing(animations[i], {
-                toValue: 1, // Cambia opacidad a 1
-                duration: 300,
-                useNativeDriver: true,
-            }).start();
+            const animateAndSpeak = async () => {
+                for (let i = 0; i < shuffledOptions.length; i++) {
+                    Animated.timing(animations[i], {
+                        toValue: 1, // Cambia opacidad a 1
+                        duration: 300,
+                        useNativeDriver: true,
+                    }).start();
 
-            await speak(shuffledOptions[i].text); // Pronunciar texto
-            await new Promise((resolve) => setTimeout(resolve, 300)); // Retraso entre botones
-            }
-        };
-        animateAndSpeak();
+                    await speak(shuffledOptions[i].text); // Pronunciar texto
+                    await new Promise((resolve) => setTimeout(resolve, 300)); // Retraso entre botones
+                }
+            };
+            animateAndSpeak();
         }
     }, [props.isAnimatingOptions]);
 
-    const toggleOptionSelection = (option: Option) => {
-        setSelectedOptions((prevSelected) => {
-        const newSelected = new Set(prevSelected);
-        if (newSelected.has(option.text)) {
-            newSelected.delete(option.text);
+    const handleOptionPress = async (option: Option) => {
+        await speak(option.text); // Pronunciar texto al tocar la opción
+
+        if (option.correct) {
+            await play('correct'); // Reproducir audio correcto
+            await speak(props.feedback?.correct);
+            props.next(); // Pasar a la siguiente tarea
         } else {
-            newSelected.add(option.text);
-        }
-        return newSelected;
-        });
-    };
-
-    const validateSelection = async () => {
-        const correctSelections = options.filter((option) => option.correct).map((opt) => opt.text);
-        const selectedArray = Array.from(selectedOptions);
-
-        const allCorrectSelected = correctSelections.every((text) => selectedArray.includes(text));
-        const noIncorrectSelected = selectedArray.every((text) => correctSelections.includes(text));
-
-        if (allCorrectSelected && noIncorrectSelected) {
-        await correct.play();
-        await speak(props.feedback?.correct);
-        props.next();
-        } else {
-        await incorrect.play();
-        await speak(props.feedback?.incorrect);
+            await play('incorrect'); // Reproducir audio incorrecto
+            await speak(props.feedback?.incorrect);
         }
     };
 
     return (
         <View style={{ alignItems: 'center', width: '100%' }}>
-        {/* Contenedor horizontal de las opciones */}
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
-            {options.map((option, index) => {
-            const isSelected = selectedOptions.has(option.text);
-
-            return (
-                <Animated.View
-                key={option.text}
-                style={{
-                    opacity: animations[index], // Controla la opacidad
-                    transform: [{ scale: animations[index] }], // Escalado adicional para mejor efecto
-                    margin: 10, // Espaciado entre botones
-                }}
-                >
-                <Button
-                    size={100}
-                    onPress={async () => {
-                    toggleOptionSelection(option);
-                    await speak(option.text);
-                    }}
-                    style={{
-                    borderWidth: 2,
-                    borderColor: isSelected ? 'green' : 'transparent',
-                    backgroundColor: '#f0f0f0',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    }}
-                >
-                    <Icon name="volume-up" color="#000000" size={40} />
-                </Button>
-                </Animated.View>
-            );
-            })}
-        </View>
-
-        {/* Botón de confirmación */}
-        <View style={{ marginTop: 20, paddingHorizontal: 20 }}>
-            <ConfirmationButton onPress={validateSelection} />
-        </View>
+            {/* Contenedor horizontal de las opciones */}
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
+                {options.map((option, index) => (
+                    <Animated.View
+                        key={option.text}
+                        style={{
+                            opacity: animations[index], // Controla la opacidad
+                            transform: [{ scale: animations[index] }], // Escalado adicional para mejor efecto
+                            margin: 10, // Espaciado entre botones
+                        }}
+                    >
+                        <IconButton
+                            name="question-mark"
+                            size={100}
+                            onPress={() => handleOptionPress(option)} // Validar inmediatamente al tocar
+                            style={{
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        >
+                        </IconButton>
+                    </Animated.View>
+                ))}
+            </View>
         </View>
     );
 };
+
   
   

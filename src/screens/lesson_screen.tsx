@@ -2,162 +2,142 @@
 
 // React
 
-import { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 // React Native
 
-import { Animated, StyleSheet, View } from 'react-native';
-import { ScrollView } from 'react-native';
-
-// Expo
-
-import { StatusBar } from 'expo-status-bar';
-
-import { MaterialIcons as Icon } from '@expo/vector-icons';
+import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // React Navigation
 
-import { useNavigation, useRoute } from '@react-navigation/native';
-
-// React Native Gesture Handler
-
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
-// React Native Safe Area Context
-
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Task } from '@/types';
+import { IconButton, Progress } from '@/components';
+import { Colors } from '@/constants';
+import { LockProvider } from '@/contexts';
+import { useEffectAsync, useSpeech } from '@/hooks';
+import { delay, RootStackParamList } from '@/shared';
+import { TaskScreen } from './task_screen';
 
-import { Button, Progress } from '@/components';
+type Props = NativeStackScreenProps<RootStackParamList, 'lesson'>;
 
-import { LockProvider, useSpeech } from '@/hooks';
+export const LessonScreen = (props: Props) => {
+  const insets = useSafeAreaInsets();
 
-import { TaskFactory } from '@/tasks';
+  return (
+    <LockProvider>
+      <View
+        style={[
+          styles.container_1,
+          {
+            paddingTop: insets.top * 1.5,
+          },
+        ]}
+      >
+        <InLessonScreen {...props} />
+      </View>
+    </LockProvider>
+  );
+};
 
-import { delay } from '@/_';
+const InLessonScreen = (props: Props) => {
+  const [progress, setProgress] = useState(0);
+
+  const anim = useAnimatedValue(0);
+
+  const { speak } = useSpeech();
+
+  const { lesson } = props.route.params;
+
+  const task = lesson.tasks[progress];
+
+  useEffectAsync(async () => {
+    await speak(...task.instructions);
+  }, [progress]);
+
+  const next = async () => {
+    if (progress + 1 === lesson.tasks.length) {
+      props.navigation.navigate('end');
+
+      return;
+    }
+
+    Animated.timing(anim, {
+      toValue: -500,
+      duration: 500,
+      useNativeDriver: false,
+    }).start();
+
+    await delay(500);
+
+    setProgress(progress + 1);
+
+    Animated.timing(anim, {
+      toValue: 0,
+      duration: 500,
+      useNativeDriver: false,
+    }).start();
+  };
+
+  return (
+    <>
+      <View style={styles.container_2}>
+        <IconButton
+          name="arrow-back"
+          onPress={() => {
+            props.navigation.navigate('home');
+          }}
+        />
+        <View
+          style={{
+            width: '50%',
+          }}
+        >
+          <Progress progress={progress} count={lesson.tasks.length} />
+        </View>
+        <IconButton
+          name="question-mark"
+          onPress={async () => {
+            await speak(...task.instructions);
+          }}
+        />
+      </View>
+      <Animated.View
+        style={[
+          styles.container_3,
+          {
+            transform: [{ translateX: anim }],
+          },
+        ]}
+      >
+        <TaskScreen task={task} next={next} />
+      </Animated.View>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
-  button: {
-    borderRadius: 48,
-    height: 40,
-    width: 40,
-  },
   container_1: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'center',
     width: '100%',
   },
   container_2: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     width: '100%',
   },
   container_3: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
     flex: 11,
     justifyContent: 'center',
     width: '100%',
   },
 });
-
-export const LessonScreen = () => {
-  return (
-    <LockProvider>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <InLessonScreen />
-      </ScrollView>
-    </LockProvider>
-  );
-};
-
-const InLessonScreen = () => {
-  const insets = useSafeAreaInsets();
-
-  const navigation = useNavigation<any>();
-  const route = useRoute<any>();
-
-  const [progress, setProgress] = useState(0);
-
-  const { speak } = useSpeech();
-
-  const tasks = route.params.lesson.tasks as Task[];
-  const task = tasks[progress];
-
-  const anim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    const fn = async () => {
-      await speak(task.instruction);
-    };
-
-    fn();
-  }, [task]);
-
-  const next = async () => {
-    const p = progress + 1;
-
-    if (p !== tasks.length) {
-      Animated.timing(anim, {
-        toValue: -500,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-
-      await delay(500);
-
-      setProgress(p);
-
-      Animated.timing(anim, {
-        toValue: 0,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      const lessonIndex = route.params.lessonIndex;
-
-      navigation.navigate('Victory', {
-        lessonIndex,
-      });
-    }
-  };
-
-  return (
-    <GestureHandlerRootView>
-      <View
-        style={[
-          styles.container_1,
-          {
-            paddingTop: insets.top,
-          },
-        ]}
-      >
-        <StatusBar style='auto' />
-        <View style={styles.container_2}>
-          <Progress value={progress / tasks.length} />
-          <Button
-            style={styles.button}
-            onPress={() => {
-              speak(task.instruction);
-            }}
-          >
-            <Icon name='question-mark' color='#ffffff' size={20} />
-          </Button>
-        </View>
-        <Animated.View
-          style={[styles.container_3, { transform: [{ translateX: anim }] }]}
-        >
-          {TaskFactory.create(task, next)}
-        </Animated.View>
-      </View>
-    </GestureHandlerRootView>
-  );
-};

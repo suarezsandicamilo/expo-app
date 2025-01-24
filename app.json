@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "expo-app",
-    "slug": "expo-app",
+    "name": "tc-722",
+    "slug": "tc-722",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,11 +19,25 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tc722.tc722"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "scheme": "expo-app"
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/PatrickHand-Regular.ttf"]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d396a72b-a173-40bf-a293-c5246ccaba13"
+      }
+    },
+    "owner": "tc-722"
   }
 }

@@ -1,29 +1,46 @@
 //
 
+// React Native
+
+import { ActivityIndicator } from 'react-native';
+
+// Expo
+
+import { useFonts } from 'expo-font';
+
 // React Navigation
 
 import { NavigationContainer } from '@react-navigation/native';
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // App
 
-import { HomeScreen, LessonScreen, VictoryScreen } from '@/screens';
+import { EndScreen, HomeScreen, LessonScreen } from '@/screens';
+import { RootStackParamList } from '@/shared';
 
-const Stack = createNativeStackNavigator();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
+  const [ready] = useFonts({
+    PatrickHand: require('@/../assets/fonts/PatrickHand-Regular.ttf'),
+  });
+
+  if (!ready) {
+    return <ActivityIndicator />;
+  }
+
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <RootStack.Navigator
         screenOptions={{
+          animation: 'fade',
           headerShown: false,
         }}
       >
-        <Stack.Screen name='Home' component={HomeScreen} />
-        <Stack.Screen name='Lesson' component={LessonScreen} />
-        <Stack.Screen name='Victory' component={VictoryScreen} />
-      </Stack.Navigator>
+        <RootStack.Screen name="home" component={HomeScreen} />
+        <RootStack.Screen name="lesson" component={LessonScreen} />
+        <RootStack.Screen name="end" component={EndScreen} />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 };

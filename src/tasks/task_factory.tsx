@@ -3,42 +3,38 @@
 // App
 
 import { Task } from '@/types';
-
-import { BubblesTask } from './bubbles_task';
-
+import { CountTask } from './count_task';
 import { DragAndDropTask } from './drag_and_drop_task';
-
 import { SelectTask } from './select_task';
-
+import { SuperSelectTask } from './super_select_task';
+import { SuperTapTask } from './super_tap_task';
 import { TapTask } from './tap_task';
-
-import { SuperSelectAdvTask } from './superselectAdv_task';
-
-import { SuperTapTask } from './supertap_task';
-
+import { Correct_IncorrectTask } from './correct_incorrect_task';
 import { SelectAudioTask } from './selectaudio_task';
 
-const create = (task: Task, next: () => void) => {
-  switch (task.type) {
-    case 'bubbles':
-      return <BubblesTask next={next} {...task.data} />;
-    case 'drag_and_drop':
-      return <DragAndDropTask next={next} {...task.data} />;
-      case 'select':
-        return <SelectTask next={next} {...task.data} />;
-    case 'superselectAdv':
-      return <SuperSelectAdvTask next={next} {...task.data} />;
-    case 'tap':
-      return <TapTask next={next} {...task.data} />;
-    case 'superTap':
-      return <SuperTapTask next={next} {...task.data} />;
-    case 'selectaudio':
-      return <SelectAudioTask next={next} {...task.data} />;
-    default:
-      return <></>;
-  }
+const map = {
+  tap: TapTask,
+  select: SelectTask,
+  drag_and_drop: DragAndDropTask,
+  count: CountTask,
+  super_tap: SuperTapTask,
+  super_select: SuperSelectTask,
+  correct_incorrect: Correct_IncorrectTask,
+  selectaudio: SelectAudioTask
+} as const;
+
+type Props = {
+  task: Task;
+  next: () => void;
 };
 
-export const TaskFactory = {
-  create,
+export const createTask = (props: Props) => {
+  const Component = map[props.task.type];
+
+  if (!Component) {
+    throw new Error('Unknown task type');
+  }
+
+  // @ts-expect-error Ignore
+  return <Component next={props.next} {...props.task.data} />;
 };
