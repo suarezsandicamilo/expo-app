@@ -191,7 +191,7 @@ export const Lessons: Lesson[] = [
           text: 'Las palabras, ana, y, banana, riman?',
           feedback: {
             correct: '¡Excelente! Muy buen trabajo.',
-            incorrect: 'Intenatalo nuevamente.',
+            incorrect: 'Casi, intenta otra vez.',
           },
           words: [
             { text: 'Ana', image: 'Ana' },
@@ -419,7 +419,7 @@ export const Lessons: Lesson[] = [
           correct_answer: 'Sí',
           feedback: {
             correct: '¡Excelente! Muy buen trabajo.',
-            incorrect: 'Lo siento, intentalo de nuevo.',
+            incorrect: 'Casi, intenta otra vez.',
           },
           words: [
             { text: 'Ana', image: 'Ana' },
