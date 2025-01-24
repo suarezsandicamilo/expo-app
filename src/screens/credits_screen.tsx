@@ -6,7 +6,7 @@ import React from 'react';
 
 // React Native
 
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // Expo
@@ -17,12 +17,12 @@ import { StatusBar } from 'expo-status-bar';
 
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-// Ap
+// App
 
+import { IconButton, Image } from '@/components';
 import { Colors } from '@/constants';
 import { LockProvider } from '@/contexts';
 import { RootStackParamList } from '@/shared';
-import { IconButton } from '@/components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'credits'>;
 
@@ -57,7 +57,32 @@ export const InCreditsScreen = (props: Props) => {
           }}
         />
       </View>
-      <View style={styles.container_3}></View>
+      <View style={styles.container_3}>
+        <ScrollView style={{ width: '100%' }}>
+          <View style={styles.container_4}>
+            <View style={{ width: '100%' }}>
+              <Text style={[styles.text, styles.header]}>Desarrolladores</Text>
+              <Text style={styles.text}>Camilo Suárez Sandí</Text>
+              <Text style={styles.text}>Cristopher Hernández Calderón</Text>
+              <Text style={styles.text}>Ángel Chaves Chinchilla</Text>
+              <Text style={styles.text}>David Cerdas Alvarado</Text>
+            </View>
+            <View style={{ width: '100%' }}>
+              <Text style={[styles.text, styles.header]}>
+                Asesoría Académica
+              </Text>
+              <Text style={styles.text}>Dra. María Marta Camacho Álvarez</Text>
+              <Text style={styles.text}>
+                Dra. María de los Ángeles Carpio Brenes
+              </Text>
+              <Text style={styles.text}>Lcda. Carmen Hernández Rojas</Text>
+            </View>
+            <Image source="logo_1" size={144} />
+            <Image source="logo_2" size={144} />
+            <Image source="logo_3" size={144} />
+          </View>
+        </ScrollView>
+      </View>
     </>
   );
 };
@@ -82,6 +107,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 11,
     justifyContent: 'center',
+    width: '100%',
+  },
+  container_4: {
+    alignItems: 'center',
+    gap: 24,
+    justifyContent: 'center',
+    marginVertical: 24,
+    width: '100%',
+  },
+  header: {
+    fontSize: 16,
+    marginBottom: 12,
+    textDecorationLine: 'underline',
+  },
+  text: {
+    fontFamily: 'PatrickHand',
+    marginLeft: 24,
     width: '100%',
   },
 });
