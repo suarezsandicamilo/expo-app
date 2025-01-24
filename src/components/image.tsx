@@ -35,8 +35,7 @@ export const Image = (props: Props) => {
   }
 
   return (
-    <I
-      source={Images[props.source]}
+    <View
       style={[
         styles.container,
         {
@@ -44,17 +43,32 @@ export const Image = (props: Props) => {
           width: size,
         },
       ]}
-    />
+    >
+      <I
+        source={Images[props.source]}
+        style={[
+          styles.image,
+          {
+            height: size - 24,
+            width: size - 24,
+          },
+        ]}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#e0e0e0',
+    borderColor: '#e0e0e0',
     borderRadius: 8,
-    gap: 24,
+    borderWidth: 1,
     justifyContent: 'center',
+    padding: 12,
+  },
+  image: {
+    resizeMode: 'center',
   },
   text: {
     fontFamily: 'PatrickHand',
