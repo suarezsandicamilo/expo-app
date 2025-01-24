@@ -1,5 +1,6 @@
 //
 
+export * from './credits_screen';
 export * from './end_screen';
 export * from './home_screen';
 export * from './lesson_screen';

@@ -8,6 +8,7 @@ export type RootStackParamList = {
   home: undefined;
   lesson: { lesson: Lesson };
   end: undefined;
+  credits: undefined;
 };
 
 export const delay = (ms: number) => {
