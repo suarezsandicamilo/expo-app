@@ -14,8 +14,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'oso',
+            image: 'oso',
           },
           feedback: {
             correct: '',
@@ -28,8 +28,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ave',
+            image: 'ave',
           },
           feedback: {
             correct: '',
@@ -43,7 +43,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'oso',
           },
           options: [
             {
@@ -80,7 +80,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ave',
           },
           options: [
             {
@@ -116,8 +116,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'imán',
+            image: 'imán',
           },
           feedback: {
             correct: '',
@@ -130,8 +130,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'abeja',
+            image: 'abeja',
           },
           feedback: {
             correct: '',
@@ -145,7 +145,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'imán',
           },
           options: [
             {
@@ -182,8 +182,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'abeja',
+            image: 'abeja',
           },
           count: 1,
           feedback: {
@@ -202,8 +202,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'erizo',
+            image: 'erizo',
           },
           feedback: {
             correct: '',
@@ -216,8 +216,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'empanada',
+            image: 'empanada',
           },
           feedback: {
             correct: '',
@@ -231,7 +231,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'erizo',
           },
           options: [
             {
@@ -268,7 +268,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'empanada',
           },
           options: [
             {
@@ -304,8 +304,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'anillo',
+            image: 'anillo',
           },
           feedback: {
             correct: '',
@@ -318,8 +318,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ardilla',
+            image: 'ardilla',
           },
           feedback: {
             correct: '',
@@ -333,7 +333,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'anillo',
           },
           options: [
             {
@@ -370,8 +370,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'ardilla',
+            image: 'ardilla',
           },
           count: 1,
           feedback: {
@@ -390,8 +390,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'inodoro',
+            image: 'inodoro',
           },
           feedback: {
             correct: '',
@@ -404,8 +404,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'esquimal',
+            image: 'esquimal',
           },
           feedback: {
             correct: '',
@@ -419,7 +419,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'inodoro',
           },
           options: [
             {
@@ -456,7 +456,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'esquimal',
           },
           options: [
             {
@@ -492,8 +492,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'embudo',
+            image: 'embudo',
           },
           feedback: {
             correct: '',
@@ -506,8 +506,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'isla',
+            image: 'isla',
           },
           feedback: {
             correct: '',
@@ -521,7 +521,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'embudo',
           },
           options: [
             {
@@ -558,8 +558,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'isla',
+            image: 'isla',
           },
           count: 1,
           feedback: {
@@ -578,8 +578,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'iglú',
+            image: 'iglú',
           },
           feedback: {
             correct: '',
@@ -592,8 +592,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'escalera',
+            image: 'escalera',
           },
           feedback: {
             correct: '',
@@ -607,7 +607,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'iglú',
           },
           options: [
             {
@@ -644,7 +644,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'escalera',
           },
           options: [
             {
@@ -680,8 +680,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'árbol',
+            image: 'árbol',
           },
           feedback: {
             correct: '',
@@ -694,8 +694,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'insecto',
+            image: 'insecto',
           },
           feedback: {
             correct: '',
@@ -709,7 +709,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'árbol',
           },
           options: [
             {
@@ -746,8 +746,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'insecto',
+            image: 'insecto',
           },
           count: 1,
           feedback: {
@@ -766,8 +766,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ala',
+            image: 'ala',
           },
           feedback: {
             correct: '',
@@ -780,8 +780,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ave',
+            image: 'ave',
           },
           feedback: {
             correct: '',
@@ -795,7 +795,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ala',
           },
           options: [
             {
@@ -832,7 +832,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ave',
           },
           options: [
             {
@@ -868,8 +868,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'arco',
+            image: 'arco',
           },
           feedback: {
             correct: '',
@@ -882,8 +882,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'imán',
+            image: 'imán',
           },
           feedback: {
             correct: '',
@@ -897,7 +897,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'arco',
           },
           options: [
             {
@@ -934,8 +934,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'imán',
+            image: 'imán',
           },
           count: 1,
           feedback: {
@@ -954,8 +954,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espada',
+            image: 'espada',
           },
           feedback: {
             correct: '',
@@ -968,8 +968,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'estrella',
+            image: 'estrella',
           },
           feedback: {
             correct: '',
@@ -983,7 +983,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espada',
           },
           options: [
             {
@@ -1020,7 +1020,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'estrella',
           },
           options: [
             {
@@ -1056,8 +1056,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espejo',
+            image: 'espejo',
           },
           feedback: {
             correct: '',
@@ -1070,8 +1070,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'anillo',
+            image: 'anillo',
           },
           feedback: {
             correct: '',
@@ -1085,7 +1085,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espejo',
           },
           options: [
             {
@@ -1122,8 +1122,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'anillo',
+            image: 'anillo',
           },
           count: 1,
           feedback: {
@@ -1142,8 +1142,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'iguana',
+            image: 'iguana',
           },
           feedback: {
             correct: '',
@@ -1156,8 +1156,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'olla',
+            image: 'olla',
           },
           feedback: {
             correct: '',
@@ -1171,7 +1171,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'iguana',
           },
           options: [
             {
@@ -1208,7 +1208,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'olla',
           },
           options: [
             {
@@ -1244,8 +1244,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'esposas',
+            image: 'esposas',
           },
           feedback: {
             correct: '',
@@ -1258,8 +1258,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'elefante',
+            image: 'elefante',
           },
           feedback: {
             correct: '',
@@ -1273,7 +1273,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'esposas',
           },
           options: [
             {
@@ -1310,8 +1310,196 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'elefante',
+            image: 'elefante',
+          },
+          count: 1,
+          feedback: {
+            correct: '',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 8,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: [],
+        data: {
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          feedback: {
+            correct: '',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: [],
+        data: {
+          button: {
+            text: 'oruga',
+            image: 'oruga',
+          },
+          feedback: {
+            correct: '',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: [],
+        data: {
+          instructions: [],
+          button: {
+            text: 'árbol',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '',
+            incorrect: '',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: [],
+        data: {
+          instructions: [],
+          button: {
+            text: 'oruga',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '',
+            incorrect: '',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: [],
+        data: {
+          button: {
+            text: 'ovillo',
+            image: 'ovillo',
+          },
+          feedback: {
+            correct: '',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: [],
+        data: {
+          button: {
+            text: 'escalera',
+            image: 'escalera',
+          },
+          feedback: {
+            correct: '',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: [],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ovillo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '',
+            incorrect: '',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: [],
+        data: {
+          instructions: [],
+          button: {
+            text: 'escalera',
+            image: 'escalera',
           },
           count: 1,
           feedback: {
@@ -1330,8 +1518,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'imán',
+            image: 'imán',
           },
           feedback: {
             correct: '',
@@ -1344,8 +1532,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ala',
+            image: 'ala',
           },
           feedback: {
             correct: '',
@@ -1359,7 +1547,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'imán',
           },
           options: [
             {
@@ -1396,7 +1584,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ala',
           },
           options: [
             {
@@ -1432,8 +1620,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'arco',
+            image: 'arco',
           },
           feedback: {
             correct: '',
@@ -1446,8 +1634,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'avión',
+            image: 'avión',
           },
           feedback: {
             correct: '',
@@ -1461,7 +1649,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'arco',
           },
           options: [
             {
@@ -1498,8 +1686,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'avión',
+            image: 'avión',
           },
           count: 1,
           feedback: {
@@ -1518,8 +1706,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espada',
+            image: 'espada',
           },
           feedback: {
             correct: '',
@@ -1532,8 +1720,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espejo',
+            image: 'espejo',
           },
           feedback: {
             correct: '',
@@ -1547,7 +1735,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espada',
           },
           options: [
             {
@@ -1584,7 +1772,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espejo',
           },
           options: [
             {
@@ -1620,8 +1808,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ardilla',
+            image: 'ardilla',
           },
           feedback: {
             correct: '',
@@ -1634,8 +1822,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'enano',
+            image: 'enano',
           },
           feedback: {
             correct: '',
@@ -1649,7 +1837,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ardilla',
           },
           options: [
             {
@@ -1686,8 +1874,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'enano',
+            image: 'enano',
           },
           count: 1,
           feedback: {
@@ -1706,8 +1894,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'enchufe',
+            image: 'enchufe',
           },
           feedback: {
             correct: '',
@@ -1720,8 +1908,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'elefante',
+            image: 'elefante',
           },
           feedback: {
             correct: '',
@@ -1735,7 +1923,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'enchufe',
           },
           options: [
             {
@@ -1772,7 +1960,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'elefante',
           },
           options: [
             {
@@ -1808,8 +1996,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'olla',
+            image: 'olla',
           },
           feedback: {
             correct: '',
@@ -1822,8 +2010,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'inodoro',
+            image: 'inodoro',
           },
           feedback: {
             correct: '',
@@ -1837,7 +2025,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'olla',
           },
           options: [
             {
@@ -1874,8 +2062,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'inodoro',
+            image: 'inodoro',
           },
           count: 1,
           feedback: {
@@ -1894,8 +2082,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'escalera',
+            image: 'escalera',
           },
           feedback: {
             correct: '',
@@ -1908,8 +2096,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'insecto',
+            image: 'insecto',
           },
           feedback: {
             correct: '',
@@ -1923,7 +2111,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'escalera',
           },
           options: [
             {
@@ -1960,7 +2148,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'insecto',
           },
           options: [
             {
@@ -1996,8 +2184,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'árbol',
+            image: 'árbol',
           },
           feedback: {
             correct: '',
@@ -2010,8 +2198,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'oreja',
+            image: 'oreja',
           },
           feedback: {
             correct: '',
@@ -2025,7 +2213,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'árbol',
           },
           options: [
             {
@@ -2062,8 +2250,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'oreja',
+            image: 'oreja',
           },
           count: 1,
           feedback: {
@@ -2082,8 +2270,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ala',
+            image: 'ala',
           },
           feedback: {
             correct: '',
@@ -2096,8 +2284,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'abeja',
+            image: 'abeja',
           },
           feedback: {
             correct: '',
@@ -2111,7 +2299,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ala',
           },
           options: [
             {
@@ -2148,7 +2336,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'abeja',
           },
           options: [
             {
@@ -2184,8 +2372,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'aro',
+            image: 'aro',
           },
           feedback: {
             correct: '',
@@ -2198,8 +2386,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'arco',
+            image: 'arco',
           },
           feedback: {
             correct: '',
@@ -2213,7 +2401,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'aro',
           },
           options: [
             {
@@ -2250,8 +2438,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'arco',
+            image: 'arco',
           },
           count: 1,
           feedback: {
@@ -2270,8 +2458,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'estrella',
+            image: 'estrella',
           },
           feedback: {
             correct: '',
@@ -2284,8 +2472,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espejo',
+            image: 'espejo',
           },
           feedback: {
             correct: '',
@@ -2299,7 +2487,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'estrella',
           },
           options: [
             {
@@ -2336,7 +2524,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espejo',
           },
           options: [
             {
@@ -2372,8 +2560,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'espada',
+            image: 'espada',
           },
           feedback: {
             correct: '',
@@ -2386,8 +2574,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ardilla',
+            image: 'ardilla',
           },
           feedback: {
             correct: '',
@@ -2401,7 +2589,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'espada',
           },
           options: [
             {
@@ -2438,8 +2626,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'ardilla',
+            image: 'ardilla',
           },
           count: 1,
           feedback: {
@@ -2458,8 +2646,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'embudo',
+            image: 'embudo',
           },
           feedback: {
             correct: '',
@@ -2472,8 +2660,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'olla',
+            image: 'olla',
           },
           feedback: {
             correct: '',
@@ -2487,7 +2675,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'embudo',
           },
           options: [
             {
@@ -2524,7 +2712,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'olla',
           },
           options: [
             {
@@ -2560,8 +2748,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'iguana',
+            image: 'iguana',
           },
           feedback: {
             correct: '',
@@ -2574,8 +2762,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'iglesia',
+            image: 'iglesia',
           },
           feedback: {
             correct: '',
@@ -2589,7 +2777,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'iguana',
           },
           options: [
             {
@@ -2626,8 +2814,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'iglesia',
+            image: 'iglesia',
           },
           count: 1,
           feedback: {
@@ -2646,8 +2834,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'edificio',
+            image: 'edificio',
           },
           feedback: {
             correct: '',
@@ -2660,8 +2848,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'ovillo',
+            image: 'ovillo',
           },
           feedback: {
             correct: '',
@@ -2675,7 +2863,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'edificio',
           },
           options: [
             {
@@ -2712,7 +2900,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'ovillo',
           },
           options: [
             {
@@ -2748,8 +2936,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'oveja',
+            image: 'oveja',
           },
           feedback: {
             correct: '',
@@ -2762,8 +2950,8 @@ export const Lessons: Lesson[] = [
         instructions: [],
         data: {
           button: {
-            text: '',
-            image: '',
+            text: 'árbol',
+            image: 'árbol',
           },
           feedback: {
             correct: '',
@@ -2777,7 +2965,7 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
+            text: 'oveja',
           },
           options: [
             {
@@ -2814,8 +3002,8 @@ export const Lessons: Lesson[] = [
         data: {
           instructions: [],
           button: {
-            text: '',
-            image: '',
+            text: 'árbol',
+            image: 'árbol',
           },
           count: 1,
           feedback: {
