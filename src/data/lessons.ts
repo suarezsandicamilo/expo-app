@@ -18,7 +18,7 @@ export const Lessons: Lesson[] = [
             image: 'oso',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -32,7 +32,7 @@ export const Lessons: Lesson[] = [
             image: 'ave',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -68,8 +68,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -105,8 +105,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -120,7 +120,7 @@ export const Lessons: Lesson[] = [
             image: 'imán',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -134,7 +134,7 @@ export const Lessons: Lesson[] = [
             image: 'abeja',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -170,8 +170,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -187,7 +187,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -206,7 +206,7 @@ export const Lessons: Lesson[] = [
             image: 'erizo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -220,7 +220,7 @@ export const Lessons: Lesson[] = [
             image: 'empanada',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -256,8 +256,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -293,8 +293,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -308,7 +308,7 @@ export const Lessons: Lesson[] = [
             image: 'anillo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -322,7 +322,7 @@ export const Lessons: Lesson[] = [
             image: 'ardilla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -358,8 +358,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -375,7 +375,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -394,7 +394,7 @@ export const Lessons: Lesson[] = [
             image: 'inodoro',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -408,7 +408,7 @@ export const Lessons: Lesson[] = [
             image: 'esquimal',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -444,8 +444,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -481,8 +481,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -496,7 +496,7 @@ export const Lessons: Lesson[] = [
             image: 'embudo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -510,7 +510,7 @@ export const Lessons: Lesson[] = [
             image: 'isla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -546,8 +546,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -563,7 +563,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -582,7 +582,7 @@ export const Lessons: Lesson[] = [
             image: 'iglú',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -596,7 +596,7 @@ export const Lessons: Lesson[] = [
             image: 'escalera',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -632,8 +632,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -669,8 +669,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -684,7 +684,7 @@ export const Lessons: Lesson[] = [
             image: 'árbol',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -698,7 +698,7 @@ export const Lessons: Lesson[] = [
             image: 'insecto',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -734,8 +734,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -751,7 +751,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -770,7 +770,7 @@ export const Lessons: Lesson[] = [
             image: 'ala',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -784,7 +784,7 @@ export const Lessons: Lesson[] = [
             image: 'ave',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -820,8 +820,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -857,8 +857,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -872,7 +872,7 @@ export const Lessons: Lesson[] = [
             image: 'arco',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -886,7 +886,7 @@ export const Lessons: Lesson[] = [
             image: 'imán',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -922,8 +922,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -939,7 +939,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -958,7 +958,7 @@ export const Lessons: Lesson[] = [
             image: 'espada',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -972,7 +972,7 @@ export const Lessons: Lesson[] = [
             image: 'estrella',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1008,8 +1008,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1045,8 +1045,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1060,7 +1060,7 @@ export const Lessons: Lesson[] = [
             image: 'espejo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1074,7 +1074,7 @@ export const Lessons: Lesson[] = [
             image: 'anillo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1110,8 +1110,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1127,7 +1127,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1146,7 +1146,7 @@ export const Lessons: Lesson[] = [
             image: 'iguana',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1160,7 +1160,7 @@ export const Lessons: Lesson[] = [
             image: 'olla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1196,8 +1196,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1233,8 +1233,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1248,7 +1248,7 @@ export const Lessons: Lesson[] = [
             image: 'esposas',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1262,7 +1262,7 @@ export const Lessons: Lesson[] = [
             image: 'elefante',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1298,8 +1298,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1315,7 +1315,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1334,7 +1334,7 @@ export const Lessons: Lesson[] = [
             image: 'árbol',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1348,7 +1348,7 @@ export const Lessons: Lesson[] = [
             image: 'oruga',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1384,8 +1384,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1421,8 +1421,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1436,7 +1436,7 @@ export const Lessons: Lesson[] = [
             image: 'ovillo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1450,7 +1450,7 @@ export const Lessons: Lesson[] = [
             image: 'escalera',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1486,8 +1486,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1503,7 +1503,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1522,7 +1522,7 @@ export const Lessons: Lesson[] = [
             image: 'imán',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1536,7 +1536,7 @@ export const Lessons: Lesson[] = [
             image: 'ala',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1572,8 +1572,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1609,8 +1609,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1624,7 +1624,7 @@ export const Lessons: Lesson[] = [
             image: 'arco',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1638,7 +1638,7 @@ export const Lessons: Lesson[] = [
             image: 'avión',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1674,8 +1674,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1691,7 +1691,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1710,7 +1710,7 @@ export const Lessons: Lesson[] = [
             image: 'espada',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1724,7 +1724,7 @@ export const Lessons: Lesson[] = [
             image: 'espejo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1760,8 +1760,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1797,8 +1797,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1812,7 +1812,7 @@ export const Lessons: Lesson[] = [
             image: 'ardilla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1826,7 +1826,7 @@ export const Lessons: Lesson[] = [
             image: 'enano',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1862,8 +1862,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1879,7 +1879,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1898,7 +1898,7 @@ export const Lessons: Lesson[] = [
             image: 'enchufe',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1912,7 +1912,7 @@ export const Lessons: Lesson[] = [
             image: 'elefante',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -1948,8 +1948,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -1985,8 +1985,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2000,7 +2000,7 @@ export const Lessons: Lesson[] = [
             image: 'olla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2014,7 +2014,7 @@ export const Lessons: Lesson[] = [
             image: 'inodoro',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2050,8 +2050,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2067,7 +2067,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2086,7 +2086,7 @@ export const Lessons: Lesson[] = [
             image: 'escalera',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2100,7 +2100,7 @@ export const Lessons: Lesson[] = [
             image: 'insecto',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2136,8 +2136,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2173,8 +2173,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2188,7 +2188,7 @@ export const Lessons: Lesson[] = [
             image: 'árbol',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2202,7 +2202,7 @@ export const Lessons: Lesson[] = [
             image: 'oreja',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2238,8 +2238,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2255,7 +2255,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2274,7 +2274,7 @@ export const Lessons: Lesson[] = [
             image: 'ala',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2288,7 +2288,7 @@ export const Lessons: Lesson[] = [
             image: 'abeja',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2324,8 +2324,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2361,8 +2361,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2376,7 +2376,7 @@ export const Lessons: Lesson[] = [
             image: 'aro',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2390,7 +2390,7 @@ export const Lessons: Lesson[] = [
             image: 'arco',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2426,8 +2426,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2443,7 +2443,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2462,7 +2462,7 @@ export const Lessons: Lesson[] = [
             image: 'estrella',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2476,7 +2476,7 @@ export const Lessons: Lesson[] = [
             image: 'espejo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2512,8 +2512,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2549,8 +2549,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2564,7 +2564,7 @@ export const Lessons: Lesson[] = [
             image: 'espada',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2578,7 +2578,7 @@ export const Lessons: Lesson[] = [
             image: 'ardilla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2614,8 +2614,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2631,7 +2631,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2650,7 +2650,7 @@ export const Lessons: Lesson[] = [
             image: 'embudo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2664,7 +2664,7 @@ export const Lessons: Lesson[] = [
             image: 'olla',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2700,8 +2700,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2737,8 +2737,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2752,7 +2752,7 @@ export const Lessons: Lesson[] = [
             image: 'iguana',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2766,7 +2766,7 @@ export const Lessons: Lesson[] = [
             image: 'iglesia',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2802,8 +2802,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2819,7 +2819,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2838,7 +2838,7 @@ export const Lessons: Lesson[] = [
             image: 'edificio',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2852,7 +2852,7 @@ export const Lessons: Lesson[] = [
             image: 'ovillo',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2888,8 +2888,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2925,8 +2925,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -2940,7 +2940,7 @@ export const Lessons: Lesson[] = [
             image: 'oveja',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2954,7 +2954,7 @@ export const Lessons: Lesson[] = [
             image: 'árbol',
           },
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -2990,8 +2990,8 @@ export const Lessons: Lesson[] = [
             },
           ],
           feedback: {
-            correct: '',
-            incorrect: '',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
@@ -3007,7 +3007,7 @@ export const Lessons: Lesson[] = [
           },
           count: 1,
           feedback: {
-            correct: '',
+            correct: '¡Buen trabajo!',
           },
         },
       },
