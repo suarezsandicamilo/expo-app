@@ -11,7 +11,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'oso',
@@ -25,7 +25,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ave',
@@ -39,7 +39,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -76,7 +76,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -113,7 +113,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'imán',
@@ -127,7 +127,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'abeja',
@@ -141,7 +141,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -178,7 +178,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -199,7 +199,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'erizo',
@@ -213,7 +213,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'empanada',
@@ -227,7 +227,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -264,7 +264,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -301,7 +301,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'anillo',
@@ -315,7 +315,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ardilla',
@@ -329,7 +329,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -366,7 +366,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -387,7 +387,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'inodoro',
@@ -401,7 +401,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'esquimal',
@@ -415,7 +415,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -452,7 +452,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -489,7 +489,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'embudo',
@@ -503,7 +503,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'isla',
@@ -517,7 +517,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -554,7 +554,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -575,7 +575,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'iglú',
@@ -589,7 +589,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'escalera',
@@ -603,7 +603,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -640,7 +640,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -677,7 +677,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'árbol',
@@ -691,7 +691,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'insecto',
@@ -705,7 +705,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -742,7 +742,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -763,7 +763,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ala',
@@ -777,7 +777,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ave',
@@ -791,7 +791,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -828,7 +828,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -865,7 +865,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'arco',
@@ -879,7 +879,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'imán',
@@ -893,7 +893,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -930,7 +930,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -951,7 +951,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espada',
@@ -965,7 +965,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'estrella',
@@ -979,7 +979,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1016,7 +1016,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1053,7 +1053,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espejo',
@@ -1067,7 +1067,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'anillo',
@@ -1081,7 +1081,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1118,7 +1118,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1139,7 +1139,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'iguana',
@@ -1153,7 +1153,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'olla',
@@ -1167,7 +1167,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1204,7 +1204,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1241,7 +1241,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'esposas',
@@ -1255,7 +1255,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'elefante',
@@ -1269,7 +1269,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1306,7 +1306,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1327,7 +1327,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'árbol',
@@ -1341,7 +1341,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'oruga',
@@ -1355,7 +1355,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1392,7 +1392,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1429,7 +1429,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ovillo',
@@ -1443,7 +1443,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'escalera',
@@ -1457,7 +1457,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1494,7 +1494,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1515,7 +1515,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'imán',
@@ -1529,7 +1529,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ala',
@@ -1543,7 +1543,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1580,7 +1580,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1617,7 +1617,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'arco',
@@ -1631,7 +1631,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'avión',
@@ -1645,7 +1645,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1682,7 +1682,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1703,7 +1703,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espada',
@@ -1717,7 +1717,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espejo',
@@ -1731,7 +1731,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1768,7 +1768,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1805,7 +1805,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ardilla',
@@ -1819,7 +1819,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'enano',
@@ -1833,7 +1833,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1870,7 +1870,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1891,7 +1891,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'enchufe',
@@ -1905,7 +1905,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'elefante',
@@ -1919,7 +1919,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1956,7 +1956,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -1993,7 +1993,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'olla',
@@ -2007,7 +2007,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'inodoro',
@@ -2021,7 +2021,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2058,7 +2058,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2079,7 +2079,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'escalera',
@@ -2093,7 +2093,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'insecto',
@@ -2107,7 +2107,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2144,7 +2144,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2181,7 +2181,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'árbol',
@@ -2195,7 +2195,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'oreja',
@@ -2209,7 +2209,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2246,7 +2246,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2267,7 +2267,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ala',
@@ -2281,7 +2281,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'abeja',
@@ -2295,7 +2295,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2332,7 +2332,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2369,7 +2369,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'aro',
@@ -2383,7 +2383,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'arco',
@@ -2397,7 +2397,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2434,7 +2434,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2455,7 +2455,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'estrella',
@@ -2469,7 +2469,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espejo',
@@ -2483,7 +2483,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2520,7 +2520,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2557,7 +2557,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'espada',
@@ -2571,7 +2571,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ardilla',
@@ -2585,7 +2585,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2622,7 +2622,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2643,7 +2643,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'embudo',
@@ -2657,7 +2657,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'olla',
@@ -2671,7 +2671,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2708,7 +2708,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2745,7 +2745,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'iguana',
@@ -2759,7 +2759,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'iglesia',
@@ -2773,7 +2773,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2810,7 +2810,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2831,7 +2831,7 @@ export const Lessons: Lesson[] = [
       {
         id: 1,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'edificio',
@@ -2845,7 +2845,7 @@ export const Lessons: Lesson[] = [
       {
         id: 2,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'ovillo',
@@ -2859,7 +2859,7 @@ export const Lessons: Lesson[] = [
       {
         id: 3,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2896,7 +2896,7 @@ export const Lessons: Lesson[] = [
       {
         id: 4,
         type: 'drag_and_drop',
-        instructions: [],
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2933,7 +2933,7 @@ export const Lessons: Lesson[] = [
       {
         id: 5,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'oveja',
@@ -2947,7 +2947,7 @@ export const Lessons: Lesson[] = [
       {
         id: 6,
         type: 'tap',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
             text: 'árbol',
@@ -2961,7 +2961,7 @@ export const Lessons: Lesson[] = [
       {
         id: 7,
         type: 'select',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
@@ -2998,7 +2998,7 @@ export const Lessons: Lesson[] = [
       {
         id: 8,
         type: 'count',
-        instructions: [],
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: [],
           button: {
