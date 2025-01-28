@@ -7,7 +7,8 @@ export type TaskType =
   | 'count'
   | 'super_tap'
   | 'super_select'
-  | 'correct_incorrect';
+  | 'correct_incorrect'
+  | 'selectaudio';
 
 export type Task = {
   id: number;

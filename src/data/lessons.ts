@@ -200,6 +200,37 @@ export const Lessons: Lesson[] = [
           staticImage: 'Ana_Come_Banana',
         },
       },
+      {
+        id: 8,
+        type: 'selectaudio',
+        instructions: ["Presiona el boton para escuchar la tarea"],
+        data: {
+          instruction: "Si a la palabra",
+          instruction2: "caballo",
+          instruction3: "se le quita la silaba",
+          instruction4: "ba",
+          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
+          staticImage: "Caballo",
+          feedback: {
+            correct: "¡Buen trabajo! El resultado es callo",
+            incorrect: "Casi, intenta otra vez."
+          },
+          options: [
+            {
+              text: "Ballo",
+              correct: false
+            },
+            {
+              text: "Callo",
+              correct: true
+            },
+            {
+              text: "Calle",
+              correct: false
+            }
+          ]
+        }
+      }
     ],
   },
   {
@@ -432,7 +463,39 @@ export const Lessons: Lesson[] = [
   },
   {
     id: 9,
-    tasks: [],
+    tasks: [
+      {
+        id: 1,
+        type: 'selectaudio',
+        instructions: ["Presiona el boton para escuchar la tarea"],
+        data: {
+          instruction: "Si a la palabra",
+          instruction2: "caballo",
+          instruction3: "se le quita la silaba",
+          instruction4: "ba",
+          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
+          staticImage: "Caballo",
+          feedback: {
+            correct: "¡Buen trabajo! El resultado es callo",
+            incorrect: "Casi, intenta otra vez."
+          },
+          options: [
+            {
+              text: "Ballo",
+              correct: false
+            },
+            {
+              text: "Callo",
+              correct: true
+            },
+            {
+              text: "Calle",
+              correct: false
+            }
+          ]
+        }
+      }
+    ],
   },
   {
     id: 10,

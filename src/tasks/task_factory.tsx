@@ -10,6 +10,7 @@ import { SuperSelectTask } from './super_select_task';
 import { SuperTapTask } from './super_tap_task';
 import { TapTask } from './tap_task';
 import { Correct_IncorrectTask } from './correct_incorrect_task';
+import { SelectAudioTask } from './selectaudio_task';
 
 const map = {
   tap: TapTask,
@@ -18,7 +19,8 @@ const map = {
   count: CountTask,
   super_tap: SuperTapTask,
   super_select: SuperSelectTask,
-  correct_incorrect: Correct_IncorrectTask
+  correct_incorrect: Correct_IncorrectTask,
+  selectaudio: SelectAudioTask
 } as const;
 
 type Props = {
