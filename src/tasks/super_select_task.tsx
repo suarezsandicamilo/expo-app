@@ -1,162 +1,193 @@
-//
-
-// React
-
 import { useEffect, useRef, useState } from 'react';
-
-// React Native
-
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
-
-// App
-
-import { IconButton, ImageButton } from '@/components';
+import { Animated, StyleSheet, View } from 'react-native';
+import { Button, IconButton, ImageButton} from '@/components';
 import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '../../assets/images';
 
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+    flex: 1,
+    justifyContent: 'center',
+    width: '100%',
+  },
+  largeCardContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 10,
+  },
+  largeCard: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 5,
+    borderColor: 'transparent',
+  },
+  smallCardsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  instruction: {
+    textAlign: 'center',
+    fontSize: 18,
+    marginVertical: 10,
+  },
+  buttonContainer: {
+    marginTop: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    marginBottom: 20,
+  },
+});
+
 type Option = {
   text: string;
-  image: string;
+  image: ImageKey;
   correct: boolean;
 };
 
 type Props = {
-  instructions: string[];
-  button: {
-    text: string[];
-  };
-  count: number;
-  options: Option[];
+  next: () => void;
+  instruction: string;
+  instruction2: string;
+  instruction3: string;
+  staticImage: ImageKey;
+  staticImage2: ImageKey;
   feedback: {
     correct: string;
     incorrect: string;
   };
-  next: () => void;
+  options: Option[];
 };
 
 export const SuperSelectTask = (props: Props) => {
-  const [count, setCount] = useState(0);
-
-  const [array, setArray] = useState([...Array(4)].map(() => false));
-
-  const anim = useAnimatedValue(-500);
-
-  const { play } = useAudio();
-
+  const [highlightedCard, setHighlightedCard] = useState<number | null>(null);
+  const [selectedOptions, setSelectedOptions] = useState<Set<string>>(new Set());
   const { speak } = useSpeech();
+  const { play } = useAudio();
+  const anim = useRef(new Animated.Value(-500)).current;
 
-  const options = useRef(props.options);
+  const playTaskAudio = async () => {
+    setHighlightedCard(0);
+    await speak(props.instruction);
+    setHighlightedCard(1);
+    await speak(props.instruction2);
+    setHighlightedCard(null);
+    await speak(props.instruction3);
+    Animated.timing(anim, {
+      duration: 250,
+      toValue: 0,
+      useNativeDriver: true,
+    }).start();
+  };
 
-  useEffect(() => {
-    options.current = shuffle(props.options);
-  }, [props.options]);
+  const toggleOptionSelection = (option: Option) => {
+    setSelectedOptions((prevSelected) => {
+      const newSelected = new Set(prevSelected);
+      if (newSelected.has(option.text)) {
+        newSelected.delete(option.text);
+      } else {
+        newSelected.add(option.text);
+      }
+      return newSelected;
+    });
+  };
 
-  useEffectAsync(async () => {
-    if (count === props.options.filter((o) => o.correct).length) {
-      await speak(props.feedback.correct);
+  const validateSelection = async () => {
+    const correctSelections = props.options?.filter((option) => option.correct).map((opt) => opt.text) || [];
+    const selectedArray = Array.from(selectedOptions);
 
+    const allCorrectSelected = correctSelections.every((text) => selectedArray.includes(text));
+    const noIncorrectSelected = selectedArray.every((text) => correctSelections.includes(text));
+
+    if (allCorrectSelected && noIncorrectSelected) {
+      await play('correct');
+      await speak(props.feedback?.correct || '');
       props.next();
+    } else {
+      await play('incorrect');
+      await speak(props.feedback?.incorrect || '');
     }
-  }, [count]);
+  };
+
+  const handleImagePress = async (index: number) => {
+    if (index === 0) {
+      // Instrucción para la primera imagen (staticImage)
+      await speak(props.instruction);  // Aquí puedes cambiar por cualquier acción que desees
+    } else if (index === 1) {
+      // Instrucción para la segunda imagen (staticImage2)
+      await speak(props.instruction2);  // Aquí puedes cambiar por cualquier acción que desees
+    }
+  };  
 
   return (
-    <View style={styles.container_1}>
-      <View style={styles.container_2}>
-        <IconButton
+    <View style={styles.container}>
+
+      <IconButton
           name="volume-up"
-          size={192}
+          size={78}
           onPress={async () => {
-            await speak(...props.button.text);
-
-            await speak(...props.instructions);
-
-            Animated.timing(anim, {
-              toValue: 0,
-              duration: 250,
-              useNativeDriver: false,
-            }).start();
+            playTaskAudio()
           }}
-        />
-      </View>
-      <Animated.View
-        style={[
-          styles.container_3,
-          {
-            transform: [
-              {
-                translateX: anim,
-              },
-            ],
-          },
-        ]}
-      >
-        {options.current.map((option, index) => {
-          return (
+          style={{
+            marginBottom: 10 
+          }}
+        >
+      </IconButton>
+
+      <View style={styles.largeCardContainer}>
+        {[props.staticImage, props.staticImage2].map((image, index) => (
+          image && (
             <View
               key={index}
+              style={[
+                styles.largeCard,
+                highlightedCard === index && { borderColor: 'yellow' },
+              ]}
+            >
+              <ImageButton source={image as ImageKey} size={160} 
+              onPress={() => handleImagePress(index)} // Manejador de evento
+              />
+            </View>
+          )
+        ))}
+      </View>
+
+      <Animated.View style={[styles.smallCardsContainer, { transform: [{ translateX: anim }] }]}>
+        {props.options?.map((option) => {
+          const isSelected = selectedOptions.has(option.text);
+
+          return (
+            <View
+              key={option.text}
               style={{
-                opacity: array[index] ? 0.25 : 1,
+                borderColor: isSelected ? 'green' : 'transparent', // Always green for selected options
+                borderWidth: isSelected ? 2 : 0,
+                borderRadius: 8,
+                margin: 5,
               }}
             >
               <ImageButton
                 source={option.image as ImageKey}
-                size={120}
+                size={128}
                 onPress={async () => {
-                  if (array[index]) {
-                    return;
-                  }
-
+                  toggleOptionSelection(option);
                   await speak(option.text);
-
-                  if (option.correct) {
-                    await play('correct');
-
-                    setCount((c) => c + 1);
-
-                    setArray((s) => {
-                      const next = [...s];
-
-                      next[index] = true;
-
-                      return next;
-                    });
-                  } else {
-                    await play('incorrect');
-
-                    await speak(props.feedback.incorrect);
-                  }
                 }}
               />
             </View>
           );
         })}
       </Animated.View>
+        <View style={styles.buttonContainer}>
+          <IconButton
+            name="check"
+            onPress={validateSelection}
+          />
+        </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container_1: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center',
-    width: '100%',
-  },
-  container_2: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center',
-    width: '100%',
-  },
-  container_3: {
-    alignContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 24,
-    justifyContent: 'center',
-    width: '75%',
-  },
-});

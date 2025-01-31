@@ -140,7 +140,7 @@ export const Lessons: Lesson[] = [
       },
       {
         id: 6,
-        type: 'super_select',
+        type: 'super_select_adv',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: ['Selecciona la carta de abajo que formamos.'],
@@ -226,6 +226,44 @@ export const Lessons: Lesson[] = [
             },
             {
               text: "Calle",
+              correct: false
+            }
+          ]
+        }
+      },
+      {
+        id: 9,
+        type: "super_select",
+        instructions: ["Presiona el botón para iniciar"],
+        data: {
+          instruction: "María come manzanas",
+          instruction2: "María come naranjas",
+          instruction3: "Selecciona las palabras que cambiaron en estas oraciones",
+          staticImage: "maria_come_manzanas",
+          staticImage2: "maria_come_naranjas",
+          feedback: {
+            correct: "¡Buen trabajo! Seleccionaste las palabras correctas.",
+            incorrect: "Casi, intenta otra vez."
+          },
+          options: [
+            {
+              text: "manzanas",
+              image: "manzanas",
+              correct: true
+            },
+            {
+              text: "naranjas",
+              image: "naranjas",
+              correct: true
+            },
+            {
+              text: "fresas",
+              image: "fresas",
+              correct: false
+            },
+            {
+              text: "mangos",
+              image: "mangos",
               correct: false
             }
           ]
@@ -393,7 +431,86 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
-        type: 'super_select',
+        type: "super_select",
+        instructions: ["Presiona el botón para iniciar"],
+        data: {
+          instruction: "María come manzanas",
+          instruction2: "María come naranjas",
+          instruction3: "Selecciona las palabras que cambiaron en estas oraciones",
+          staticImage: "maria_come_manzanas",
+          staticImage2: "maria_come_naranjas",
+          feedback: {
+            correct: "¡Buen trabajo! Seleccionaste las palabras correctas.",
+            incorrect: "Casi, intenta otra vez."
+          },
+          options: [
+            {
+              text: "manzanas",
+              image: "manzanas",
+              correct: true
+            },
+            {
+              text: "naranjas",
+              image: "naranjas",
+              correct: true
+            },
+            {
+              text: "fresas",
+              image: "fresas",
+              correct: false
+            },
+            {
+              text: "mangos",
+              image: "mangos",
+              correct: false
+            }
+          ]
+        }
+      }
+    ]
+  },  
+  {
+    id: 9,
+    tasks: [
+      {
+        id: 1,
+        type: 'selectaudio',
+        instructions: ["Presiona el boton para escuchar la tarea"],
+        data: {
+          instruction: "Si a la palabra",
+          instruction2: "caballo",
+          instruction3: "se le quita la silaba",
+          instruction4: "ba",
+          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
+          staticImage: "Caballo",
+          feedback: {
+            correct: "¡Buen trabajo! El resultado es callo",
+            incorrect: "Casi, intenta otra vez."
+          },
+          options: [
+            {
+              text: "Ballo",
+              correct: false
+            },
+            {
+              text: "Callo",
+              correct: true
+            },
+            {
+              text: "Calle",
+              correct: false
+            }
+          ]
+        }
+      }
+    ],
+  },
+  {
+    id: 10,
+    tasks: [
+      {
+        id: 1,
+        type: 'super_select_adv',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
           instructions: ['Selecciona la carta de abajo que formamos.'],
@@ -433,72 +550,5 @@ export const Lessons: Lesson[] = [
         },
       },
     ],
-  },
-  {
-    id: 8,
-    tasks: [
-      {
-        id: 1,
-        type: 'correct_incorrect',
-        instructions: ['Toca la carta de arriba'],
-        data: {
-          instruction: 'Repite conmigo',
-          instruction2: 'ana',
-          instruction3: 'come',
-          instruction4: 'banana.',
-          text: 'Las palabras, ana, y, banana, riman?',
-          correct_answer: 'Sí',
-          feedback: {
-            correct: '¡Excelente! Muy buen trabajo.',
-            incorrect: 'Casi, intenta otra vez.',
-          },
-          words: [
-            { text: 'Ana', image: 'Ana' },
-            { text: 'Banana', image: 'Banana' },
-          ],
-          staticImage: 'Ana_Come_Banana',
-        },
-      },
-    ],
-  },
-  {
-    id: 9,
-    tasks: [
-      {
-        id: 1,
-        type: 'selectaudio',
-        instructions: ["Presiona el boton para escuchar la tarea"],
-        data: {
-          instruction: "Si a la palabra",
-          instruction2: "caballo",
-          instruction3: "se le quita la silaba",
-          instruction4: "ba",
-          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
-          staticImage: "Caballo",
-          feedback: {
-            correct: "¡Buen trabajo! El resultado es callo",
-            incorrect: "Casi, intenta otra vez."
-          },
-          options: [
-            {
-              text: "Ballo",
-              correct: false
-            },
-            {
-              text: "Callo",
-              correct: true
-            },
-            {
-              text: "Calle",
-              correct: false
-            }
-          ]
-        }
-      }
-    ],
-  },
-  {
-    id: 10,
-    tasks: [],
   },
 ];
