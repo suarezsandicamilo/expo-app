@@ -7,6 +7,7 @@ export type TaskType =
   | 'count'
   | 'super_tap'
   | 'super_select'
+  | 'super_select_adv'
   | 'correct_incorrect'
   | 'selectaudio';
 
