@@ -5,17 +5,19 @@ import { useAudio, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey  } from '@/../assets/images';
 
+import { Colors } from '@/constants';
+
 const styles = StyleSheet.create({
   container_1: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'center',
     width: '100%',
   },
   container_2: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'flex-start',
     paddingTop: 20,
@@ -24,7 +26,7 @@ const styles = StyleSheet.create({
   container_3: {
     alignContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors['background-1'],
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',

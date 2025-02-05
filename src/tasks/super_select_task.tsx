@@ -5,10 +5,12 @@ import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '../../assets/images';
 
+import { Colors } from '@/constants';
+
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'center',
     width: '100%',
@@ -156,7 +158,11 @@ export const SuperSelectTask = (props: Props) => {
         ))}
       </View>
 
-      <Animated.View style={[styles.smallCardsContainer, { transform: [{ translateX: anim }] }]}>
+      <Animated.View style={[styles.smallCardsContainer, { transform: [{ translateX: anim }] }, {
+        alignContent: 'center',
+        flexWrap: 'wrap',
+        width: '75%',
+      }]}>
         {props.options?.map((option) => {
           const isSelected = selectedOptions.has(option.text);
 
@@ -165,29 +171,33 @@ export const SuperSelectTask = (props: Props) => {
               key={option.text}
               style={{
                 borderColor: isSelected ? 'green' : 'transparent', // Always green for selected options
-                borderWidth: isSelected ? 2 : 0,
+                borderWidth: 2,
                 borderRadius: 8,
                 margin: 5,
               }}
             >
               <ImageButton
                 source={option.image as ImageKey}
-                size={128}
+                size={96}
                 onPress={async () => {
                   toggleOptionSelection(option);
-                  await speak(option.text);
+
+                  if (!isSelected) {
+                    await speak(option.text);
+                  }
                 }}
               />
             </View>
           );
         })}
       </Animated.View>
-        <View style={styles.buttonContainer}>
+        <Animated.View style={[styles.buttonContainer, { transform: [{ translateX: anim }] }]}>
           <IconButton
             name="check"
             onPress={validateSelection}
+            size={78}
           />
-        </View>
+        </Animated.View>
     </View>
   );
 };
