@@ -46,8 +46,8 @@ export const IconButton = (props: Props) => {
 
         return [
           styles.container,
-          style,
           props.onPress != undefined && state.pressed && styles.pressed,
+          style,
           {
             height: size,
             width: size,
