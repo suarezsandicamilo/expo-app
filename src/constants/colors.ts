@@ -24,4 +24,12 @@ export const Colors = {
 
   'star-1': '#ffc107',
   'star-2': '#ffa000',
+
+  'green-1': '#81c784',
+  'green-2': '#4caf50',
+  'green-3': '#388e3c',
+
+  'red-1': '#e57373',
+  'red-2': '#f44336',
+  'red-3': '#d32f2f',
 };
