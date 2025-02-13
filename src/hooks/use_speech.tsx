@@ -21,7 +21,7 @@ export const useSpeech = () => {
       let index = 0;
 
       for (const text of texts) {
-        Speech.speak(text, {
+        Speech.speak(text ?? '', {
           voice,
           onDone: () => {
             if (index === texts.length - 1) {
