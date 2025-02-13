@@ -22,7 +22,7 @@ const map = {
   super_select: SuperSelectTask,
   super_select_adv: SuperSelectAdvTask,
   correct_incorrect: Correct_IncorrectTask,
-  selectaudio: SelectAudioTask
+  selectaudio: SelectAudioTask,
 } as const;
 
 type Props = {
@@ -37,6 +37,8 @@ export const createTask = (props: Props) => {
     throw new Error('Unknown task type');
   }
 
-  // @ts-expect-error Ignore
-  return <Component next={props.next} {...props.task.data} />;
+  return (
+    // @ts-expect-error Ignore
+    <Component key={props.task.id} next={props.next} {...props.task.data} />
+  );
 };
