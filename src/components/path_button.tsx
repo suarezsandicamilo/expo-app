@@ -16,13 +16,16 @@ import { Icon } from './icon';
 import { LockPressable } from './lock_pressable';
 
 type Props = {
+  force: boolean;
   progress: number;
   index: number;
   onPress?: () => void;
 };
 
 export const PathButton = (props: Props) => {
-  return <ProgressPathButton {...props} />;
+  if (props.force) {
+    return <ProgressPathButton {...props} />;
+  }
 
   if (props.progress < props.index) {
     return <BackPathButton />;

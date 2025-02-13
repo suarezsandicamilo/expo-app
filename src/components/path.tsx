@@ -14,7 +14,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Lessons } from '@/data/test';
+import { Lessons } from '@/data';
 import { Db } from '@/db';
 import { useEffectAsync } from '@/hooks';
 import { RootStackParamList } from '@/shared';
@@ -57,6 +57,7 @@ export const Path = (props: Props) => {
               }}
             >
               <PathButton
+                force={progress >= Lessons.length}
                 progress={progress}
                 index={index}
                 onPress={() => {
