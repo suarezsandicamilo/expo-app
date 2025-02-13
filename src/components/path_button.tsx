@@ -22,8 +22,6 @@ type Props = {
 };
 
 export const PathButton = (props: Props) => {
-  return <ProgressPathButton {...props} />;
-
   if (props.progress < props.index) {
     return <BackPathButton />;
   }
