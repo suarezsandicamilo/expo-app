@@ -170,7 +170,7 @@ export const Lesson14: Lesson = {
           {
             text: 'Enano',
             image: 'enano',
-            correct: false,
+            correct: true,
           },
           {
             text: 'Iguana',
