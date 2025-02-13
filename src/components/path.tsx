@@ -57,6 +57,7 @@ export const Path = (props: Props) => {
               }}
             >
               <PathButton
+                force={progress >= Lessons.length}
                 progress={progress}
                 index={index}
                 onPress={() => {
