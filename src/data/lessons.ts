@@ -14,7 +14,8 @@ export const Lessons: Lesson[] = [
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
-            text: 'La abeja zumba.',
+            text: 'oso',
+            image: 'oso',
           },
           feedback: {
             correct: '¡Buen trabajo!',
@@ -23,252 +24,173 @@ export const Lessons: Lesson[] = [
       },
       {
         id: 2,
-        type: 'select',
+        type: 'tap',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: [
-            'Selecciona la carta de abajo que tiene la palabra que escuchaste.',
-          ],
           button: {
-            text: 'La abeja zumba.',
+            text: 'ave',
+            image: 'ave',
           },
-          options: [
-            {
-              text: 'Abeja',
-              image: 'abeja',
-              correct: true,
-            },
-            {
-              text: 'Avión',
-              image: 'avion',
-              correct: false,
-            },
-            {
-              text: 'Árbol',
-              image: 'arbol',
-              correct: false,
-            },
-            {
-              text: 'Ave',
-              image: 'ave',
-              correct: false,
-            },
-          ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es abeja.',
-            incorrect: 'Casi, intenta otra vez.',
+            correct: '¡Buen trabajo!',
           },
         },
       },
       {
         id: 3,
-        type: 'drag_and_drop',
-        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: [
-            'Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.',
-          ],
+          instructions: [],
           button: {
-            text: 'La abeja zumba.',
+            text: 'oso',
           },
           options: [
             {
-              text: 'Abeja',
-              image: 'abeja',
+              text: '',
+              image: '',
               correct: true,
             },
             {
-              text: 'Avión',
-              image: 'avion',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Árbol',
-              image: 'arbol',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Ave',
-              image: 'ave',
+              text: '',
+              image: '',
               correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es abeja.',
+            correct: '¡Buen trabajo!',
             incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
       {
         id: 4,
-        type: 'count',
-        instructions: ['Toca el botón y escucha la oración.'],
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
         data: {
-          instructions: [
-            'Toca las burbujas y cuenta el número de palabras en la oración.',
-          ],
+          instructions: [],
           button: {
-            text: 'La abeja zumba.',
+            text: 'ave',
           },
-          count: 3,
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
           feedback: {
-            correct: '¡Buen trabajo! La oración tiene tres palabras.',
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
           },
         },
       },
       {
         id: 5,
-        type: 'super_tap',
-        instructions: ['Toca los botones y escucha las oraciones.'],
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          buttons: [
-            {
-              text: 'María come manzanas.',
-            },
-            {
-              text: 'María come naranjas.',
-            },
-          ],
+          button: {
+            text: 'imán',
+            image: 'imán',
+          },
           feedback: {
-            correct: [
-              '¡Buen trabajo!',
-              'En la primera oración María come manzanas.',
-              'Y en la segunda oración María come naranjas.',
-            ],
+            correct: '¡Buen trabajo!',
           },
         },
       },
       {
         id: 6,
-        type: 'super_select_adv',
+        type: 'tap',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: ['Selecciona la carta de abajo que formamos.'],
           button: {
-            text: [
-              'Si a "Pan"!',
-              'Le agregamos "Da"!',
-              '¿Qué palabra formamos?',
-            ],
+            text: 'abeja',
+            image: 'abeja',
           },
-          options: [
-            {
-              text: 'Panda',
-              image: 'panda',
-              correct: true,
-            },
-            {
-              text: 'Abeja',
-              image: 'abeja',
-              correct: false,
-            },
-            {
-              text: 'Avión',
-              image: 'avion',
-              correct: false,
-            },
-            {
-              text: 'Árbol',
-              image: 'arbol',
-              correct: false,
-            },
-          ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es panda.',
-            incorrect: 'Casi, intenta otra vez.',
+            correct: '¡Buen trabajo!',
           },
         },
       },
       {
         id: 7,
-        type: 'correct_incorrect',
-        instructions: ['Toca la carta de arriba'],
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instruction: 'Repite conmigo',
-          instruction2: 'ana',
-          instruction3: 'come',
-          instruction4: 'banana.',
-          text: 'Las palabras, ana, y, banana, riman?',
+          instructions: [],
+          button: {
+            text: 'imán',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
           feedback: {
-            correct: '¡Excelente! Muy buen trabajo.',
+            correct: '¡Buen trabajo!',
             incorrect: 'Casi, intenta otra vez.',
           },
-          words: [
-            { text: 'Ana', image: 'Ana' },
-            { text: 'Banana', image: 'Banana' },
-          ],
-          staticImage: 'Ana_Come_Banana',
         },
       },
       {
         id: 8,
-        type: 'selectaudio',
-        instructions: ["Presiona el boton para escuchar la tarea"],
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instruction: "Si a la palabra",
-          instruction2: "caballo",
-          instruction3: "se le quita la silaba",
-          instruction4: "ba",
-          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
-          staticImage: "Caballo",
-          feedback: {
-            correct: "¡Buen trabajo! El resultado es callo",
-            incorrect: "Casi, intenta otra vez."
+          instructions: [],
+          button: {
+            text: 'abeja',
+            image: 'abeja',
           },
-          options: [
-            {
-              text: "Ballo",
-              correct: false
-            },
-            {
-              text: "Callo",
-              correct: true
-            },
-            {
-              text: "Calle",
-              correct: false
-            }
-          ]
-        }
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
       },
-      {
-        id: 9,
-        type: "super_select",
-        instructions: ["Presiona el botón para iniciar"],
-        data: {
-          instruction: "María come manzanas",
-          instruction2: "María come naranjas",
-          instruction3: "Selecciona las palabras que cambiaron en estas oraciones",
-          staticImage: "maria_come_manzanas",
-          staticImage2: "maria_come_naranjas",
-          feedback: {
-            correct: "¡Buen trabajo! Seleccionaste las palabras correctas.",
-            incorrect: "Casi, intenta otra vez."
-          },
-          options: [
-            {
-              text: "manzanas",
-              image: "manzanas",
-              correct: true
-            },
-            {
-              text: "naranjas",
-              image: "naranjas",
-              correct: true
-            },
-            {
-              text: "fresas",
-              image: "fresas",
-              correct: false
-            },
-            {
-              text: "mangos",
-              image: "mangos",
-              correct: false
-            }
-          ]
-        }
-      }
     ],
   },
   {
@@ -280,8 +202,178 @@ export const Lessons: Lesson[] = [
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
           button: {
-            text: 'La abeja zumba.',
+            text: 'erizo',
+            image: 'erizo',
           },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'empanada',
+            image: 'empanada',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'erizo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'empanada',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'anillo',
+            image: 'anillo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ardilla',
+            image: 'ardilla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'anillo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ardilla',
+            image: 'ardilla',
+          },
+          count: 1,
           feedback: {
             correct: '¡Buen trabajo!',
           },
@@ -294,40 +386,184 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'inodoro',
+            image: 'inodoro',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'esquimal',
+            image: 'esquimal',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
         type: 'select',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: [
-            'Selecciona la carta de abajo que tiene la palabra que escuchaste.',
-          ],
+          instructions: [],
           button: {
-            text: 'La abeja zumba.',
+            text: 'inodoro',
           },
           options: [
             {
-              text: 'Abeja',
-              image: 'abeja',
+              text: '',
+              image: '',
               correct: true,
             },
             {
-              text: 'Avión',
-              image: 'avion',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Árbol',
-              image: 'arbol',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Ave',
-              image: 'ave',
+              text: '',
+              image: '',
               correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es abeja.',
+            correct: '¡Buen trabajo!',
             incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'esquimal',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'embudo',
+            image: 'embudo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'isla',
+            image: 'isla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'embudo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'isla',
+            image: 'isla',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -338,40 +574,184 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
-        type: 'drag_and_drop',
-        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: [
-            'Arrastra y suelta en el cuadro la carta de abajo que tiene la palabra que escuchaste.',
-          ],
           button: {
-            text: 'La abeja zumba.',
+            text: 'iglú',
+            image: 'iglú',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'escalera',
+            image: 'escalera',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'iglú',
           },
           options: [
             {
-              text: 'Abeja',
-              image: 'abeja',
+              text: '',
+              image: '',
               correct: true,
             },
             {
-              text: 'Avión',
-              image: 'avion',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Árbol',
-              image: 'arbol',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Ave',
-              image: 'ave',
+              text: '',
+              image: '',
               correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es abeja.',
+            correct: '¡Buen trabajo!',
             incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'escalera',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'insecto',
+            image: 'insecto',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'árbol',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'insecto',
+            image: 'insecto',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -382,18 +762,184 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ala',
+            image: 'ala',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ave',
+            image: 'ave',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ala',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ave',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'arco',
+            image: 'arco',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'imán',
+            image: 'imán',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'arco',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
         type: 'count',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: [
-            'Toca las burbujas y cuenta el número de palabras en la oración.',
-          ],
+          instructions: [],
           button: {
-            text: 'La abeja zumba.',
+            text: 'imán',
+            image: 'imán',
           },
-          count: 3,
+          count: 1,
           feedback: {
-            correct: '¡Buen trabajo! La oración tiene tres palabras.',
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -404,23 +950,184 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
-        type: 'super_tap',
-        instructions: ['Toca los botones y escucha las oraciones.'],
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          buttons: [
+          button: {
+            text: 'espada',
+            image: 'espada',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'estrella',
+            image: 'estrella',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espada',
+          },
+          options: [
             {
-              text: 'María come manzanas.',
+              text: '',
+              image: '',
+              correct: true,
             },
             {
-              text: 'María come naranjas.',
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
             },
           ],
           feedback: {
-            correct: [
-              '¡Buen trabajo!',
-              'En la primera oración María come manzanas.',
-              'Y en la segunda oración María come naranjas.',
-            ],
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'estrella',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'espejo',
+            image: 'espejo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'anillo',
+            image: 'anillo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espejo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'anillo',
+            image: 'anillo',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
           },
         },
       },
@@ -431,78 +1138,563 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
-        type: "super_select",
-        instructions: ["Presiona el botón para iniciar"],
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instruction: "María come manzanas",
-          instruction2: "María come naranjas",
-          instruction3: "Selecciona las palabras que cambiaron en estas oraciones",
-          staticImage: "maria_come_manzanas",
-          staticImage2: "maria_come_naranjas",
+          button: {
+            text: 'iguana',
+            image: 'iguana',
+          },
           feedback: {
-            correct: "¡Buen trabajo! Seleccionaste las palabras correctas.",
-            incorrect: "Casi, intenta otra vez."
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'olla',
+            image: 'olla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'iguana',
           },
           options: [
             {
-              text: "manzanas",
-              image: "manzanas",
-              correct: true
+              text: '',
+              image: '',
+              correct: true,
             },
             {
-              text: "naranjas",
-              image: "naranjas",
-              correct: true
+              text: '',
+              image: '',
+              correct: false,
             },
             {
-              text: "fresas",
-              image: "fresas",
-              correct: false
+              text: '',
+              image: '',
+              correct: false,
             },
             {
-              text: "mangos",
-              image: "mangos",
-              correct: false
-            }
-          ]
-        }
-      }
-    ]
-  },  
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'olla',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'esposas',
+            image: 'esposas',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'elefante',
+            image: 'elefante',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'esposas',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'elefante',
+            image: 'elefante',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 8,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'oruga',
+            image: 'oruga',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'árbol',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'oruga',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ovillo',
+            image: 'ovillo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'escalera',
+            image: 'escalera',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ovillo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'escalera',
+            image: 'escalera',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
   {
     id: 9,
     tasks: [
       {
         id: 1,
-        type: 'selectaudio',
-        instructions: ["Presiona el boton para escuchar la tarea"],
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instruction: "Si a la palabra",
-          instruction2: "caballo",
-          instruction3: "se le quita la silaba",
-          instruction4: "ba",
-          instruction5: "que queda?, selecciona la opcion que crees que es la correcta.",
-          staticImage: "Caballo",
+          button: {
+            text: 'imán',
+            image: 'imán',
+          },
           feedback: {
-            correct: "¡Buen trabajo! El resultado es callo",
-            incorrect: "Casi, intenta otra vez."
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ala',
+            image: 'ala',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'imán',
           },
           options: [
             {
-              text: "Ballo",
-              correct: false
+              text: '',
+              image: '',
+              correct: true,
             },
             {
-              text: "Callo",
-              correct: true
+              text: '',
+              image: '',
+              correct: false,
             },
             {
-              text: "Calle",
-              correct: false
-            }
-          ]
-        }
-      }
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ala',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'arco',
+            image: 'arco',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'avión',
+            image: 'avión',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'arco',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'avión',
+            image: 'avión',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
     ],
   },
   {
@@ -510,42 +1702,1312 @@ export const Lessons: Lesson[] = [
     tasks: [
       {
         id: 1,
-        type: 'super_select_adv',
+        type: 'tap',
         instructions: ['Toca el botón y escucha la oración.'],
         data: {
-          instructions: ['Selecciona la carta de abajo que formamos.'],
           button: {
-            text: [
-              'Si a "Pan"!',
-              'Le agregamos "Da"!',
-              '¿Qué palabra formamos?',
-            ],
+            text: 'espada',
+            image: 'espada',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'espejo',
+            image: 'espejo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espada',
           },
           options: [
             {
-              text: 'Panda',
-              image: 'panda',
+              text: '',
+              image: '',
               correct: true,
             },
             {
-              text: 'Abeja',
-              image: 'abeja',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Avión',
-              image: 'avion',
+              text: '',
+              image: '',
               correct: false,
             },
             {
-              text: 'Árbol',
-              image: 'arbol',
+              text: '',
+              image: '',
               correct: false,
             },
           ],
           feedback: {
-            correct: '¡Buen trabajo! La palabra es panda.',
+            correct: '¡Buen trabajo!',
             incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espejo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ardilla',
+            image: 'ardilla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'enano',
+            image: 'enano',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ardilla',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'enano',
+            image: 'enano',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 11,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'enchufe',
+            image: 'enchufe',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'elefante',
+            image: 'elefante',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'enchufe',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'elefante',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'olla',
+            image: 'olla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'inodoro',
+            image: 'inodoro',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'olla',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'inodoro',
+            image: 'inodoro',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 12,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'escalera',
+            image: 'escalera',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'insecto',
+            image: 'insecto',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'escalera',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'insecto',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'oreja',
+            image: 'oreja',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'árbol',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'oreja',
+            image: 'oreja',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 13,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ala',
+            image: 'ala',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'abeja',
+            image: 'abeja',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ala',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'abeja',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'aro',
+            image: 'aro',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'arco',
+            image: 'arco',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'aro',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'arco',
+            image: 'arco',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 14,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'estrella',
+            image: 'estrella',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'espejo',
+            image: 'espejo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'estrella',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espejo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'espada',
+            image: 'espada',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ardilla',
+            image: 'ardilla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'espada',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ardilla',
+            image: 'ardilla',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 15,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'embudo',
+            image: 'embudo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'olla',
+            image: 'olla',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'embudo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'olla',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'iguana',
+            image: 'iguana',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'iglesia',
+            image: 'iglesia',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'iguana',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'iglesia',
+            image: 'iglesia',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: 16,
+    tasks: [
+      {
+        id: 1,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'edificio',
+            image: 'edificio',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 2,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'ovillo',
+            image: 'ovillo',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 3,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'edificio',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 4,
+        type: 'drag_and_drop',
+        instructions: ['Toca el botón de arriba y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'ovillo',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 5,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'oveja',
+            image: 'oveja',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 6,
+        type: 'tap',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          feedback: {
+            correct: '¡Buen trabajo!',
+          },
+        },
+      },
+      {
+        id: 7,
+        type: 'select',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'oveja',
+          },
+          options: [
+            {
+              text: '',
+              image: '',
+              correct: true,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+            {
+              text: '',
+              image: '',
+              correct: false,
+            },
+          ],
+          feedback: {
+            correct: '¡Buen trabajo!',
+            incorrect: 'Casi, intenta otra vez.',
+          },
+        },
+      },
+      {
+        id: 8,
+        type: 'count',
+        instructions: ['Toca el botón y escucha la oración.'],
+        data: {
+          instructions: [],
+          button: {
+            text: 'árbol',
+            image: 'árbol',
+          },
+          count: 1,
+          feedback: {
+            correct: '¡Buen trabajo!',
           },
         },
       },

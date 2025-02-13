@@ -2,7 +2,12 @@
 
 // React Native
 
-import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
+import {
+  PressableStateCallbackType,
+  StyleProp,
+  StyleSheet,
+  ViewStyle,
+} from 'react-native';
 
 // Expo
 
@@ -14,12 +19,14 @@ import { Colors } from '@/constants';
 import { Icon } from './icon';
 import { LockPressable } from './lock_pressable';
 
+type StylePropFn = (state: PressableStateCallbackType) => StyleProp<ViewStyle>;
+
 type Props = {
   color?: string;
   name?: keyof typeof MaterialIcons.glyphMap;
   size?: number;
+  style?: StyleProp<ViewStyle> | StylePropFn;
   onPress?: () => void;
-  style?: StyleProp<ViewStyle>;
 };
 
 export const IconButton = (props: Props) => {
@@ -29,10 +36,18 @@ export const IconButton = (props: Props) => {
     <LockPressable
       onPress={props.onPress}
       style={(state) => {
+        let style = props.style;
+
+        if (style != undefined && typeof style !== 'object') {
+          const fn = style as StylePropFn;
+
+          style = fn(state);
+        }
+
         return [
           styles.container,
-          props.style,
           props.onPress != undefined && state.pressed && styles.pressed,
+          style,
           {
             height: size,
             width: size,

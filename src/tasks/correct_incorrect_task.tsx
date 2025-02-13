@@ -135,24 +135,24 @@ const InRhymeSelectTask = (props: Props) => {
           <View
             style={{
               margin: 10,
-              borderColor: selectedOption === 'Sí' ? 'green' : 'transparent', // Borde verde si está seleccionado
-              borderWidth: selectedOption === 'Sí' ? 3 : 0, // Borde de 3px si está seleccionado
+              borderColor: selectedOption === 'Sí' ? Colors['green-3'] : 'transparent', // Borde verde si está seleccionado
+              borderWidth: 2, // Borde de 3px si está seleccionado
               borderRadius: 8, // Bordes redondeados para el borde externo
             }}
           >
             <IconButton
-              name="check"
+              name="thumb-up"
               size={100}
               onPress={async () => {
                 const option = 'Sí';
                 await handleSelection(option);
                 await validateSelection(option);
               }}
-              style={{
+              style={(state) => ({
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: Colors['theme-1'], // Fondo verde para "Sí"
-              }}
+                backgroundColor: !state.pressed ? Colors['green-2'] : Colors['green-3'], // Fondo verde para "Sí"
+              })}
             >
             </IconButton>
           </View>
@@ -161,24 +161,24 @@ const InRhymeSelectTask = (props: Props) => {
           <View
             style={{
               margin: 10,
-              borderColor: selectedOption === 'No' ? 'red' : 'transparent', // Borde rojo si está seleccionado
-              borderWidth: selectedOption === 'No' ? 3 : 0, // Borde de 3px si está seleccionado
+              borderColor: selectedOption === 'No' ? Colors['red-3'] : 'transparent', // Borde rojo si está seleccionado
+              borderWidth: 2, // Borde de 3px si está seleccionado
               borderRadius: 8, // Bordes redondeados para el borde externo
             }}
           >
             <IconButton
-              name="close"
+              name="thumb-down"
               size={100}
               onPress={async () => {
                 const option = 'No';
                 await handleSelection(option);
                 await validateSelection(option);
               }}
-              style={{
+              style={(state) => ({
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#F44336', // Fondo rojo para "No"
-              }}
+                backgroundColor: !state.pressed ? Colors['red-2'] : Colors['red-3'], // Fondo rojo para "No"
+              })}
             >
             </IconButton>
           </View>
@@ -186,7 +186,3 @@ const InRhymeSelectTask = (props: Props) => {
       </View>
     );
   };
-  
-  
-  
-  
