@@ -70,9 +70,15 @@ export const Correct_IncorrectTask = (props: Props) => {
           size={100}
           onPress={async () => {
             await speak(props.instruction);
-            await speak(props.instruction2);
-            await speak(props.instruction3);
-            await speak(props.instruction4);
+            if (props.instruction2) {
+              await speak(props.instruction2);
+            }
+            if (props.instruction3) {
+              await speak(props.instruction3);
+            }
+            if (props.instruction4) {
+              await speak(props.instruction4);
+            }
             await speak(props.text);
 
             Animated.timing(anim, {
@@ -88,9 +94,15 @@ export const Correct_IncorrectTask = (props: Props) => {
           source={props.staticImage as ImageKey} 
           size={180}
           onPress={async () => {
-            if (props.instruction2) await speak(props.instruction2);
-            if (props.instruction3) await speak(props.instruction3);
-            if (props.instruction4) await speak(props.instruction4);
+            if (props.instruction2) {
+              await speak(props.instruction2);
+            }
+            if (props.instruction3) {
+              await speak(props.instruction3);
+            }
+            if (props.instruction4) {
+              await speak(props.instruction4);
+            }
             await speak(props.text);
           }}
         />

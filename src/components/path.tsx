@@ -42,7 +42,11 @@ export const Path = (props: Props) => {
   }, [progress]);
 
   useEffectAsync(async () => {
-    setProgress(await Db.get('progress', 0));
+    const p = await Db.get('progress', 0);
+
+    console.info('Progress: ', p);
+
+    setProgress(p);
   }, []);
 
   return (
