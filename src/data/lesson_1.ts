@@ -205,7 +205,7 @@ export const Lesson1: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'árbol',
-            'y',
+            'i',
             'arco',
           ],
         },
@@ -229,7 +229,7 @@ export const Lesson1: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'avión',
-            'y',
+            'i',
             'ave',
           ],
         },
@@ -237,41 +237,79 @@ export const Lesson1: Lesson = {
     },
     {
       id: 11,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
+      type: "super_select",
+      instructions: ["Presiona el botón y escucha las oraciones"],
       data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que empiezan con e.'],
+        instruction: "El árbol es alto",
+        instruction2: "El arco es alto",
+        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
+        staticImage: "arbol",
+        staticImage2: "arco",
+        feedback: {
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
+          incorrect: "Casi, intenta otra vez."
         },
         options: [
           {
-            text: 'Esquimal',
-            image: 'esquimal',
-            correct: true,
+            text: "árbol",
+            image: "arbol",
+            correct: true
           },
           {
-            text: 'Edificio',
-            image: 'edificio',
-            correct: true,
+            text: "arco",
+            image: "arco",
+            correct: true
           },
           {
-            text: 'Elefante',
-            image: 'elefante',
-            correct: true,
+            text: "ave",
+            image: "ave",
+            correct: false
           },
           {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: false,
-          },
-        ],
+            text: "aro",
+            image: "aro",
+            correct: false
+          }
+        ]
+      }
+    },
+    {
+      id: 12,
+      type: "super_select",
+      instructions: ["Presiona el botón y escucha las oraciones"],
+        data: {
+        instruction: "El avión vuela.",
+        instruction2: "El ave vuela.",
+        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
+        staticImage: "avión",
+        staticImage2: "ave",
         feedback: {
-          correct:
-            'Buen trabajo. Las palabras esquimal, edificio y elefante empiezan con e.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son avión y ave.",
+          incorrect: "Casi, intenta otra vez."
         },
-      },
+        options: [
+          {
+            text: "avión",
+            image: "avion",
+            correct: true
+          },
+          {
+            text: "ave",
+            image: "ave",
+            correct: true
+          },
+          {
+            text: "uva",
+            image: "uva",
+            correct: false
+          },
+          {
+            text: "arco",
+            image: "arco",
+            correct: false
+          }
+        ]
+      }
     },
   ],
 };

@@ -10,64 +10,64 @@ export const Lesson4: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la oración.'],
       data: {
         button: {
-          text: 'Abeja. Aa - beja.',
-          image: 'abeja',
+          text: 'La oveja es blanca',
+          image: 'oveja',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
+          correct: 'Buen trabajo.',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la oración.'],
       data: {
         button: {
-          text: 'Anillo. Aa - nillo.',
-          image: 'anillo',
+          text: 'El ojo parpadea.',
+          image: 'ojo',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra anillo empieza con a.',
+          correct: 'Buen trabajo.',
         },
       },
     },
     {
       id: 3,
       type: 'select',
-      instructions: ['Toca el botón'],
+      instructions: ['Toca el botón y escucha la oración.'],
       data: {
-        instructions: [''],
+        instructions: ['El ángel brilla'],
         button: {
-          text: 'Selecciona la palabra que empieza con a.',
+          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
         },
         options: [
           {
-            text: 'Abeja',
-            image: 'abeja',
+            text: 'Oveja',
+            image: 'oveja',
+            correct: false,
+          },
+          {
+            text: 'Ángel',
+            image: 'angel',
             correct: true,
           },
           {
-            text: 'Uva',
-            image: 'uva',
+            text: 'Oreja',
+            image: 'oreja',
             correct: false,
           },
           {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
+            text: 'Ovillo',
+            image: 'ovillo',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
+          correct: 'Buen trabajo. La oracion incluye la palabra ángel.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -75,160 +75,11 @@ export const Lesson4: Lesson = {
     {
       id: 4,
       type: 'select',
-      instructions: ['Toca el botón'],
+      instructions: ['Toca el botón y escucha la oración.'],
       data: {
-        instructions: [''],
+        instructions: ['La oveja es blanca'],
         button: {
-          text: 'Selecciona la palabra que empieza con a.',
-        },
-        options: [
-          {
-            text: 'Anillo',
-            image: 'anillo',
-            correct: true,
-          },
-          {
-            text: 'Uva',
-            image: 'uva',
-            correct: false,
-          },
-          {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct: 'Buen trabajo. La palabra anillo empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 5,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que empiezan con a.'],
-        },
-        options: [
-          {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: true,
-          },
-          {
-            text: 'Avión',
-            image: 'avion',
-            correct: true,
-          },
-          {
-            text: 'Ave',
-            image: 'ave',
-            correct: true,
-          },
-          {
-            text: 'Uva',
-            image: 'uva',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct:
-            'Buen trabajo. Las palabras abeja, avión y ave empiezan con a.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 6,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que empiezan con a.'],
-        },
-        options: [
-          {
-            text: 'Anillo',
-            image: 'anillo',
-            correct: true,
-          },
-          {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: true,
-          },
-          {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct: 'Buen trabajo. Las palabras anillo y abeja empiezan con a.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 7,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra abeja empieza con a? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'Sí',
-        text: 'Abeja',
-        staticImage: 'abeja',
-        feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 8,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra imán empieza con a? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'No',
-        text: 'Imán',
-        staticImage: 'iman',
-        feedback: {
-          correct:
-            'Buen trabajo. La palabra imán no empieza con a, empieza con i.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 9,
-      type: 'select',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: '¿Si en la palabra, abeja, cambiamos la a, por una o, qué palabra formamos?',
+          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
         },
         options: [
           {
@@ -237,63 +88,228 @@ export const Lesson4: Lesson = {
             correct: true,
           },
           {
-            text: 'Avión',
-            image: 'avion',
+            text: 'Oruga',
+            image: 'oruga',
             correct: false,
           },
           {
-            text: 'Uva',
-            image: 'uva',
+            text: 'Ovillo',
+            image: 'ovillo',
             correct: false,
           },
           {
-            text: 'Oso',
-            image: 'oso',
+            text: 'Oreja',
+            image: 'oreja',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es oveja.',
+          correct: 'Buen trabajo. La oracion incluye la palabra oso.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
     },
     {
-      id: 10,
-      type: 'select',
-      instructions: ['Toca el botón'],
+      id: 5,
+      type: 'count',
+      instructions: ['Toca el botón y escucha la oración.'],
       data: {
-        instructions: [''],
+        instructions: [
+          'Toca las burbujas y cuenta el número de palabras en la oración.',
+        ],
         button: {
-          text: '¿Si en la palabra, ala, cambiamos la a, por una o, qué palabra formamos?',
+          text: 'La oruga se mueve.',
         },
-        options: [
+        count: 4,
+        feedback: {
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+        },
+      },
+    },
+    {
+      id: 6,
+      type: 'count',
+      instructions: ['Toca el botón y escucha la oración.'],
+      data: {
+        instructions: [
+          'Toca las burbujas y cuenta el número de palabras en la oración.',
+        ],
+        button: {
+          text: 'La oveja es blanca.',
+        },
+        count: 4,
+        feedback: {
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+        },
+      },
+    },
+    {
+      id: 7,
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las oraciones.'],
+      data: {
+        buttons: [
           {
-            text: 'Ola',
-            image: 'ola',
-            correct: true,
+            text: 'Ángel brilla',
           },
           {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: false,
-          },
-          {
-            text: 'Árbol',
-            image: 'arbol',
-            correct: false,
-          },
-          {
-            text: 'Anillo',
-            image: 'anillo',
-            correct: false,
+            text: 'Brilla ángel.',
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es ola.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: [
+            '¡Buen trabajo!',
+            'Primero escuchamos una oración con la palabra ángel',
+            'Y luego escuchamos la oración al revés.',
+          ],
         },
       },
+    },
+    {
+      id: 8,
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las oraciones.'],
+      data: {
+        buttons: [
+          {
+            text: 'Oveja blanca.',
+          },
+          {
+            text: 'Blanca oveja.',
+          },
+        ],
+        feedback: {
+          correct: [
+            '¡Buen trabajo!',
+            'Primero escuchamos una oración con la palabra oveja',
+            'Y luego escuchamos la oración al revés.',
+          ],
+        },
+      },
+    },
+    {
+      id: 9,
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las oraciones.'],
+      data: {
+        buttons: [
+          {
+            text: 'El ojo parpadea.',
+          },
+          {
+            text: 'La oveja parpadea',
+          },
+        ],
+        feedback: {
+          correct: [
+            '¡Buen trabajo!',
+            'Las palabras que cambiaron entre las oraciones fueron',
+            'ojo',
+            'y',
+            'oveja',
+          ],
+        },
+      },
+    },
+    {
+      id: 10,
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las oraciones.'],
+      data: {
+        buttons: [
+          {
+            text: 'El ángel brilla',
+          },
+          {
+            text: 'El ovillo brilla.',
+          },
+        ],
+        feedback: {
+          correct: [
+            '¡Buen trabajo!',
+            'Las palabras que cambiaron entre las oraciones fueron',
+            'ángel',
+            'y',
+            'ovillo',
+          ],
+        },
+      },
+    },
+    {
+      id: 11,
+      type: "super_select",
+      instructions: ["Presiona el botón y escucha las oraciones"],
+      data: {
+        instruction: "El ojo parpadea.",
+        instruction2: " La oveja parpadea.",
+        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
+        staticImage: "ojo",
+        staticImage2: "oveja",
+        feedback: {
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
+          incorrect: "Casi, intenta otra vez."
+        },
+        options: [
+          {
+            text: "ojo",
+            image: "ojo",
+            correct: true
+          },
+          {
+            text: "oveja",
+            image: "obeja",
+            correct: true
+          },
+          {
+            text: "oruga",
+            image: "oruga",
+            correct: false
+          },
+          {
+            text: "ovillo",
+            image: "ovillo",
+            correct: false
+          }
+        ]
+      }
+    },
+    {
+      id: 12,
+      type: "super_select",
+      instructions: ["Presiona el botón y escucha las oraciones"],
+        data: {
+        instruction: "El ángel brilla.",
+        instruction2: "El ovillo brilla",
+        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
+        staticImage: "angel",
+        staticImage2: "ovillo",
+        feedback: {
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
+          incorrect: "Casi, intenta otra vez."
+        },
+        options: [
+          {
+            text: "ovillo",
+            image: "ovillo",
+            correct: true
+          },
+          {
+            text: "ángel",
+            image: "angel",
+            correct: true
+          },
+          {
+            text: "oreja",
+            image: "oreja",
+            correct: false
+          },
+          {
+            text: "oveja",
+            image: "oveja",
+            correct: false
+          }
+        ]
+      }
     },
   ],
 };
