@@ -14,7 +14,7 @@ export const Lesson11: Lesson = {
       data: {
         button: {
           text: 'Gato. Ga - to.',
-          image: 'manzana',
+          image: 'gato',
         },
         feedback: {
           correct: 'Buen trabajo. La palabra gato rima con: ato.',
@@ -52,7 +52,7 @@ export const Lesson11: Lesson = {
           }
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras gato y pato riman con: ato'],
+          correct: ['Buen trabajo.', 'Las palabras gato y pato riman con: ato'],
         },
       },
     },
@@ -68,12 +68,12 @@ export const Lesson11: Lesson = {
             image: 'luna'
           },
           {
-            text: 'Cuna. Cu - na',
+            text: 'Cuna. Ku - na',
             image: 'cuna'
           }
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras luna y cuna riman con: una'],
+          correct: ['Buen trabajo.', 'Las palabras luna y cuna riman con: una'],
         },
       },
     },
@@ -90,7 +90,7 @@ export const Lesson11: Lesson = {
         text: 'Gato',
         staticImage: 'gato',
         feedback: {
-          correct: 'Buen trabajo. La palabra gat rima con pato',
+          correct: 'Buen trabajo. La palabra gato rima con pato',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -120,7 +120,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con: secto.',
+          text: 'Selecciona la palabra que rima con: ecto',
         },
         options: [
           {
@@ -145,7 +145,7 @@ export const Lesson11: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Insecto rima con: secto.',
+          correct: 'Buen trabajo. Insecto rima con: ecto.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -157,7 +157,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con: una.',
+          text: 'Selecciona la palabra que rima con: una.',
         },
         options: [
           {

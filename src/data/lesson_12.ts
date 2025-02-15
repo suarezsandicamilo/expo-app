@@ -38,7 +38,7 @@ export const Lesson12: Lesson = {
     {
       id: 3,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
+      instructions: ['Toca las cartas y escucha las palabras'],
       data: {
         instructions: [''],
         buttons: [
@@ -59,7 +59,7 @@ export const Lesson12: Lesson = {
     {
       id: 4,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
+      instructions: ['Toca las cartas y escucha las palabras'],
       data: {
         instructions: [''],
         buttons: [
@@ -68,12 +68,12 @@ export const Lesson12: Lesson = {
             image: 'zapato',
           },
           {
-            text: 'Plato. pla - to',
+            text: 'Plato. plato',
             image: 'plato'
           }
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras zapato y plato riman con: ato'],
+          correct: ['Buen trabajo.', 'Las palabras zapato y plato riman con: ato'],
         },
       },
     },
@@ -108,7 +108,7 @@ export const Lesson12: Lesson = {
         text: 'ojo',
         staticImage: 'ojo',
         feedback: {
-          correct: 'Buen trabajo. La palabra ojo no rima con uña.',
+          correct: 'Buen trabajo. La palabra ojo no rima con pato.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -120,7 +120,7 @@ export const Lesson12: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con: uga.',
+          text: 'Selecciona la palabra que rima con: ruga',
         },
         options: [
           {
@@ -145,7 +145,7 @@ export const Lesson12: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Oruga rima con: uga.',
+          correct: 'Buen trabajo. Oruga rima con: ruga.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

@@ -31,7 +31,7 @@ export const Lesson10: Lesson = {
           image: 'espejo',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra espejo rima con: ejo',
+          correct: 'Buen trabajo. La palabra espejo rima con: eejo',
         },
       },
     },
@@ -52,7 +52,7 @@ export const Lesson10: Lesson = {
           }
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras manzana y campana riman con: ana'],
+          correct: ['Buen trabajo.', 'Las palabras manzana y campana riman con: ana'],
         },
       },
     },
@@ -73,7 +73,7 @@ export const Lesson10: Lesson = {
           }
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras espejo y conejo riman con: ejo'],
+          correct: ['Buen trabajo.', 'Las palabras espejo y conejo riman con: eejo'],
         },
       },
     },
@@ -120,7 +120,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con: illa.',
+          text: 'Selecciona la palabra que rima con: illa',
         },
         options: [
           {
@@ -157,7 +157,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con: ante.',
+          text: 'Selecciona la palabra que rima con: ante',
         },
         options: [
           {
@@ -194,7 +194,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: ['Selecciona las palabras que riman con: ejo'],
+          text: ['Selecciona las palabras que riman con: eejo'],
         },
         options: [
           {
@@ -219,7 +219,7 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras Conejo y espejo riman con: ejo.',
+          correct: 'Buen trabajo. Las palabras Conejo y espejo riman con: eejo.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

@@ -17,7 +17,7 @@ export const Lesson09: Lesson = {
           image: 'abeja',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja rima con beja.',
+          correct: 'Buen trabajo. La palabra abeja rima con eja.',
         },
       },
     },
@@ -126,7 +126,7 @@ export const Lesson09: Lesson = {
         text: 'Imán',
         staticImage: 'iman',
         feedback: {
-          correct: 'Buen trabajo. La palabra imán no rima con ave. La palabra imán rima con titán por ejemplo',
+          correct: 'Buen trabajo. La palabra imán no rima con ave. La palabra imán rima con titán.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -138,7 +138,7 @@ export const Lesson09: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con eja.',
+          text: 'Selecciona la palabra que rima con: Eja.',
         },
         options: [
           {
@@ -175,7 +175,7 @@ export const Lesson09: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: 'Cuál de estas figuras rima con arco.',
+          text: 'Selecciona la palabra que rima con: Arco.',
         },
         options: [
           {

@@ -6,7 +6,7 @@ import { Lesson } from '@/types';
 
 import { Lesson09 } from './lesson_09';
 import { Lesson10 } from './lesson_10';
-import { Lesson11 } from './lessson_11';
+import { Lesson11 } from './lesson_11';
 import { Lesson12 } from './lesson_12';
 import { Lesson13 } from './lesson_13';
 import { Lesson14 } from './lesson_14';
