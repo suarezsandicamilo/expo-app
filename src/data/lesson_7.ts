@@ -45,6 +45,7 @@ export const Lesson7: Lesson = {
         ],
         button: {
           text: 'O - LA.',
+          image: 'ola',
         },
         count: 2,
         feedback: {
@@ -61,7 +62,8 @@ export const Lesson7: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'I - GLE - SIA.',
+          text: 'I - gua - na.',
+          image: 'iguana',
         },
         count: 3,
         feedback: {
@@ -80,8 +82,8 @@ export const Lesson7: Lesson = {
             image: 'isla',
           },
           {
-            text: 'Ahora al reves. LA - IS.',
-            image: 'isla',
+            text: 'Ahora al revés. LA - IS.',
+            image: 'isla2',
           },
         ],
         feedback: {
@@ -98,12 +100,12 @@ export const Lesson7: Lesson = {
       data: {
         buttons: [
           {
-            text: 'CU - NA',
+            text: 'Cu - na',
             image: 'cuna',
           },
           {
-            text: 'Ahora al reves. NA. CU',
-            image: 'cuna',
+            text: 'Ahora al revés. Na - cu.',
+            image: 'cuna2',
           },
         ],
         feedback: {
@@ -123,9 +125,9 @@ export const Lesson7: Lesson = {
         instruction3: "GLU",
         instruction4: "",
         instruction5: "",
-        staticImage: "",
+        staticImage: "iglu",
         feedback: {
-          correct: "¡Buen trabajo! El resultado es íglu",
+          correct: "¡Buen trabajo! El resultado es iglú",
           incorrect: "Casi, intenta otra vez."
         },
         options: [
@@ -134,7 +136,7 @@ export const Lesson7: Lesson = {
             correct: false
           },
           {
-            text: "íglu",
+            text: "iglú",
             correct: true
           },
           {
@@ -151,10 +153,10 @@ export const Lesson7: Lesson = {
       data: {
         instruction: "Qué palabra se forma al juntar las sílabas,",
         instruction2: "o",
-        instruction3: "ya",
-        instruction4: "NO",
+        instruction3: "lla",
+        instruction4: "",
         instruction5: "",
-        staticImage: "",
+        staticImage: "olla",
         feedback: {
           correct: "¡Buen trabajo! El resultado es olla",
           incorrect: "Casi, intenta otra vez."
@@ -219,12 +221,12 @@ export const Lesson7: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra o, le agregamos jo, qué palabra formamos?',
+          text: '¿Si a la palabra o, le agregamos so, qué palabra formamos?',
         },
         options: [
           {
-            text: 'ojo',
-            image: 'ojo',
+            text: 'oso',
+            image: 'oso',
             correct: true,
           },
           {
@@ -244,7 +246,7 @@ export const Lesson7: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es ojo.',
+          correct: 'Buen trabajo. La palabra es oso.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

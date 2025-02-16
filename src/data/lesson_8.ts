@@ -44,7 +44,8 @@ export const Lesson8: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'O - RU - GA.',
+          text: 'O - ru - ga.',
+          image: 'oruga',
         },
         count: 3,
         feedback: {
@@ -61,7 +62,8 @@ export const Lesson8: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'O - VE - JA.',
+          text: 'O - ve - ja.',
+          image: 'oveja',
         },
         count: 3,
         feedback: {
@@ -80,8 +82,8 @@ export const Lesson8: Lesson = {
             image: 'plato',
           },
           {
-            text: 'Ahora al reves. TO - PLA.',
-            image: 'plato',
+            text: 'Ahora al revés. TO - PLA.',
+            image: 'plato2',
           },
         ],
         feedback: {
@@ -102,8 +104,8 @@ export const Lesson8: Lesson = {
             image: 'estufa',
           },
           {
-            text: 'Ahora al reves. FA - TU - ES',
-            image: 'estufa',
+            text: 'Ahora al revés. FA - TU - ES',
+            image: 'estufa2',
           },
         ],
         feedback: {
@@ -123,7 +125,7 @@ export const Lesson8: Lesson = {
         instruction3: "SA",
         instruction4: "",
         instruction5: "",
-        staticImage: "",
+        staticImage: "casa",
         feedback: {
           correct: "¡Buen trabajo! El resultado es casa",
           incorrect: "Casi, intenta otra vez."
@@ -154,7 +156,7 @@ export const Lesson8: Lesson = {
         instruction3: "RU",
         instruction4: "GA",
         instruction5: "",
-        staticImage: "",
+        staticImage: "oruga",
         feedback: {
           correct: "¡Buen trabajo! El resultado es oruga",
           incorrect: "Casi, intenta otra vez."
@@ -244,7 +246,7 @@ export const Lesson8: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es enano.',
+          correct: 'Buen trabajo. La palabra es útiles.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -294,7 +296,7 @@ export const Lesson8: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si en la palabra, ojo, cambiamos jo, por reja, qué palabra formamos?',
+          text: '¿Si en la palabra, oveja, cambiamos veja, por reja, qué palabra formamos?',
         },
         options: [
           {
@@ -303,8 +305,8 @@ export const Lesson8: Lesson = {
             correct: true,
           },
           {
-            text: 'oveja',
-            image: 'oveja',
+            text: 'ojo',
+            image: 'ojo',
             correct: false,
           },
           {
