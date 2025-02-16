@@ -119,6 +119,7 @@ export const Lesson2: Lesson = {
         ],
         button: {
           text: 'La araña teje.',
+          image: 'araña',
         },
         count: 3,
         feedback: {
@@ -136,6 +137,7 @@ export const Lesson2: Lesson = {
         ],
         button: {
           text: 'Campana amarilla.',
+          image: 'campana',
         },
         count: 2,
         feedback: {
@@ -289,8 +291,8 @@ export const Lesson2: Lesson = {
         instruction: "La araña mira la estrella.",
         instruction2: "La ardilla mira la estrella.",
         instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "avión",
-        staticImage2: "ave",
+        staticImage: "araña",
+        staticImage2: "ardilla",
         feedback: {
           correct: "¡Buen trabajo!  Las palabras que cambiaron son araña y ardilla.",
           incorrect: "Casi, intenta otra vez."
@@ -298,7 +300,7 @@ export const Lesson2: Lesson = {
         options: [
           {
             text: "Araña",
-            image: "Araña",
+            image: "araña",
             correct: true
           },
           {

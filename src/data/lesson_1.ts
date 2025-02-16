@@ -137,6 +137,7 @@ export const Lesson1: Lesson = {
         ],
         button: {
           text: 'El anillo es brillante.',
+          image: 'anillo',
         },
         count: 4,
         feedback: {
@@ -290,7 +291,7 @@ export const Lesson1: Lesson = {
         instruction: "El avión vuela.",
         instruction2: "El ave vuela.",
         instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "avión",
+        staticImage: "avion",
         staticImage2: "ave",
         feedback: {
           correct: "¡Buen trabajo!  Las palabras que cambiaron son avión y ave.",

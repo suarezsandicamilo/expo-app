@@ -119,6 +119,7 @@ export const Lesson3: Lesson = {
         ],
         button: {
           text: 'El pato nada',
+          image: 'pato',
         },
         count: 3,
         feedback: {
@@ -136,6 +137,7 @@ export const Lesson3: Lesson = {
         ],
         button: {
           text: 'La cuna es azul.',
+          image: 'cuna',
         },
         count: 4,
         feedback: {
@@ -199,9 +201,11 @@ export const Lesson3: Lesson = {
         buttons: [
           {
             text: 'El pato nada',
+            image: 'pato',
           },
           {
             text: 'El gato nada.',
+            image: 'gato',
           },
         ],
         feedback: {
@@ -223,9 +227,11 @@ export const Lesson3: Lesson = {
         buttons: [
           {
             text: 'La cuna es azul',
+            image: 'cuna',
           },
           {
             text: 'La luna es azul',
+            image: 'luna',
           },
         ],
         feedback: {

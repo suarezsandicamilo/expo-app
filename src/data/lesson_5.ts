@@ -13,7 +13,7 @@ export const Lesson5: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Abeja. Aa - be - ja.',
+          text: 'Abeja. Aa - beh - ja.',
           image: 'abeja',
         },
         feedback: {
@@ -44,7 +44,8 @@ export const Lesson5: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'A - BE - JA.',
+          text: 'A - beh - ja.',
+          image: 'abeja',
         },
         count: 3,
         feedback: {
@@ -62,6 +63,7 @@ export const Lesson5: Lesson = {
         ],
         button: {
           text: 'A - VE.',
+          image: 'ave',
         },
         count: 2,
         feedback: {
@@ -76,12 +78,12 @@ export const Lesson5: Lesson = {
       data: {
         buttons: [
           {
-            text: 'A - BE - JA',
+            text: 'A - beh - ja.',
             image: 'abeja',
           },
           {
-            text: 'JA - BE - A',
-            image: 'abeja',
+            text: 'Ahora al revés. Ja - beh - A.',
+            image: 'abeja2',
           },
         ],
         feedback: {
@@ -102,8 +104,8 @@ export const Lesson5: Lesson = {
             image: 'martillo',
           },
           {
-            text: 'Ahora al reves. LLO - TI - MAR',
-            image: 'martillo',
+            text: 'Ahora al revés. LLO - TI - MAR',
+            image: 'martillo2',
           },
         ],
         feedback: {
@@ -123,7 +125,7 @@ export const Lesson5: Lesson = {
         instruction3: "VA",
         instruction4: "",
         instruction5: "",
-        staticImage: "",
+        staticImage: "uva",
         feedback: {
           correct: "¡Buen trabajo! El resultado es uva",
           incorrect: "Casi, intenta otra vez."
@@ -154,7 +156,7 @@ export const Lesson5: Lesson = {
         instruction3: "NI",
         instruction4: "LLO",
         instruction5: "",
-        staticImage: "",
+        staticImage: "anillo",
         feedback: {
           correct: "¡Buen trabajo! El resultado es anillo",
           incorrect: "Casi, intenta otra vez."
@@ -182,7 +184,7 @@ export const Lesson5: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra marti, le agregamos llo qué palabra formamos?',
+          text: '¿Si a la palabra marti, le agregamos llo, qué palabra formamos?',
         },
         options: [
           {
@@ -197,12 +199,12 @@ export const Lesson5: Lesson = {
           },
           {
             text: 'imán',
-            image: 'imán',
+            image: 'iman',
             correct: false,
           },
           {
             text: 'avión',
-            image: 'avión',
+            image: 'avion',
             correct: false,
           },
         ],
@@ -219,7 +221,7 @@ export const Lesson5: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra abe, le agregamos ja qué palabra formamos?',
+          text: '¿Si a la palabra abe, le agregamos ja, qué palabra formamos?',
         },
         options: [
           {
@@ -319,7 +321,7 @@ export const Lesson5: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es ola.',
+          correct: 'Buen trabajo. La palabra es avión.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

@@ -44,7 +44,8 @@ export const Lesson6: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'ES - CO - BA.',
+          text: 'Es - co - bah.',
+          image: 'escoba',
         },
         count: 3,
         feedback: {
@@ -62,6 +63,7 @@ export const Lesson6: Lesson = {
         ],
         button: {
           text: 'ES - PA - DA.',
+          image: 'espada',
         },
         count: 3,
         feedback: {
@@ -76,12 +78,12 @@ export const Lesson6: Lesson = {
       data: {
         buttons: [
           {
-            text: 'ES - CO - BA',
+            text: 'Es - co - bah.',
             image: 'escoba',
           },
           {
-            text: 'Ahora al reves. BA - CO - ES.',
-            image: 'escoba',
+            text: 'Ahora al revés. Bah - co - es.',
+            image: 'escoba2',
           },
         ],
         feedback: {
@@ -98,12 +100,12 @@ export const Lesson6: Lesson = {
       data: {
         buttons: [
           {
-            text: 'AR - DI - LLA',
+            text: 'Ar - di - lla.',
             image: 'ardilla',
           },
           {
-            text: 'Ahora al reves. LLA - DI - AR',
-            image: 'ardilla',
+            text: 'Ahora al revés. Lla - di - ar.',
+            image: 'ardilla2',
           },
         ],
         feedback: {
@@ -119,11 +121,11 @@ export const Lesson6: Lesson = {
       instructions: ["Toca el botón y escucha las sílabas."],
       data: {
         instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "ES",
-        instruction3: "TRE",
-        instruction4: "LLA",
+        instruction2: "Es",
+        instruction3: "Tre",
+        instruction4: "Lla",
         instruction5: "",
-        staticImage: "",
+        staticImage: "estrella",
         feedback: {
           correct: "¡Buen trabajo! El resultado es estrella",
           incorrect: "Casi, intenta otra vez."
@@ -154,7 +156,7 @@ export const Lesson6: Lesson = {
         instruction3: "NA",
         instruction4: "NO",
         instruction5: "",
-        staticImage: "",
+        staticImage: "enano",
         feedback: {
           correct: "¡Buen trabajo! El resultado es enano",
           incorrect: "Casi, intenta otra vez."
@@ -182,7 +184,7 @@ export const Lesson6: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra es, le agregamos co - ba, qué palabra formamos?',
+          text: '¿Si a la palabra es, le agregamos co - bah, qué palabra formamos?',
         },
         options: [
           {

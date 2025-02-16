@@ -104,7 +104,7 @@ export const Lesson4: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra oso.',
+          correct: 'Buen trabajo. La oracion incluye la palabra oveja.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -119,6 +119,7 @@ export const Lesson4: Lesson = {
         ],
         button: {
           text: 'La oruga se mueve.',
+          image: 'oruga',
         },
         count: 4,
         feedback: {
@@ -136,6 +137,7 @@ export const Lesson4: Lesson = {
         ],
         button: {
           text: 'La oveja es blanca.',
+          image: 'oveja',
         },
         count: 4,
         feedback: {
@@ -155,7 +157,7 @@ export const Lesson4: Lesson = {
           },
           {
             text: 'Brilla ángel.',
-            image: 'angel',
+            image: 'angel2',
           },
         ],
         feedback: {
@@ -179,7 +181,7 @@ export const Lesson4: Lesson = {
           },
           {
             text: 'Blanca oveja.',
-            image: 'oveja',
+            image: 'oveja2',
           },
         ],
         feedback: {
@@ -254,7 +256,7 @@ export const Lesson4: Lesson = {
         staticImage: "ojo",
         staticImage2: "oveja",
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son ojo y oveja.",
           incorrect: "Casi, intenta otra vez."
         },
         options: [
@@ -265,7 +267,7 @@ export const Lesson4: Lesson = {
           },
           {
             text: "oveja",
-            image: "obeja",
+            image: "oveja",
             correct: true
           },
           {
@@ -292,7 +294,7 @@ export const Lesson4: Lesson = {
         staticImage: "angel",
         staticImage2: "ovillo",
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
+          correct: "¡Buen trabajo!  Las palabras que cambiaron son ángel y ovillo.",
           incorrect: "Casi, intenta otra vez."
         },
         options: [
