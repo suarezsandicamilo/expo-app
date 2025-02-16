@@ -151,9 +151,11 @@ export const Lesson1: Lesson = {
         buttons: [
           {
             text: 'Ave canta.',
+            image: 'ave'
           },
           {
             text: 'Canta ave.',
+            image: 'ave2'
           },
         ],
         feedback: {
@@ -173,9 +175,11 @@ export const Lesson1: Lesson = {
         buttons: [
           {
             text: 'Anillo brillante.',
+            image: 'anillo',
           },
           {
             text: 'Brillante anillo.',
+            image: 'anillo2'
           },
         ],
         feedback: {
@@ -195,9 +199,11 @@ export const Lesson1: Lesson = {
         buttons: [
           {
             text: 'El árbol es alto.',
+            image: 'arbol',
           },
           {
             text: 'El arco es alto.',
+            image: 'arco',
           },
         ],
         feedback: {
@@ -219,9 +225,11 @@ export const Lesson1: Lesson = {
         buttons: [
           {
             text: 'El avión vuela.',
+            image: 'avion',
           },
           {
             text: 'El ave vuela.',
+            image: 'ave',
           },
         ],
         feedback: {

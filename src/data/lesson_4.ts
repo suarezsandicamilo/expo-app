@@ -151,9 +151,11 @@ export const Lesson4: Lesson = {
         buttons: [
           {
             text: 'Ángel brilla',
+            image: 'angel',
           },
           {
             text: 'Brilla ángel.',
+            image: 'angel',
           },
         ],
         feedback: {
@@ -173,9 +175,11 @@ export const Lesson4: Lesson = {
         buttons: [
           {
             text: 'Oveja blanca.',
+            image: 'oveja',
           },
           {
             text: 'Blanca oveja.',
+            image: 'oveja',
           },
         ],
         feedback: {
@@ -195,9 +199,11 @@ export const Lesson4: Lesson = {
         buttons: [
           {
             text: 'El ojo parpadea.',
+            image: 'ojo',
           },
           {
             text: 'La oveja parpadea',
+            image: 'oveja',
           },
         ],
         feedback: {
@@ -219,9 +225,11 @@ export const Lesson4: Lesson = {
         buttons: [
           {
             text: 'El ángel brilla',
+            image: 'angel',
           },
           {
             text: 'El ovillo brilla.',
+            image: 'ovillo',
           },
         ],
         feedback: {

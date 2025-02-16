@@ -151,9 +151,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'Araña teje.',
+            image: 'araña'
           },
           {
             text: 'Teje araña.',
+            image: 'araña2'
           },
         ],
         feedback: {
@@ -173,9 +175,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'Campana amarilla.',
+            image: 'campana'
           },
           {
             text: 'Amarilla campana.',
+            image: 'campana2'
           },
         ],
         feedback: {
@@ -195,9 +199,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'El enano tiene la espada',
+            image: 'espada'
           },
           {
             text: 'El enano tiene la escoba.',
+            image: 'escoba'
           },
         ],
         feedback: {
@@ -219,9 +225,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'La araña mira la estrella.',
+            image: 'araña'
           },
           {
             text: 'La ardilla mira la estrella.',
+            image: 'ardilla'
           },
         ],
         feedback: {

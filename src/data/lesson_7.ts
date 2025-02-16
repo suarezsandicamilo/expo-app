@@ -13,11 +13,11 @@ export const Lesson7: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Abeja. Aa - beja.',
-          image: 'abeja',
+          text: 'Isla. Is - la',
+          image: 'isla',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
+          correct: 'Buen trabajo.',
         },
       },
     },
@@ -27,198 +27,152 @@ export const Lesson7: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Anillo. Aa - nillo.',
-          image: 'anillo',
+          text: 'Escalera. Es - ca - le - ra',
+          image: 'escalera',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra anillo empieza con a.',
+          correct: 'Buen trabajo.',
         },
       },
     },
     {
       id: 3,
-      type: 'select',
-      instructions: ['Toca el botón'],
+      type: 'count',
+      instructions: ['Toca el botón y escucha la palabra.'],
       data: {
-        instructions: [''],
-        button: {
-          text: 'Selecciona la palabra que empieza con a.',
-        },
-        options: [
-          {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: true,
-          },
-          {
-            text: 'Uva',
-            image: 'uva',
-            correct: false,
-          },
-          {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
-            correct: false,
-          },
+        instructions: [
+          'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
+        button: {
+          text: 'O - LA.',
+        },
+        count: 2,
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra tiene dos sílabas.',
         },
       },
     },
     {
       id: 4,
-      type: 'select',
-      instructions: ['Toca el botón'],
+      type: 'count',
+      instructions: ['Toca el botón y escucha la palabra.'],
       data: {
-        instructions: [''],
-        button: {
-          text: 'Selecciona la palabra que empieza con a.',
-        },
-        options: [
-          {
-            text: 'Anillo',
-            image: 'anillo',
-            correct: true,
-          },
-          {
-            text: 'Uva',
-            image: 'uva',
-            correct: false,
-          },
-          {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
-            correct: false,
-          },
+        instructions: [
+          'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
+        button: {
+          text: 'I - GLE - SIA.',
+        },
+        count: 3,
         feedback: {
-          correct: 'Buen trabajo. La palabra anillo empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra tiene tres sílabas.',
         },
       },
     },
     {
       id: 5,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las palabras.'],
       data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que empiezan con a.'],
-        },
-        options: [
+        buttons: [
           {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: true,
+            text: 'IS - LA',
+            image: 'isla',
           },
           {
-            text: 'Avión',
-            image: 'avion',
-            correct: true,
-          },
-          {
-            text: 'Ave',
-            image: 'ave',
-            correct: true,
-          },
-          {
-            text: 'Uva',
-            image: 'uva',
-            correct: false,
+            text: 'Ahora al reves. LA - IS.',
+            image: 'isla',
           },
         ],
         feedback: {
-          correct:
-            'Buen trabajo. Las palabras abeja, avión y ave empiezan con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: [
+            '¡Buen trabajo!',
+          ],
         },
       },
     },
     {
       id: 6,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
+      type: 'super_tap',
+      instructions: ['Toca los botones y escucha las palabras.'],
       data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que empiezan con a.'],
-        },
-        options: [
+        buttons: [
           {
-            text: 'Anillo',
-            image: 'anillo',
-            correct: true,
+            text: 'CU - NA',
+            image: 'cuna',
           },
           {
-            text: 'Abeja',
-            image: 'abeja',
-            correct: true,
-          },
-          {
-            text: 'Oso',
-            image: 'oso',
-            correct: false,
-          },
-          {
-            text: 'Imán',
-            image: 'iman',
-            correct: false,
+            text: 'Ahora al reves. NA. CU',
+            image: 'cuna',
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras anillo y abeja empiezan con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: [
+            '¡Buen trabajo!',
+          ],
         },
       },
     },
     {
       id: 7,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
+      type: 'selectaudio',
+      instructions: ["Toca el botón y escucha las sílabas."],
       data: {
-        instruction: '¿La palabra abeja empieza con a? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'Sí',
-        text: 'Abeja',
-        staticImage: 'abeja',
+        instruction: "Qué palabra se forma al juntar las sílabas,",
+        instruction2: "I",
+        instruction3: "GLU",
+        instruction4: "",
+        instruction5: "",
+        staticImage: "",
         feedback: {
-          correct: 'Buen trabajo. La palabra abeja empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: "¡Buen trabajo! El resultado es íglu",
+          incorrect: "Casi, intenta otra vez."
         },
+        options: [
+          {
+            text: "insecto",
+            correct: false
+          },
+          {
+            text: "íglu",
+            correct: true
+          },
+          {
+            text: "iglesia",
+            correct: false
+          }
+        ]
       },
     },
     {
       id: 8,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
+      type: 'selectaudio',
+      instructions: ["Toca el botón y escucha las sílabas."],
       data: {
-        instruction: '¿La palabra imán empieza con a? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'No',
-        text: 'Imán',
-        staticImage: 'iman',
+        instruction: "Qué palabra se forma al juntar las sílabas,",
+        instruction2: "o",
+        instruction3: "ya",
+        instruction4: "NO",
+        instruction5: "",
+        staticImage: "",
         feedback: {
-          correct:
-            'Buen trabajo. La palabra imán no empieza con a, empieza con i.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: "¡Buen trabajo! El resultado es olla",
+          incorrect: "Casi, intenta otra vez."
         },
+        options: [
+          {
+            text: "ola",
+            correct: false
+          },
+          {
+            text: "olla",
+            correct: true
+          },
+          {
+            text: "ojo",
+            correct: false
+          }
+        ]
       },
     },
     {
@@ -228,32 +182,32 @@ export const Lesson7: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si en la palabra, abeja, cambiamos la a, por una o, qué palabra formamos?',
+          text: '¿Si a la palabra is, le agregamos la, qué palabra formamos?',
         },
         options: [
           {
-            text: 'Oveja',
-            image: 'oveja',
+            text: 'isla',
+            image: 'isla',
             correct: true,
           },
           {
-            text: 'Avión',
-            image: 'avion',
+            text: 'iglesia',
+            image: 'iglesia',
             correct: false,
           },
           {
-            text: 'Uva',
-            image: 'uva',
+            text: 'insecto',
+            image: 'insecto',
             correct: false,
           },
           {
-            text: 'Oso',
-            image: 'oso',
+            text: 'edificio',
+            image: 'edificio',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es oveja.',
+          correct: 'Buen trabajo. La palabra es isla.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -265,32 +219,144 @@ export const Lesson7: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si en la palabra, ala, cambiamos la a, por una o, qué palabra formamos?',
+          text: '¿Si a la palabra o, le agregamos jo, qué palabra formamos?',
         },
         options: [
           {
-            text: 'Ola',
-            image: 'ola',
+            text: 'ojo',
+            image: 'ojo',
             correct: true,
           },
           {
-            text: 'Abeja',
-            image: 'abeja',
+            text: 'olla',
+            image: 'olla',
             correct: false,
           },
           {
-            text: 'Árbol',
-            image: 'arbol',
+            text: 'ovillo',
+            image: 'ovillo',
             correct: false,
           },
           {
-            text: 'Anillo',
-            image: 'anillo',
+            text: 'ola',
+            image: 'ola',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra es ola.',
+          correct: 'Buen trabajo. La palabra es ojo.',
+          incorrect: 'Casi, intenta otra vez.',
+        },
+      },
+    },
+    {
+      id: 11,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instruction: '¿La palabra',
+        instruction2: 'escalera',
+        instruction3: 'tiene la sílaba la',
+        instruction4: '¿Sí o no?',
+        correct_answer: 'No',
+        text: 'escalera',
+        staticImage: 'escalera',
+        feedback: {
+          correct:
+            'Buen trabajo. La palabra escalera no tiene la sílaba la',
+          incorrect: 'Casi, intenta otra vez.',
+        },
+      },
+    },
+    {
+      id: 12,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instruction: '¿La palabra',
+        instruction2: 'edificio',
+        instruction3: 'tiene la sílaba e',
+        instruction4: '¿Sí o no?',
+        correct_answer: 'Sí',
+        text: 'edificio',
+        staticImage: 'edificio',
+        feedback: {
+          correct:
+            'Buen trabajo. La palabra edificio no tiene la sílaba e',
+          incorrect: 'Casi, intenta otra vez.',
+        },
+      },
+    },
+    {
+      id: 13,
+      type: 'select',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: [''],
+        button: {
+          text: '¿Si en la palabra, ola, cambiamos la, por ya, qué palabra formamos?',
+        },
+        options: [
+          {
+            text: 'olla',
+            image: 'olla',
+            correct: true,
+          },
+          {
+            text: 'isla',
+            image: 'isla',
+            correct: false,
+          },
+          {
+            text: 'gato',
+            image: 'gato',
+            correct: false,
+          },
+          {
+            text: 'edificio',
+            image: 'edificio',
+            correct: false,
+          },
+        ],
+        feedback: {
+          correct: 'Buen trabajo. La palabra es olla.',
+          incorrect: 'Casi, intenta otra vez.',
+        },
+      },
+    },
+    {
+      id: 14,
+      type: 'select',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: [''],
+        button: {
+          text: '¿Si en la palabra, Iglú, cambiamos glu, por glesia, qué palabra formamos?',
+        },
+        options: [
+          {
+            text: 'iglesia',
+            image: 'iglesia',
+            correct: true,
+          },
+          {
+            text: 'insecto',
+            image: 'insecto',
+            correct: false,
+          },
+          {
+            text: 'Escalera',
+            image: 'escalera',
+            correct: false,
+          },
+          {
+            text: 'Edificio',
+            image: 'edificio',
+            correct: false,
+          },
+        ],
+        feedback: {
+          correct: 'Buen trabajo. La palabra es iglesia.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

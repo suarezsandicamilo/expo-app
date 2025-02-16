@@ -151,9 +151,11 @@ export const Lesson3: Lesson = {
         buttons: [
           {
             text: 'Gato maúlla.',
+            image: 'gato',
           },
           {
-            text: 'Gato maúlla.',
+            text: 'Maúlla gato.',
+            image: 'gato2',
           },
         ],
         feedback: {
@@ -172,10 +174,12 @@ export const Lesson3: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Cuna azu',
+            text: 'Cuna azul',
+            image: 'cuna',
           },
           {
             text: 'Azul cuna.',
+            image: 'cuna2',
           },
         ],
         feedback: {

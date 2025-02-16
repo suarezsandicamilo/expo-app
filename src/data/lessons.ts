@@ -22,6 +22,18 @@ import { Lesson15 } from './lesson_15';
 import { Lesson16 } from './lesson_16';
 
 export const Lessons: Lesson[] = [
+  Lesson1,
+  Lesson2,
+  Lesson3,
+  Lesson4,
+  Lesson5,
+  Lesson6,
+  Lesson7,
+  Lesson8,
+  Lesson09,
+  Lesson10,
+  Lesson11,
+  Lesson12,
   Lesson13,
   Lesson14,
   Lesson15,
