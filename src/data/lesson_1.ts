@@ -119,6 +119,7 @@ export const Lesson1: Lesson = {
         ],
         button: {
           text: 'La abeja zumba.',
+          image: 'abeja',
         },
         count: 3,
         feedback: {
