@@ -12,7 +12,7 @@ import { Lesson5 } from './lesson_5';
 import { Lesson6 } from './lesson_6';
 import { Lesson7 } from './lesson_7';
 import { Lesson8 } from './lesson_8';
-import { Lesson09 } from './lesson_09';
+import { Lesson9 } from './lesson_9';
 import { Lesson10 } from './lesson_10';
 import { Lesson11 } from './lesson_11';
 import { Lesson12 } from './lesson_12';
@@ -30,7 +30,7 @@ export const Lessons: Lesson[] = [
   Lesson6,
   Lesson7,
   Lesson8,
-  Lesson09,
+  Lesson9,
   Lesson10,
   Lesson11,
   Lesson12,

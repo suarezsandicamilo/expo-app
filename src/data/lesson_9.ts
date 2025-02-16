@@ -4,7 +4,7 @@
 
 import { Lesson } from '@/types';
 
-export const Lesson09: Lesson = {
+export const Lesson9: Lesson = {
   id: 9,
   tasks: [
     {
