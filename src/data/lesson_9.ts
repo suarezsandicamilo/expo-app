@@ -48,7 +48,7 @@ export const Lesson9: Lesson = {
           },
           {
             text: 'Oreja. O - reja',
-            image: 'Oreja'
+            image: 'oreja'
           }
         ],
         feedback: {
