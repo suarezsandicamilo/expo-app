@@ -13,7 +13,7 @@ export const Lesson10: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Manzana. Man - zana.',
+          text: 'Manzana. Man  , zana.',
           image: 'manzana',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson10: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Espejo. Es - pejo.',
+          text: 'Espejo. Es  , pejo.',
           image: 'espejo',
         },
         feedback: {
@@ -43,11 +43,11 @@ export const Lesson10: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Manzana. Man - zana',
+            text: 'Manzana. Man  , zana',
             image: 'manzana'
           },
           {
-            text: 'Campana. Cam - pana',
+            text: 'Campana. Cam  , pana',
             image: 'campana'
           }
         ],
@@ -64,11 +64,11 @@ export const Lesson10: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Espejo . Es - pejo',
+            text: 'Espejo . Es  , pejo',
             image: 'espejo'
           },
           {
-            text: 'Conejo. Co - nejo',
+            text: 'Conejo. Co  , nejo',
             image: 'conejo'
           }
         ],

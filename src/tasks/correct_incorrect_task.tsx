@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Animated, StyleSheet, View } from 'react-native';
+import { Animated, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { ImageButton, IconButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { ImageKey } from '@/../assets/images';
@@ -61,13 +61,14 @@ type Props = {
 export const Correct_IncorrectTask = (props: Props) => {
   const anim = useRef(new Animated.Value(-500)).current;
   const { speak } = useSpeech();
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   return (
-    <View style={styles.container_1}>
-      <View style={styles.container_2}>
+    <View style={[styles.container_1, { paddingHorizontal: width * 0.05 }]}>
+      <View style={[styles.container_2, { paddingTop: height * 0.02 }]}>
         <IconButton
           name="volume-up"
-          size={100}
+          size={Math.min(width, height) * 0.5} // Tamaño proporcional
           onPress={async () => {
             await speak(props.instruction);
             if (props.instruction2) {
@@ -87,12 +88,11 @@ export const Correct_IncorrectTask = (props: Props) => {
               useNativeDriver: true,
             }).start();
           }}
-          style={{ marginBottom: 30 }} // Margen entre los botones
-        >
-        </IconButton>
-        <ImageButton 
-          source={props.staticImage as ImageKey} 
-          size={180}
+          style={{ marginBottom: height * 0.03 }} // Margen dinámico
+        />
+        <ImageButton
+          source={props.staticImage as ImageKey}
+          size={Math.min(width, height) * 0.5} // Tamaño proporcional
           onPress={async () => {
             if (props.instruction2) {
               await speak(props.instruction2);
@@ -108,7 +108,12 @@ export const Correct_IncorrectTask = (props: Props) => {
         />
       </View>
 
-      <Animated.View style={[styles.container_3, { transform: [{ translateX: anim }] }]}>
+      <Animated.View
+        style={[
+          styles.container_3,
+          { transform: [{ translateX: anim }], marginTop: height * 0.02 },
+        ]}
+      >
         <InRhymeSelectTask {...props} />
       </Animated.View>
     </View>
@@ -116,85 +121,89 @@ export const Correct_IncorrectTask = (props: Props) => {
 };
 
 const InRhymeSelectTask = (props: Props) => {
-    const { speak } = useSpeech();
-    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const { speak } = useSpeech();
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const { play } = useAudio();
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
-    const { play } = useAudio();
-  
-    const handleSelection = async (option: string) => {
-      setSelectedOption(option); // Establecer la opción seleccionada
-      await speak(option); // Reproducir la selección
-    };
-  
-    const validateSelection = async (option: string) => {
-      const correctAnswer = props.correct_answer;
-      if (option === correctAnswer) {
-        await play('correct');
-        await speak(props.feedback?.correct);
-        props.next();
-      } else {
-        await play('incorrect');
-        await speak(props.feedback?.incorrect);
-      }
-    };
-  
-    return (
-      <View style={{ alignItems: 'center', width: '100%' }}>
-        {/* Contenedor horizontal de las opciones */}
-        <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom: 20 }}>
-          
-          {/* Contenedor para el botón "Sí" */}
-          <View
-            style={{
-              margin: 10,
-              borderColor: selectedOption === 'Sí' ? Colors['green-3'] : 'transparent', // Borde verde si está seleccionado
-              borderWidth: 2, // Borde de 3px si está seleccionado
-              borderRadius: 8, // Bordes redondeados para el borde externo
+  const handleSelection = async (option: string) => {
+    setSelectedOption(option);
+    await speak(option);
+  };
+
+  const validateSelection = async (option: string) => {
+    const correctAnswer = props.correct_answer;
+    if (option === correctAnswer) {
+      await play('correct');
+      await speak(props.feedback?.correct);
+      props.next();
+    } else {
+      await play('incorrect');
+      await speak(props.feedback?.incorrect);
+    }
+  };
+
+  return (
+    <View style={{ alignItems: 'center', width: '100%' }}>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginBottom: height * 0.02, // Margen dinámico
+        }}
+      >
+        <View
+          style={{
+            margin: width * 0.02,
+            borderColor: selectedOption === 'Sí' ? Colors['green-3'] : 'transparent',
+            borderWidth: 2,
+            borderRadius: 8,
+          }}
+        >
+          <IconButton
+            name="thumb-up"
+            size={Math.min(width, height) * 0.3} // Tamaño proporcional
+            onPress={async () => {
+              const option = 'Sí';
+              await handleSelection(option);
+              await validateSelection(option);
             }}
-          >
-            <IconButton
-              name="thumb-up"
-              size={100}
-              onPress={async () => {
-                const option = 'Sí';
-                await handleSelection(option);
-                await validateSelection(option);
-              }}
-              style={(state) => ({
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: !state.pressed ? Colors['green-2'] : Colors['green-3'], // Fondo verde para "Sí"
-              })}
-            >
-            </IconButton>
-          </View>
-  
-          {/* Contenedor para el botón "No" */}
-          <View
-            style={{
-              margin: 10,
-              borderColor: selectedOption === 'No' ? Colors['red-3'] : 'transparent', // Borde rojo si está seleccionado
-              borderWidth: 2, // Borde de 3px si está seleccionado
-              borderRadius: 8, // Bordes redondeados para el borde externo
+            style={(state) => ({
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: !state.pressed
+                ? Colors['green-2']
+                : Colors['green-3'],
+            })}
+          />
+        </View>
+
+        <View
+          style={{
+            margin: width * 0.02,
+            borderColor: selectedOption === 'No' ? Colors['red-3'] : 'transparent',
+            borderWidth: 2,
+            borderRadius: 8,
+          }}
+        >
+          <IconButton
+            name="thumb-down"
+            size={Math.min(width, height) * 0.3} // Tamaño proporcional
+            onPress={async () => {
+              const option = 'No';
+              await handleSelection(option);
+              await validateSelection(option);
             }}
-          >
-            <IconButton
-              name="thumb-down"
-              size={100}
-              onPress={async () => {
-                const option = 'No';
-                await handleSelection(option);
-                await validateSelection(option);
-              }}
-              style={(state) => ({
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: !state.pressed ? Colors['red-2'] : Colors['red-3'], // Fondo rojo para "No"
-              })}
-            >
-            </IconButton>
-          </View>
+            style={(state) => ({
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: !state.pressed
+                ? Colors['red-2']
+                : Colors['red-3'],
+            })}
+          />
         </View>
       </View>
-    );
-  };
+    </View>
+  );
+};

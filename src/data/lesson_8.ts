@@ -13,7 +13,7 @@ export const Lesson8: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Oruga. O - ru - ga',
+          text: 'Oruga. O  , ru  , ga',
           image: 'oruga',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson8: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Oveja. O - ve - ja',
+          text: 'Oveja. O  , ve  , ja',
           image: 'oveja',
         },
         feedback: {
@@ -44,7 +44,7 @@ export const Lesson8: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'O - ru - ga.',
+          text: 'O  , ru  , ga.',
           image: 'oruga',
         },
         count: 3,
@@ -62,7 +62,7 @@ export const Lesson8: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'O - ve - ja.',
+          text: 'O  , ve  , ja.',
           image: 'oveja',
         },
         count: 3,
@@ -78,11 +78,11 @@ export const Lesson8: Lesson = {
       data: {
         buttons: [
           {
-            text: 'PLA - TO',
+            text: 'PLA  , TO',
             image: 'plato',
           },
           {
-            text: 'Ahora al revés. TO - PLA.',
+            text: 'Ahora al revés. TO  , PLA.',
             image: 'plato2',
           },
         ],
@@ -100,11 +100,11 @@ export const Lesson8: Lesson = {
       data: {
         buttons: [
           {
-            text: 'ES - TU - FA',
+            text: 'ES  , TU  , FA',
             image: 'estufa',
           },
           {
-            text: 'Ahora al revés. FA - TU - ES',
+            text: 'Ahora al revés. FA  , TU  , ES',
             image: 'estufa2',
           },
         ],

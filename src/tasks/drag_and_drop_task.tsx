@@ -1,29 +1,16 @@
-//
-
-// React
-
 import { useEffect, useRef, useState } from 'react';
-
-// React Native
-
 import {
   Animated,
   Dimensions,
   StyleSheet,
-  useAnimatedValue,
+  useWindowDimensions,
   View,
 } from 'react-native';
-
-// React Native Gesture Handler
-
 import {
   Gesture,
   GestureDetector,
   GestureHandlerRootView,
 } from 'react-native-gesture-handler';
-
-// App
-
 import { IconButton, ImageButton } from '@/components';
 import { Colors } from '@/constants';
 import { useAudio, useLock, useSpeech } from '@/hooks';
@@ -68,14 +55,11 @@ type Props = {
 
 export const DragAndDropTask = (props: Props) => {
   const [hover, setHover] = useState(false);
-
-  const anim = useAnimatedValue(-500);
-
+  const anim = useRef(new Animated.Value(-500)).current;
   const { play } = useAudio();
-
   const { speak } = useSpeech();
-
   const options = useRef(props.options);
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   useEffect(() => {
     options.current = shuffle(props.options);
@@ -94,10 +78,9 @@ export const DragAndDropTask = (props: Props) => {
         <View style={styles.container_2}>
           <IconButton
             name="volume-up"
-            size={120}
+            size={Math.min(width, height) * 0.15} // Tamaño proporcional
             onPress={async () => {
               await speak(props.button.text);
-
               await speak(...props.instructions);
 
               Animated.timing(anim, {
@@ -107,17 +90,23 @@ export const DragAndDropTask = (props: Props) => {
               }).start();
             }}
           />
-          <View style={[styles.drop, hover && styles.hover]} />
+          <View
+            style={[
+              styles.drop,
+              hover && styles.hover,
+              {
+                height: Math.min(width, height) * 0.2, // Tamaño dinámico
+                width: Math.min(width, height) * 0.2,
+              },
+            ]}
+          />
         </View>
         <Animated.View
           style={[
             styles.container_3,
             {
-              transform: [
-                {
-                  translateX: anim,
-                },
-              ],
+              transform: [{ translateX: anim }],
+              gap: Math.min(width, height) * 0.03, // Espaciado dinámico
             },
           ]}
         >
@@ -133,13 +122,10 @@ export const DragAndDropTask = (props: Props) => {
 
                   if (option.correct) {
                     await play('correct');
-
                     await speak(props.feedback.correct);
-
                     props.next();
                   } else {
                     await play('incorrect');
-
                     await speak(props.feedback.incorrect);
                   }
                 }}
@@ -167,23 +153,23 @@ type DragProps = {
 
 const Drag = (props: DragProps) => {
   const anim = useRef(new Animated.ValueXY()).current;
-
   const { isLocked } = useLock();
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   const gesture = Gesture.Pan()
     .onUpdate((event) => {
       const layout_1 = {
-        x: Dimensions.get('screen').width / 2 - 80,
-        y: Dimensions.get('screen').height / 2 - 160,
-        w: 160,
-        h: 160,
+        x: width / 2 - Math.min(width, height) * 0.1,
+        y: height / 2 - Math.min(width, height) * 0.2,
+        w: Math.min(width, height) * 0.2,
+        h: Math.min(width, height) * 0.2,
       };
 
       const layout_2 = {
-        x: event.absoluteX - 60,
-        y: event.absoluteY - 60,
-        w: 120,
-        h: 120,
+        x: event.absoluteX - Math.min(width, height) * 0.05,
+        y: event.absoluteY - Math.min(width, height) * 0.05,
+        w: Math.min(width, height) * 0.1,
+        h: Math.min(width, height) * 0.1,
       };
 
       if (intersects(layout_1, layout_2)) {
@@ -199,17 +185,17 @@ const Drag = (props: DragProps) => {
     })
     .onEnd((event) => {
       const layout_1 = {
-        x: Dimensions.get('screen').width / 2 - 80,
-        y: Dimensions.get('screen').height / 2 - 160,
-        w: 160,
-        h: 160,
+        x: width / 2 - Math.min(width, height) * 0.1,
+        y: height / 2 - Math.min(width, height) * 0.2,
+        w: Math.min(width, height) * 0.2,
+        h: Math.min(width, height) * 0.2,
       };
 
       const layout_2 = {
-        x: event.absoluteX - 30,
-        y: event.absoluteY - 30,
-        w: 60,
-        h: 60,
+        x: event.absoluteX - Math.min(width, height) * 0.05,
+        y: event.absoluteY - Math.min(width, height) * 0.05,
+        w: Math.min(width, height) * 0.1,
+        h: Math.min(width, height) * 0.1,
       };
 
       if (intersects(layout_1, layout_2)) {
@@ -217,10 +203,7 @@ const Drag = (props: DragProps) => {
       }
 
       Animated.spring(anim, {
-        toValue: {
-          x: 0,
-          y: 0,
-        },
+        toValue: { x: 0, y: 0 },
         useNativeDriver: false,
       }).start();
     });
@@ -232,7 +215,10 @@ const Drag = (props: DragProps) => {
           transform: anim.getTranslateTransform(),
         }}
       >
-        <ImageButton source={props.option.image as ImageKey} size={120} />
+        <ImageButton
+          source={props.option.image as ImageKey}
+          size={Math.min(width, height) * 0.15} // Tamaño proporcional
+        />
       </Animated.View>
     </GestureDetector>
   );
@@ -257,7 +243,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 24,
     justifyContent: 'center',
     width: '75%',
   },
@@ -266,8 +251,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderStyle: 'dotted',
     borderWidth: 2,
-    height: 120,
-    width: 120,
   },
   hover: {
     borderColor: Colors['theme-3'],

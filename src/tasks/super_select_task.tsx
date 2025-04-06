@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, View } from 'react-native';
-import { Button, IconButton, ImageButton} from '@/components';
-import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { Button, IconButton, ImageButton } from '@/components';
+import { useAudio, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
 import { ImageKey } from '../../assets/images';
-
 import { Colors } from '@/constants';
 
 const styles = StyleSheet.create({
@@ -71,6 +70,7 @@ export const SuperSelectTask = (props: Props) => {
   const { speak } = useSpeech();
   const { play } = useAudio();
   const anim = useRef(new Animated.Value(-500)).current;
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   const playTaskAudio = async () => {
     setHighlightedCard(0);
@@ -117,30 +117,21 @@ export const SuperSelectTask = (props: Props) => {
 
   const handleImagePress = async (index: number) => {
     if (index === 0) {
-      // Instrucción para la primera imagen (staticImage)
-      await speak(props.instruction);  // Aquí puedes cambiar por cualquier acción que desees
+      await speak(props.instruction);
     } else if (index === 1) {
-      // Instrucción para la segunda imagen (staticImage2)
-      await speak(props.instruction2);  // Aquí puedes cambiar por cualquier acción que desees
+      await speak(props.instruction2);
     }
-  };  
+  };
 
   return (
-    <View style={styles.container}>
-
+    <View style={[styles.container, { paddingHorizontal: width * 0.05 }]}>
       <IconButton
-          name="volume-up"
-          size={78}
-          onPress={async () => {
-            playTaskAudio()
-          }}
-          style={{
-            marginBottom: 10 
-          }}
-        >
-      </IconButton>
-
-      <View style={styles.largeCardContainer}>
+        name="volume-up"
+        size={Math.min(width, height) * 0.2} // Tamaño proporcional
+        onPress={playTaskAudio}
+        style={{ marginBottom: height * 0.01 }}
+      />
+      <View style={[styles.largeCardContainer, { marginVertical: height * 0.01 }]}>
         {[props.staticImage, props.staticImage2].map((image, index) => (
           image && (
             <View
@@ -150,19 +141,24 @@ export const SuperSelectTask = (props: Props) => {
                 highlightedCard === index && { borderColor: 'yellow' },
               ]}
             >
-              <ImageButton source={image as ImageKey} size={160} 
-              onPress={() => handleImagePress(index)} // Manejador de evento
+              <ImageButton
+                source={image as ImageKey}
+                size={Math.min(width, height) * 0.4} // Tamaño proporcional
+                onPress={() => handleImagePress(index)}
               />
             </View>
           )
         ))}
       </View>
-
-      <Animated.View style={[styles.smallCardsContainer, { transform: [{ translateX: anim }] }, {
-        alignContent: 'center',
-        flexWrap: 'wrap',
-        width: '75%',
-      }]}>
+      <Animated.View
+        style={[
+          styles.smallCardsContainer,
+          {
+            transform: [{ translateX: anim }],
+            gap: Math.min(width, height) * 0.01, // Espaciado dinámico
+          },
+        ]}
+      >
         {props.options?.map((option) => {
           const isSelected = selectedOptions.has(option.text);
 
@@ -170,15 +166,15 @@ export const SuperSelectTask = (props: Props) => {
             <View
               key={option.text}
               style={{
-                borderColor: isSelected ? 'green' : 'transparent', // Always green for selected options
+                borderColor: isSelected ? Colors['green-3'] : 'transparent',
                 borderWidth: 2,
                 borderRadius: 8,
-                margin: 5,
+                margin: width * 0.01, // Margen dinámico
               }}
             >
               <ImageButton
                 source={option.image as ImageKey}
-                size={96}
+                size={Math.min(width, height) * 0.3} // Tamaño proporcional
                 onPress={async () => {
                   toggleOptionSelection(option);
 
@@ -191,13 +187,13 @@ export const SuperSelectTask = (props: Props) => {
           );
         })}
       </Animated.View>
-        <Animated.View style={[styles.buttonContainer, { transform: [{ translateX: anim }] }]}>
-          <IconButton
-            name="check"
-            onPress={validateSelection}
-            size={78}
-          />
-        </Animated.View>
+      <Animated.View style={[styles.buttonContainer, { transform: [{ translateX: anim }] }]}>
+        <IconButton
+          name="check"
+          onPress={validateSelection}
+          size={Math.min(width, height) * 0.25} // Tamaño proporcional
+        />
+      </Animated.View>
     </View>
   );
 };

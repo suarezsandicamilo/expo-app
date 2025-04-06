@@ -13,7 +13,7 @@ export const Lesson7: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Isla. Is - la',
+          text: 'Isla. Is  , la',
           image: 'isla',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson7: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Escalera. Es - ca - le - ra',
+          text: 'Escalera. Es  , ca  , le  , ra',
           image: 'escalera',
         },
         feedback: {
@@ -44,7 +44,7 @@ export const Lesson7: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'O - LA.',
+          text: 'O  , LA.',
           image: 'ola',
         },
         count: 2,
@@ -62,7 +62,7 @@ export const Lesson7: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'I - gua - na.',
+          text: 'I  , gua  , na.',
           image: 'iguana',
         },
         count: 3,
@@ -78,11 +78,11 @@ export const Lesson7: Lesson = {
       data: {
         buttons: [
           {
-            text: 'IS - LA',
+            text: 'IS  , LA',
             image: 'isla',
           },
           {
-            text: 'Ahora al revés. LA - IS.',
+            text: 'Ahora al revés. LA  , IS.',
             image: 'isla2',
           },
         ],
@@ -100,11 +100,11 @@ export const Lesson7: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Cu - na',
+            text: 'Cu  , na',
             image: 'cuna',
           },
           {
-            text: 'Ahora al revés. Na - cu.',
+            text: 'Ahora al revés. Na  , cu.',
             image: 'cuna2',
           },
         ],

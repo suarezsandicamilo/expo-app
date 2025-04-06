@@ -13,7 +13,7 @@ export const Lesson12: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Zapato. Za - pato.',
+          text: 'Zapato. Za  , pato.',
           image: 'zapato',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson12: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'casa. ca - sa.',
+          text: 'casa. ca  , sa.',
           image: 'casa',
         },
         feedback: {
@@ -43,11 +43,11 @@ export const Lesson12: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'casa. ca - sa.',
+            text: 'casa. ca  , sa.',
             image: 'casa',
           },
           {
-            text: 'Taza. Ta - za',
+            text: 'Taza. Ta  , za',
             image: 'taza'
           }
         ],
@@ -64,7 +64,7 @@ export const Lesson12: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Zapato. Za - pato.',
+            text: 'Zapato. Za  , pato.',
             image: 'zapato',
           },
           {

@@ -81,4 +81,5 @@ export const Images = {
   logo_1: require('./logo_1.png'),
   logo_2: require('./logo_2.png'),
   logo_3: require('./logo_3.png'),
+  logo_4: require('./logo_4.png'),
 } as const;

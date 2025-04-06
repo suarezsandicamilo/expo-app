@@ -1,15 +1,5 @@
-//
-
-// React
-
 import { useState } from 'react';
-
-// React Native
-
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
-
-// App
-
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { ImageButton, Pop } from '@/components';
 import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { delay } from '@/shared';
@@ -30,36 +20,29 @@ type Props = {
 
 export const CountTask = (props: Props) => {
   const [count, setCount] = useState(0);
-
   const [array, setArray] = useState([...Array(9)].map(() => false));
-
-  const anim = useAnimatedValue(-500);
-
+  const anim = useState(new Animated.Value(-500))[0];
   const { play } = useAudio();
-
   const { speak } = useSpeech();
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   useEffectAsync(async () => {
     if (props.count === count) {
       await delay(500);
-
       await play('correct');
-
       await speak(props.feedback.correct);
-
       props.next();
     }
   }, [count]);
 
   return (
-    <View style={styles.container_1}>
-      <View style={styles.container_2}>
+    <View style={[styles.container_1, { paddingHorizontal: width * 0.05 }]}>
+      <View style={[styles.container_2, { paddingTop: height * 0.02 }]}>
         <ImageButton
           source={(props.button.image ?? props.button.text) as ImageKey}
-          size={192}
+          size={Math.min(width, height) * 0.6} // Tamaño proporcional
           onPress={async () => {
             await speak(props.button.text);
-
             await speak(...props.instructions);
 
             Animated.timing(anim, {
@@ -74,11 +57,8 @@ export const CountTask = (props: Props) => {
         style={[
           styles.container_3,
           {
-            transform: [
-              {
-                translateX: anim,
-              },
-            ],
+            transform: [{ translateX: anim }],
+            gap: Math.min(width, height) * 0.03, // Espaciado dinámico
           },
         ]}
       >
@@ -96,9 +76,7 @@ export const CountTask = (props: Props) => {
 
                 setArray((b) => {
                   const next = [...b];
-
                   next[index] = true;
-
                   return next;
                 });
 
@@ -131,7 +109,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 24,
     justifyContent: 'center',
     width: '75%',
   },

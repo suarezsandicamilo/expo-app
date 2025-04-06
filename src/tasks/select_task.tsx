@@ -1,15 +1,5 @@
-//
-
-// React
-
 import { useEffect, useRef } from 'react';
-
-// React Native
-
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
-
-// App
-
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { IconButton, ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
@@ -35,13 +25,11 @@ type Props = {
 };
 
 export const SelectTask = (props: Props) => {
-  const anim = useAnimatedValue(-500);
-
+  const anim = useRef(new Animated.Value(-500)).current;
   const { play } = useAudio();
-
   const { speak } = useSpeech();
-
   const options = useRef(props.options);
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   useEffect(() => {
     options.current = shuffle(props.options);
@@ -52,10 +40,9 @@ export const SelectTask = (props: Props) => {
       <View style={styles.container_2}>
         <IconButton
           name="volume-up"
-          size={192}
+          size={Math.min(width, height) * 0.5} // Tamaño proporcional
           onPress={async () => {
             await speak(props.button.text);
-
             await speak(...props.instructions);
 
             Animated.timing(anim, {
@@ -70,11 +57,8 @@ export const SelectTask = (props: Props) => {
         style={[
           styles.container_3,
           {
-            transform: [
-              {
-                translateX: anim,
-              },
-            ],
+            transform: [{ translateX: anim }],
+            gap: Math.min(width, height) * 0.01, // Espaciado dinámico
           },
         ]}
       >
@@ -83,19 +67,16 @@ export const SelectTask = (props: Props) => {
             <ImageButton
               key={index}
               source={option.image as ImageKey}
-              size={120}
+              size={Math.min(width, height) * 0.3} // Tamaño proporcional
               onPress={async () => {
                 await speak(option.text);
 
                 if (option.correct) {
                   await play('correct');
-
                   await speak(props.feedback.correct);
-
                   props.next();
                 } else {
                   await play('incorrect');
-
                   await speak(props.feedback.incorrect);
                 }
               }}
@@ -126,7 +107,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 24,
     justifyContent: 'center',
     width: '75%',
   },

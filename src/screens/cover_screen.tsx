@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 4,
     textAlign: 'center',
-    fontFamily: 'Baloo', // Fuente infantil (puedes usar una fuente personalizada)
   },
   subtitle: {
     fontSize: 24, // Tamaño más grande para subtítulos
@@ -67,7 +66,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 2,
     marginBottom: 20,
     textAlign: 'center',
-    fontFamily: 'Baloo', // Fuente infantil
   },
   button: {
     backgroundColor: '#28a745',

@@ -13,7 +13,7 @@ export const Lesson11: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Gato. Ga - to.',
+          text: 'Gato. Ga  , to.',
           image: 'gato',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson11: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Luna. Lu - na.',
+          text: 'Luna. Lu  , na.',
           image: 'luna',
         },
         feedback: {
@@ -43,11 +43,11 @@ export const Lesson11: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Gato. Ga - to',
+            text: 'Gato. Ga  , to',
             image: 'gato'
           },
           {
-            text: 'Pato. Pa - to',
+            text: 'Pato. Pa  , to',
             image: 'pato'
           }
         ],
@@ -64,11 +64,11 @@ export const Lesson11: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Luna . Lu - na',
+            text: 'Luna . Lu  , na',
             image: 'luna'
           },
           {
-            text: 'Cuna. Ku - na',
+            text: 'Cuna. Ku  , na',
             image: 'cuna'
           }
         ],

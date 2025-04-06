@@ -13,7 +13,7 @@ export const Lesson14: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Estrella. Ee - strella.',
+          text: 'Estrella. Ee  , strella.',
           image: 'estrella',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson14: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Elefante. Ee - lefante.',
+          text: 'Elefante. Ee  , lefante.',
           image: 'elefante',
         },
         feedback: {

@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { Animated, StyleSheet, View } from 'react-native';
-import { ImageButton, IconButton  } from '@/components';
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
+import { ImageButton, IconButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
-import { ImageKey  } from '@/../assets/images';
-
+import { ImageKey } from '@/../assets/images';
 import { Colors } from '@/constants';
 
 const styles = StyleSheet.create({
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'flex-start',
-    paddingTop: 20,
     width: '100%',
   },
   container_3: {
@@ -32,11 +30,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     width: '100%',
-  },
-  staticImageContainer: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
   },
 });
 
@@ -52,7 +45,7 @@ type Props = {
   instruction3: string;
   instruction4: string;
   instruction5: string;
-  staticImage: ImageKey ;
+  staticImage: ImageKey;
   feedback: {
     correct: string;
     incorrect: string;
@@ -61,122 +54,131 @@ type Props = {
 };
 
 export const SelectAudioTask = (props: Props) => {
-    const anim = useRef(new Animated.Value(-500)).current;
-    const [isAnimatingOptions, setIsAnimatingOptions] = useState(false); // Controla la animación de opciones
-    const { speak } = useSpeech();
-  
-    return (
-      <View style={styles.container_1}>
-        <View style={styles.container_2}>
-          <IconButton
-            name="volume-up"
-            size={100}
-            onPress={async () => {
-              await speak(props.instruction);
-              await speak(props.instruction2);
-              await speak(props.instruction3);
-              await speak(props.instruction4);
-              await speak(props.instruction5);
-  
-              Animated.timing(anim, {
-                duration: 250,
-                toValue: 0,
-                useNativeDriver: true,
-              }).start();
-  
-              // Inicia animación de opciones después de los speaks iniciales
-              setIsAnimatingOptions(true);
-            }}
-            style={{ marginBottom: 40 }}
-          >
-          </IconButton>
-          <ImageButton 
-            source={props.staticImage as ImageKey} 
-            size={180} />
-        </View>
-        <Animated.View style={[styles.container_3, { transform: [{ translateX: anim }] }]}>
-          <InSuperSelectAdvTask {...props} isAnimatingOptions={isAnimatingOptions} />
-        </Animated.View>
+  const anim = useRef(new Animated.Value(-500)).current;
+  const [isAnimatingOptions, setIsAnimatingOptions] = useState(false);
+  const { speak } = useSpeech();
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
+
+  return (
+    <View style={[styles.container_1, { paddingHorizontal: width * 0.05 }]}>
+      <View style={[styles.container_2, { paddingTop: height * 0.02 }]}>
+        <IconButton
+          name="volume-up"
+          size={Math.min(width, height) * 0.45} // Tamaño proporcional
+          onPress={async () => {
+            await speak(props.instruction);
+            await speak(props.instruction2);
+            await speak(props.instruction3);
+            await speak(props.instruction4);
+            await speak(props.instruction5);
+
+            Animated.timing(anim, {
+              duration: 250,
+              toValue: 0,
+              useNativeDriver: true,
+            }).start();
+
+            setIsAnimatingOptions(true);
+          }}
+          style={{ marginBottom: height * 0.03 }}
+        />
+        <ImageButton
+          source={props.staticImage as ImageKey}
+          size={Math.min(width, height) * 0.4} // Tamaño proporcional
+        />
       </View>
-    );
-  };
-  
-  const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) => {
-    const [options, setOptions] = useState<Option[]>([]);
-    const { play } = useAudio();
-    const { speak } = useSpeech();
-    const animations = useRef<Animated.Value[]>([]).current;
-
-    useEffect(() => {
-        const shuffledOptions = shuffle(props.options ?? []);
-        setOptions(shuffledOptions);
-
-        // Inicializar animaciones
-        animations.length = shuffledOptions.length;
-        shuffledOptions.forEach((_, i) => {
-            animations[i] = new Animated.Value(0); // Inicia con opacidad 0
-        });
-
-        // Animar opciones si está habilitado
-        if (props.isAnimatingOptions) {
-            const animateAndSpeak = async () => {
-                for (let i = 0; i < shuffledOptions.length; i++) {
-                    Animated.timing(animations[i], {
-                        toValue: 1, // Cambia opacidad a 1
-                        duration: 300,
-                        useNativeDriver: true,
-                    }).start();
-
-                    await speak(shuffledOptions[i].text); // Pronunciar texto
-                    await new Promise((resolve) => setTimeout(resolve, 300)); // Retraso entre botones
-                }
-            };
-            animateAndSpeak();
-        }
-    }, [props.isAnimatingOptions]);
-
-    const handleOptionPress = async (option: Option) => {
-        await speak(option.text); // Pronunciar texto al tocar la opción
-
-        if (option.correct) {
-            await play('correct'); // Reproducir audio correcto
-            await speak(props.feedback?.correct);
-            props.next(); // Pasar a la siguiente tarea
-        } else {
-            await play('incorrect'); // Reproducir audio incorrecto
-            await speak(props.feedback?.incorrect);
-        }
-    };
-
-    return (
-        <View style={{ alignItems: 'center', width: '100%' }}>
-            {/* Contenedor horizontal de las opciones */}
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
-                {options.map((option, index) => (
-                    <Animated.View
-                        key={option.text}
-                        style={{
-                            opacity: animations[index], // Controla la opacidad
-                            transform: [{ scale: animations[index] }], // Escalado adicional para mejor efecto
-                            margin: 10, // Espaciado entre botones
-                        }}
-                    >
-                        <IconButton
-                            name="question-mark"
-                            size={100}
-                            onPress={() => handleOptionPress(option)} // Validar inmediatamente al tocar
-                            style={{
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                        >
-                        </IconButton>
-                    </Animated.View>
-                ))}
-            </View>
-        </View>
-    );
+      <Animated.View
+        style={[
+          styles.container_3,
+          {
+            transform: [{ translateX: anim }],
+            gap: Math.min(width, height) * 0.03, // Espaciado dinámico
+          },
+        ]}
+      >
+        <InSuperSelectAdvTask {...props} isAnimatingOptions={isAnimatingOptions} />
+      </Animated.View>
+    </View>
+  );
 };
 
-  
-  
+const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) => {
+  const [options, setOptions] = useState<Option[]>([]);
+  const { play } = useAudio();
+  const { speak } = useSpeech();
+  const animations = useRef<Animated.Value[]>([]).current;
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
+
+  useEffect(() => {
+    const shuffledOptions = shuffle(props.options ?? []);
+    setOptions(shuffledOptions);
+
+    animations.length = shuffledOptions.length;
+    shuffledOptions.forEach((_, i) => {
+      animations[i] = new Animated.Value(0); // Inicia con opacidad 0
+    });
+
+    if (props.isAnimatingOptions) {
+      const animateAndSpeak = async () => {
+        for (let i = 0; i < shuffledOptions.length; i++) {
+          Animated.timing(animations[i], {
+            toValue: 1, // Cambia opacidad a 1
+            duration: 300,
+            useNativeDriver: true,
+          }).start();
+
+          await speak(shuffledOptions[i].text);
+          await new Promise((resolve) => setTimeout(resolve, 300));
+        }
+      };
+      animateAndSpeak();
+    }
+  }, [props.isAnimatingOptions]);
+
+  const handleOptionPress = async (option: Option) => {
+    await speak(option.text);
+
+    if (option.correct) {
+      await play('correct');
+      await speak(props.feedback?.correct);
+      props.next();
+    } else {
+      await play('incorrect');
+      await speak(props.feedback?.incorrect);
+    }
+  };
+
+  return (
+    <View style={{ alignItems: 'center', width: '100%' }}>
+      <View
+        style={{
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          marginBottom: height * 0.02,
+        }}
+      >
+        {options.map((option, index) => (
+          <Animated.View
+            key={option.text}
+            style={{
+              opacity: animations[index],
+              transform: [{ scale: animations[index] }],
+              margin: width * 0.02,
+            }}
+          >
+            <IconButton
+              name="question-mark"
+              size={Math.min(width, height) * 0.25} // Tamaño proporcional
+              onPress={() => handleOptionPress(option)}
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            />
+          </Animated.View>
+        ))}
+      </View>
+    </View>
+  );
+};

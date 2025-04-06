@@ -1,15 +1,5 @@
-//
-
-// React
-
 import { useEffect, useRef, useState } from 'react';
-
-// React Native
-
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
-
-// App
-
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { IconButton, ImageButton } from '@/components';
 import { useAudio, useEffectAsync, useSpeech } from '@/hooks';
 import { shuffle } from '@/shared';
@@ -37,16 +27,12 @@ type Props = {
 
 export const SuperSelectAdvTask = (props: Props) => {
   const [count, setCount] = useState(0);
-
   const [array, setArray] = useState([...Array(4)].map(() => false));
-
-  const anim = useAnimatedValue(-500);
-
+  const anim = useRef(new Animated.Value(-500)).current;
   const { play } = useAudio();
-
   const { speak } = useSpeech();
-
   const options = useRef(props.options);
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
 
   useEffect(() => {
     options.current = shuffle(props.options);
@@ -55,20 +41,18 @@ export const SuperSelectAdvTask = (props: Props) => {
   useEffectAsync(async () => {
     if (count === props.options.filter((o) => o.correct).length) {
       await speak(props.feedback.correct);
-
       props.next();
     }
   }, [count]);
 
   return (
     <View style={styles.container_1}>
-      <View style={styles.container_2}>
+      <View style={[styles.container_2, { paddingTop: height * 0.005 }]}>
         <IconButton
           name="volume-up"
-          size={192}
+          size={Math.min(width, height) * 0.4} // Tamaño proporcional
           onPress={async () => {
             await speak(...props.button.text);
-
             await speak(...props.instructions);
 
             Animated.timing(anim, {
@@ -83,11 +67,8 @@ export const SuperSelectAdvTask = (props: Props) => {
         style={[
           styles.container_3,
           {
-            transform: [
-              {
-                translateX: anim,
-              },
-            ],
+            transform: [{ translateX: anim }],
+            gap: Math.min(width, height) * 0.03, // Espaciado dinámico
           },
         ]}
       >
@@ -97,11 +78,12 @@ export const SuperSelectAdvTask = (props: Props) => {
               key={index}
               style={{
                 opacity: array[index] ? 0.25 : 1,
+                margin: width * 0.001, // Margen dinámico
               }}
             >
               <ImageButton
                 source={option.image as ImageKey}
-                size={120}
+                size={Math.min(width, height) * 0.32} // Tamaño proporcional
                 onPress={async () => {
                   if (array[index]) {
                     return;
@@ -116,14 +98,11 @@ export const SuperSelectAdvTask = (props: Props) => {
 
                     setArray((s) => {
                       const next = [...s];
-
                       next[index] = true;
-
                       return next;
                     });
                   } else {
                     await play('incorrect');
-
                     await speak(props.feedback.incorrect);
                   }
                 }}
@@ -155,7 +134,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 24,
     justifyContent: 'center',
     width: '75%',
   },

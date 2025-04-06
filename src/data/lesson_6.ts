@@ -13,7 +13,7 @@ export const Lesson6: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Espada. Es - pa - da',
+          text: 'Espada. Es  , pa  , da',
           image: 'espada',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson6: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Erizo. E - ri - zo',
+          text: 'Erizo. E  , ri  , zo',
           image: 'erizo',
         },
         feedback: {
@@ -44,7 +44,7 @@ export const Lesson6: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'Es - co - bah.',
+          text: 'Es  , co  , bah.',
           image: 'escoba',
         },
         count: 3,
@@ -62,7 +62,7 @@ export const Lesson6: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'ES - PA - DA.',
+          text: 'ES  , PA  , DA.',
           image: 'espada',
         },
         count: 3,
@@ -78,11 +78,11 @@ export const Lesson6: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Es - co - bah.',
+            text: 'Es  , co  , bah.',
             image: 'escoba',
           },
           {
-            text: 'Ahora al revés. Bah - co - es.',
+            text: 'Ahora al revés. Bah  , co  , es.',
             image: 'escoba2',
           },
         ],
@@ -100,11 +100,11 @@ export const Lesson6: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Ar - di - lla.',
+            text: 'Ar  , di  , lla.',
             image: 'ardilla',
           },
           {
-            text: 'Ahora al revés. Lla - di - ar.',
+            text: 'Ahora al revés. Lla  , di  , ar.',
             image: 'ardilla2',
           },
         ],
@@ -184,7 +184,7 @@ export const Lesson6: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra es, le agregamos co - bah, qué palabra formamos?',
+          text: '¿Si a la palabra es, le agregamos co  , bah, qué palabra formamos?',
         },
         options: [
           {
@@ -221,7 +221,7 @@ export const Lesson6: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra e, le agregamos na - no, qué palabra formamos?',
+          text: '¿Si a la palabra e, le agregamos na  , no, qué palabra formamos?',
         },
         options: [
           {

@@ -13,7 +13,7 @@ export const Lesson9: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Abeja. A - beja.',
+          text: 'Abeja. A  , beja.',
           image: 'abeja',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson9: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Anillo. A - nillo.',
+          text: 'Anillo. A  , nillo.',
           image: 'anillo',
         },
         feedback: {
@@ -43,11 +43,11 @@ export const Lesson9: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Abeja. A - beja',
+            text: 'Abeja. A  , beja',
             image: 'abeja'
           },
           {
-            text: 'Oreja. O - reja',
+            text: 'Oreja. O  , reja',
             image: 'oreja'
           }
         ],
@@ -64,11 +64,11 @@ export const Lesson9: Lesson = {
         instructions: [''],
         buttons: [
           {
-            text: 'Anillo . A - nillo',
+            text: 'Anillo . A  , nillo',
             image: 'anillo'
           },
           {
-            text: 'Martillo. Mar - tillo',
+            text: 'Martillo. Mar  , tillo',
             image: 'martillo'
           }
         ],

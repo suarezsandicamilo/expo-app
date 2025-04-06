@@ -13,7 +13,7 @@ export const Lesson16: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Oveja. Oo - veja.',
+          text: 'Oveja. Oo  , veja.',
           image: 'oveja',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson16: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Uva. Uu - va.',
+          text: 'Uva. Uu  , va.',
           image: 'uva',
         },
         feedback: {

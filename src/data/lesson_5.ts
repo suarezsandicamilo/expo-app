@@ -13,7 +13,7 @@ export const Lesson5: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Abeja. Aa - beh - ja.',
+          text: 'Abeja. Aa  , beh  , ja.',
           image: 'abeja',
         },
         feedback: {
@@ -27,7 +27,7 @@ export const Lesson5: Lesson = {
       instructions: ['Toca la carta y escucha la palabra.'],
       data: {
         button: {
-          text: 'Ave. Aa - ve.',
+          text: 'Ave. Aa  , ve.',
           image: 'ave',
         },
         feedback: {
@@ -44,7 +44,7 @@ export const Lesson5: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'A - beh - ja.',
+          text: 'A  , beh  , ja.',
           image: 'abeja',
         },
         count: 3,
@@ -62,7 +62,7 @@ export const Lesson5: Lesson = {
           'Toca las burbujas y cuenta el número de sílabas en la palabra.',
         ],
         button: {
-          text: 'A - VE.',
+          text: 'A  , VE.',
           image: 'ave',
         },
         count: 2,
@@ -78,11 +78,11 @@ export const Lesson5: Lesson = {
       data: {
         buttons: [
           {
-            text: 'A - beh - ja.',
+            text: 'A  , beh  , ja.',
             image: 'abeja',
           },
           {
-            text: 'Ahora al revés. Ja - beh - A.',
+            text: 'Ahora al revés. Ja  , beh  , A.',
             image: 'abeja2',
           },
         ],
@@ -100,11 +100,11 @@ export const Lesson5: Lesson = {
       data: {
         buttons: [
           {
-            text: 'MAR - TI - LLO',
+            text: 'mar  , ti  ,  yo',
             image: 'martillo',
           },
           {
-            text: 'Ahora al revés. LLO - TI - MAR',
+            text: 'Ahora al revés.  yo  , ti  , mar',
             image: 'martillo2',
           },
         ],
@@ -121,13 +121,13 @@ export const Lesson5: Lesson = {
       instructions: ["Toca el botón y escucha las sílabas."],
       data: {
         instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "U",
-        instruction3: "VA",
+        instruction2: "u",
+        instruction3: "vah",
         instruction4: "",
         instruction5: "",
         staticImage: "uva",
         feedback: {
-          correct: "¡Buen trabajo! El resultado es uva",
+          correct: "¡Buen trabajo! El resultado es uvah",
           incorrect: "Casi, intenta otra vez."
         },
         options: [
@@ -136,7 +136,7 @@ export const Lesson5: Lesson = {
             correct: false
           },
           {
-            text: "uva",
+            text: "uvah",
             correct: true
           },
           {
@@ -152,9 +152,9 @@ export const Lesson5: Lesson = {
       instructions: ["Toca el botón y escucha las sílabas."],
       data: {
         instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "A",
-        instruction3: "NI",
-        instruction4: "LLO",
+        instruction2: "a",
+        instruction3: "ni",
+        instruction4: " yo",
         instruction5: "",
         staticImage: "anillo",
         feedback: {
@@ -184,7 +184,7 @@ export const Lesson5: Lesson = {
       data: {
         instructions: [''],
         button: {
-          text: '¿Si a la palabra marti, le agregamos llo, qué palabra formamos?',
+          text: '¿Si a la palabra marti, le agregamos  yo, qué palabra formamos?',
         },
         options: [
           {

@@ -1,14 +1,8 @@
-//
-
-// React Native
-
-import { Animated, StyleSheet, useAnimatedValue, View } from 'react-native';
-
-// App
-
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { ImageKey } from '../../assets/images';
+import { useRef } from 'react';
 
 type Props = {
   buttons: {
@@ -22,17 +16,16 @@ type Props = {
 };
 
 export const SuperTapTask = (props: Props) => {
-  const anim = useAnimatedValue(-500);
-
+  const anim = useRef(new Animated.Value(-500)).current;
+  const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
   const { play } = useAudio();
-
   const { speak } = useSpeech();
 
   return (
     <View style={styles.container}>
       <ImageButton
         source={(props.buttons[0].image ?? props.buttons[0].text) as ImageKey}
-        size={192}
+        size={Math.min(width, height) * 0.6} // Tamaño proporcional
         onPress={async () => {
           await speak(props.buttons[0].text);
 
@@ -54,7 +47,7 @@ export const SuperTapTask = (props: Props) => {
       >
         <ImageButton
           source={(props.buttons[1].image ?? props.buttons[1].text) as ImageKey}
-          size={192}
+          size={Math.min(width, height) * 0.6} // Tamaño proporcional
           onPress={async () => {
             await speak(props.buttons[1].text);
 
@@ -76,5 +69,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     width: '100%',
+    paddingHorizontal: '5%', // Espaciado horizontal dinámico
   },
 });
