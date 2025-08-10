@@ -7,7 +7,7 @@ import { Lesson } from './types';
 export type RootStackParamList = {
   home: undefined;
   lesson: { lesson: Lesson };
-  end: undefined;
+  end: { lesson: Lesson };
   credits: undefined;
   cover: undefined;
 };

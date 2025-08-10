@@ -13,9 +13,11 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { IconButton } from '@/components';
 import { Colors } from '@/constants';
 import { LockProvider } from '@/contexts';
+import { Lessons } from '@/data';
 import { Db } from '@/db';
 import { useAudio, useEffectAsync } from '@/hooks';
 import { RootStackParamList } from '@/shared';
+import { Progress } from '@/types';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'end'>;
 
@@ -41,9 +43,14 @@ const InEndScreen = (props: Props) => {
         name="verified"
         size={192}
         onPress={async () => {
-          const p = await Db.get('progress', 0);
+          const p = await Db.get<Progress>(
+            'progress',
+            Object.fromEntries(Lessons.map((lesson) => [lesson.id, false])),
+          );
 
-          await Db.set('progress', p + 1);
+          p[props.route.params.lesson.id] = true;
+
+          await Db.set<Progress>('progress', p);
 
           props.navigation.navigate('home');
         }}

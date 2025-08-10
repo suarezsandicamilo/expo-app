@@ -16,50 +16,16 @@ import { Icon } from './icon';
 import { LockPressable } from './lock_pressable';
 
 type Props = {
-  force: boolean;
-  progress: number;
   index: number;
+  done: boolean;
   onPress?: (index?: number) => void;
 };
 
 export const PathButton = (props: Props) => {
-  if (props.force) {
-    return <ProgressPathButton {...props} />;
-  }
-
-  if (props.progress < props.index) {
-    return <BackPathButton />;
-  }
-
-  if (props.progress === props.index) {
-    return <ProgressPathButton {...props} />;
-  }
-
-  return <DonePathButton {...props}/>;
-};
-
-const BackPathButton = () => {
-  return (
-    <View
-      style={[
-        {
-          backgroundColor: '#9e9e9e',
-        },
-        styles.container_1,
-      ]}
-    >
-      <View
-        style={[
-          {
-            backgroundColor: '#9e9e9e',
-            borderColor: Colors['text-2'],
-          },
-          styles.container_2,
-        ]}
-      >
-        <Icon name="star" size={48} />
-      </View>
-    </View>
+  return props.done ? (
+    <DonePathButton {...props} />
+  ) : (
+    <ProgressPathButton {...props} />
   );
 };
 
@@ -147,16 +113,16 @@ const DonePathButton = (props: Props) => {
     <View
       style={[
         {
-          backgroundColor: Colors['star-2'], // Mantiene el color diferenciado
+          backgroundColor: Colors['star-2'],
         },
         styles.container_1,
       ]}
     >
       <LockPressable
-        onPress={() => props.onPress?.(props.index)} // Ejecuta la lección del índice
+        onPress={() => props.onPress?.(props.index)}
         style={[
           {
-            backgroundColor: Colors['star-2'], // Mismo color que el contenedor
+            backgroundColor: Colors['star-2'],
             borderColor: Colors['text-2'],
           },
           styles.container_2,

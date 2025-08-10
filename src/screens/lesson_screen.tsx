@@ -60,7 +60,7 @@ const InLessonScreen = (props: Props) => {
 
   const next = async () => {
     if (progress + 1 === lesson.tasks.length) {
-      props.navigation.navigate('end');
+      props.navigation.navigate('end', { lesson });
 
       return;
     }

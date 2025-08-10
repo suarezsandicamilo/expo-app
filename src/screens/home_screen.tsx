@@ -22,12 +22,14 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 // App
 
 import { Colors } from '@/constants';
+import { IconButton } from '@/components';
 import { LockProvider } from '@/contexts';
+import { Lessons } from '@/data';
 import { Db } from '@/db';
 import { useEffectAsync } from '@/hooks';
 import { RootStackParamList } from '@/shared';
+import { Progress } from '@/types';
 import { PathScreen } from './path_screen';
-import { IconButton } from '@/components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'home'>;
 
@@ -39,7 +41,7 @@ export const HomeScreen = (props: Props) => {
       return true;
     });
 
-    const data = await Db.get('voice', '');
+    const data = await Db.get<string>('voice', '');
 
     if (data !== '') {
       return;
@@ -59,15 +61,18 @@ export const HomeScreen = (props: Props) => {
       throw new Error('There are no Spanish voices in this device');
     }
 
-    await Db.set('voice', voice.identifier);
+    await Db.set<string>('voice', voice.identifier);
   }, []);
 
   useFocusEffect(() => {
     const fn = async () => {
       try {
-        await Db.get('progress');
+        await Db.get<Progress>('progress');
       } catch {
-        await Db.set('progress', 0);
+        await Db.set<Progress>(
+          'progress',
+          Object.fromEntries(Lessons.map((lesson) => [lesson.id, false])),
+        );
       }
     };
 
