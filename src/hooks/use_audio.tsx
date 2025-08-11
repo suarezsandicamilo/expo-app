@@ -24,7 +24,7 @@ export const useAudio = () => {
       const sound = new Audio.Sound();
 
       const status = await sound.loadAsync(source, {
-        volume: 0.25,
+        volume: 1,
       });
 
       if (!status.isLoaded) {
