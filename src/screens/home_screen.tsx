@@ -22,7 +22,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 // App
 
 import { Colors } from '@/constants';
-import { IconButton } from '@/components';
+import { Cover, IconButton } from '@/components';
 import { LockProvider } from '@/contexts';
 import { Lessons } from '@/data';
 import { Db } from '@/db';
@@ -81,16 +81,18 @@ export const HomeScreen = (props: Props) => {
 
   return (
     <LockProvider>
-      <View
-        style={[
-          styles.container_1,
-          {
-            paddingTop: insets.top * 1.5,
-          },
-        ]}
-      >
-        <InHomeScreen {...props} />
-      </View>
+      <Cover opacity={0.5}>
+        <View
+          style={[
+            styles.container_1,
+            {
+              paddingTop: insets.top * 1.5,
+            },
+          ]}
+        >
+          <InHomeScreen {...props} />
+        </View>
+      </Cover>
     </LockProvider>
   );
 };
@@ -117,7 +119,6 @@ export const InHomeScreen = (props: Props) => {
 const styles = StyleSheet.create({
   container_1: {
     alignItems: 'center',
-    backgroundColor: Colors['background-1'],
     flex: 1,
     justifyContent: 'center',
     width: '100%',

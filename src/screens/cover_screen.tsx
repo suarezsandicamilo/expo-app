@@ -6,7 +6,7 @@ import React from 'react';
 
 // React Native
 
-import { Image, ImageBackground, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
 // React Navigation
 
@@ -14,7 +14,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Button, IconButton } from '@/components';
+import { Button, Cover, IconButton } from '@/components';
 import { LockProvider } from '@/contexts';
 import { RootStackParamList } from '@/shared';
 
@@ -23,18 +23,16 @@ type Props = NativeStackScreenProps<RootStackParamList, 'cover'>;
 export const CoverScreen = (props: Props) => {
   return (
     <LockProvider>
-      <InCoverScreen {...props} />
+      <Cover opacity={0.9}>
+        <InCoverScreen {...props} />
+      </Cover>
     </LockProvider>
   );
 };
 
 export const InCoverScreen = (props: Props) => {
   return (
-    <ImageBackground
-      source={require('@/../assets/background_2.png')}
-      style={styles.cover}
-      resizeMode="cover"
-    >
+    <>
       <Image source={require('@/../assets/icon.png')} style={styles.image} />
       <Button text="Fono Aventura" active={false} />
       <IconButton
@@ -44,17 +42,11 @@ export const InCoverScreen = (props: Props) => {
           props.navigation.navigate('home');
         }}
       />
-    </ImageBackground>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  cover: {
-    alignItems: 'center',
-    flex: 1,
-    gap: 24,
-    justifyContent: 'center',
-  },
   image: {
     alignItems: 'center',
     borderRadius: 32,

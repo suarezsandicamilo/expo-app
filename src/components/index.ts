@@ -1,6 +1,7 @@
 //
 
 export * from './button';
+export * from './cover';
 export * from './icon';
 export * from './icon_button';
 export * from './image';
