@@ -11,6 +11,7 @@ import { LockPressable } from './lock_pressable';
 
 type Props = {
   text: string;
+  active?: boolean;
   onPress?: () => void;
 };
 
@@ -19,7 +20,9 @@ export const Button = (props: Props) => {
     <LockPressable
       onPress={props.onPress}
       style={(state) => {
-        return [styles.container, state.pressed && styles.pressed];
+        const active = props.active ?? true;
+
+        return [styles.container, active && state.pressed && styles.pressed];
       }}
     >
       <Text style={styles.text}>{props.text}</Text>
