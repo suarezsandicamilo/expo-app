@@ -44,15 +44,18 @@ export const Lesson9: Lesson = {
         buttons: [
           {
             text: 'Abeja. A  , beja',
-            image: 'abeja'
+            image: 'abeja',
           },
           {
             text: 'Oreja. O  , reja',
-            image: 'oreja'
-          }
+            image: 'oreja',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras Abeja y Oreja riman con: Eja'],
+          correct: [
+            'Buen trabajo. ',
+            'Las palabras Abeja y Oreja riman con: Eja',
+          ],
         },
       },
     },
@@ -65,15 +68,18 @@ export const Lesson9: Lesson = {
         buttons: [
           {
             text: 'Anillo . A  , nillo',
-            image: 'anillo'
+            image: 'anillo',
           },
           {
             text: 'Martillo. Mar  , tillo',
-            image: 'martillo'
-          }
+            image: 'martillo',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras anillo y martillo riman con: Illo'],
+          correct: [
+            'Buen trabajo. ',
+            'Las palabras anillo y martillo riman con: Illo',
+          ],
         },
       },
     },
@@ -126,7 +132,8 @@ export const Lesson9: Lesson = {
         text: 'Imán',
         staticImage: 'iman',
         feedback: {
-          correct: 'Buen trabajo. La palabra imán no rima con ave. La palabra imán rima con titán.',
+          correct:
+            'Buen trabajo. La palabra imán no rima con ave. La palabra imán rima con titán.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

@@ -1,3 +1,5 @@
+//
+
 import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { IconButton, ImageButton } from '@/components';

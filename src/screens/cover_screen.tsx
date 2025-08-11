@@ -1,8 +1,16 @@
+//
+
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground,
+  Image,
+} from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/shared';
-import { useFonts } from 'expo-font';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'cover'>;
 
@@ -74,16 +82,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingVertical: 15,
     paddingHorizontal: 20,
-    borderRadius: 32, 
-    shadowColor: '#0e285d', 
-    shadowOffset: { width: 1, height: 5 }, 
-    shadowOpacity: 1, 
-    shadowRadius: 0, 
-    elevation: 5, 
+    borderRadius: 32,
+    shadowColor: '#0e285d',
+    shadowOffset: { width: 1, height: 5 },
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    elevation: 5,
   },
   buttonText: {
-    color: 'white', 
-    fontSize: 16, 
+    color: 'white',
+    fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
   },

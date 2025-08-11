@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+//
+
+import { useRef, useState } from 'react';
 import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
-import { Button, IconButton, ImageButton } from '@/components';
+import { IconButton, ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
-import { shuffle } from '@/shared';
 import { ImageKey } from '../../assets/images';
 import { Colors } from '@/constants';
 
@@ -66,7 +67,9 @@ type Props = {
 
 export const SuperSelectTask = (props: Props) => {
   const [highlightedCard, setHighlightedCard] = useState<number | null>(null);
-  const [selectedOptions, setSelectedOptions] = useState<Set<string>>(new Set());
+  const [selectedOptions, setSelectedOptions] = useState<Set<string>>(
+    new Set(),
+  );
   const { speak } = useSpeech();
   const { play } = useAudio();
   const anim = useRef(new Animated.Value(-500)).current;
@@ -99,11 +102,18 @@ export const SuperSelectTask = (props: Props) => {
   };
 
   const validateSelection = async () => {
-    const correctSelections = props.options?.filter((option) => option.correct).map((opt) => opt.text) || [];
+    const correctSelections =
+      props.options
+        ?.filter((option) => option.correct)
+        .map((opt) => opt.text) || [];
     const selectedArray = Array.from(selectedOptions);
 
-    const allCorrectSelected = correctSelections.every((text) => selectedArray.includes(text));
-    const noIncorrectSelected = selectedArray.every((text) => correctSelections.includes(text));
+    const allCorrectSelected = correctSelections.every((text) =>
+      selectedArray.includes(text),
+    );
+    const noIncorrectSelected = selectedArray.every((text) =>
+      correctSelections.includes(text),
+    );
 
     if (allCorrectSelected && noIncorrectSelected) {
       await play('correct');
@@ -131,24 +141,27 @@ export const SuperSelectTask = (props: Props) => {
         onPress={playTaskAudio}
         style={{ marginBottom: height * 0.01 }}
       />
-      <View style={[styles.largeCardContainer, { marginVertical: height * 0.01 }]}>
-        {[props.staticImage, props.staticImage2].map((image, index) => (
-          image && (
-            <View
-              key={index}
-              style={[
-                styles.largeCard,
-                highlightedCard === index && { borderColor: 'yellow' },
-              ]}
-            >
-              <ImageButton
-                source={image as ImageKey}
-                size={Math.min(width, height) * 0.4} // Tamaño proporcional
-                onPress={() => handleImagePress(index)}
-              />
-            </View>
-          )
-        ))}
+      <View
+        style={[styles.largeCardContainer, { marginVertical: height * 0.01 }]}
+      >
+        {[props.staticImage, props.staticImage2].map(
+          (image, index) =>
+            image && (
+              <View
+                key={index}
+                style={[
+                  styles.largeCard,
+                  highlightedCard === index && { borderColor: 'yellow' },
+                ]}
+              >
+                <ImageButton
+                  source={image as ImageKey}
+                  size={Math.min(width, height) * 0.4} // Tamaño proporcional
+                  onPress={() => handleImagePress(index)}
+                />
+              </View>
+            ),
+        )}
       </View>
       <Animated.View
         style={[
@@ -187,7 +200,9 @@ export const SuperSelectTask = (props: Props) => {
           );
         })}
       </Animated.View>
-      <Animated.View style={[styles.buttonContainer, { transform: [{ translateX: anim }] }]}>
+      <Animated.View
+        style={[styles.buttonContainer, { transform: [{ translateX: anim }] }]}
+      >
         <IconButton
           name="check"
           onPress={validateSelection}

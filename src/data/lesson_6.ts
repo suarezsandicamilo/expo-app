@@ -87,9 +87,7 @@ export const Lesson6: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
@@ -109,72 +107,70 @@ export const Lesson6: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
     {
       id: 7,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "Es",
-        instruction3: "Tre",
-        instruction4: "Lla",
-        instruction5: "",
-        staticImage: "estrella",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'Es',
+        instruction3: 'Tre',
+        instruction4: 'Lla',
+        instruction5: '',
+        staticImage: 'estrella',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es estrella",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es estrella',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "Escoba",
-            correct: false
+            text: 'Escoba',
+            correct: false,
           },
           {
-            text: "estrella",
-            correct: true
+            text: 'estrella',
+            correct: true,
           },
           {
-            text: "Espada",
-            correct: false
-          }
-        ]
+            text: 'Espada',
+            correct: false,
+          },
+        ],
       },
     },
     {
       id: 8,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "E",
-        instruction3: "NA",
-        instruction4: "NO",
-        instruction5: "",
-        staticImage: "enano",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'E',
+        instruction3: 'NA',
+        instruction4: 'NO',
+        instruction5: '',
+        staticImage: 'enano',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es enano",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es enano',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "elefante",
-            correct: false
+            text: 'elefante',
+            correct: false,
           },
           {
-            text: "enano",
-            correct: true
+            text: 'enano',
+            correct: true,
           },
           {
-            text: "erizo",
-            correct: false
-          }
-        ]
+            text: 'erizo',
+            correct: false,
+          },
+        ],
       },
     },
     {
@@ -264,8 +260,7 @@ export const Lesson6: Lesson = {
         text: 'estrella',
         staticImage: 'estrella',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra estrella sí tiene la sílaba es',
+          correct: 'Buen trabajo. La palabra estrella sí tiene la sílaba es',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -283,8 +278,7 @@ export const Lesson6: Lesson = {
         text: 'campana',
         staticImage: 'campana',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra campana no tiene la sílaba ra',
+          correct: 'Buen trabajo. La palabra campana no tiene la sílaba ra',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

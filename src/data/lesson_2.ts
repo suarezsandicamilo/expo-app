@@ -153,11 +153,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'Araña teje.',
-            image: 'araña'
+            image: 'araña',
           },
           {
             text: 'Teje araña.',
-            image: 'araña2'
+            image: 'araña2',
           },
         ],
         feedback: {
@@ -177,11 +177,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'Campana amarilla.',
-            image: 'campana'
+            image: 'campana',
           },
           {
             text: 'Amarilla campana.',
-            image: 'campana2'
+            image: 'campana2',
           },
         ],
         feedback: {
@@ -201,11 +201,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'El enano tiene la espada',
-            image: 'espada'
+            image: 'espada',
           },
           {
             text: 'El enano tiene la escoba.',
-            image: 'escoba'
+            image: 'escoba',
           },
         ],
         feedback: {
@@ -227,11 +227,11 @@ export const Lesson2: Lesson = {
         buttons: [
           {
             text: 'La araña mira la estrella.',
-            image: 'araña'
+            image: 'araña',
           },
           {
             text: 'La ardilla mira la estrella.',
-            image: 'ardilla'
+            image: 'ardilla',
           },
         ],
         feedback: {
@@ -247,79 +247,83 @@ export const Lesson2: Lesson = {
     },
     {
       id: 11,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
       data: {
-        instruction: "El enano tiene la espada",
-        instruction2: "El enano tiene la escoba",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "espada",
-        staticImage2: "escoba",
+        instruction: 'El enano tiene la espada',
+        instruction2: 'El enano tiene la escoba',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'espada',
+        staticImage2: 'escoba',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son espada y escoba.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son espada y escoba.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "Espada",
-            image: "espada",
-            correct: true
+            text: 'Espada',
+            image: 'espada',
+            correct: true,
           },
           {
-            text: "Escoba",
-            image: "escoba",
-            correct: true
+            text: 'Escoba',
+            image: 'escoba',
+            correct: true,
           },
           {
-            text: "Erizo",
-            image: "erizo",
-            correct: false
+            text: 'Erizo',
+            image: 'erizo',
+            correct: false,
           },
           {
-            text: "Enano",
-            image: "enano",
-            correct: false
-          }
-        ]
-      }
+            text: 'Enano',
+            image: 'enano',
+            correct: false,
+          },
+        ],
+      },
     },
     {
       id: 12,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
-        data: {
-        instruction: "La araña mira la estrella.",
-        instruction2: "La ardilla mira la estrella.",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "araña",
-        staticImage2: "ardilla",
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
+      data: {
+        instruction: 'La araña mira la estrella.',
+        instruction2: 'La ardilla mira la estrella.',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'araña',
+        staticImage2: 'ardilla',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son araña y ardilla.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son araña y ardilla.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "Araña",
-            image: "araña",
-            correct: true
+            text: 'Araña',
+            image: 'araña',
+            correct: true,
           },
           {
-            text: "ardilla",
-            image: "ardilla",
-            correct: true
+            text: 'ardilla',
+            image: 'ardilla',
+            correct: true,
           },
           {
-            text: "conejo",
-            image: "conejo",
-            correct: false
+            text: 'conejo',
+            image: 'conejo',
+            correct: false,
           },
           {
-            text: "iguana",
-            image: "iguana",
-            correct: false
-          }
-        ]
-      }
+            text: 'iguana',
+            image: 'iguana',
+            correct: false,
+          },
+        ],
+      },
     },
   ],
 };

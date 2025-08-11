@@ -247,79 +247,83 @@ export const Lesson4: Lesson = {
     },
     {
       id: 11,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
       data: {
-        instruction: "El ojo parpadea.",
-        instruction2: " La oveja parpadea.",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "ojo",
-        staticImage2: "oveja",
+        instruction: 'El ojo parpadea.',
+        instruction2: ' La oveja parpadea.',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'ojo',
+        staticImage2: 'oveja',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son ojo y oveja.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son ojo y oveja.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "ojo",
-            image: "ojo",
-            correct: true
+            text: 'ojo',
+            image: 'ojo',
+            correct: true,
           },
           {
-            text: "oveja",
-            image: "oveja",
-            correct: true
+            text: 'oveja',
+            image: 'oveja',
+            correct: true,
           },
           {
-            text: "oruga",
-            image: "oruga",
-            correct: false
+            text: 'oruga',
+            image: 'oruga',
+            correct: false,
           },
           {
-            text: "ovillo",
-            image: "ovillo",
-            correct: false
-          }
-        ]
-      }
+            text: 'ovillo',
+            image: 'ovillo',
+            correct: false,
+          },
+        ],
+      },
     },
     {
       id: 12,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
-        data: {
-        instruction: "El ángel brilla.",
-        instruction2: "El ovillo brilla",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "angel",
-        staticImage2: "ovillo",
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
+      data: {
+        instruction: 'El ángel brilla.',
+        instruction2: 'El ovillo brilla',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'angel',
+        staticImage2: 'ovillo',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son ángel y ovillo.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son ángel y ovillo.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "ovillo",
-            image: "ovillo",
-            correct: true
+            text: 'ovillo',
+            image: 'ovillo',
+            correct: true,
           },
           {
-            text: "ángel",
-            image: "angel",
-            correct: true
+            text: 'ángel',
+            image: 'angel',
+            correct: true,
           },
           {
-            text: "oreja",
-            image: "oreja",
-            correct: false
+            text: 'oreja',
+            image: 'oreja',
+            correct: false,
           },
           {
-            text: "oveja",
-            image: "oveja",
-            correct: false
-          }
-        ]
-      }
+            text: 'oveja',
+            image: 'oveja',
+            correct: false,
+          },
+        ],
+      },
     },
   ],
 };

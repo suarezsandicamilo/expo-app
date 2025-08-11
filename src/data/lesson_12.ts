@@ -48,11 +48,14 @@ export const Lesson12: Lesson = {
           },
           {
             text: 'Taza. Ta  , za',
-            image: 'taza'
-          }
+            image: 'taza',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo. ','Las palabras casa y taza riman con: asa'],
+          correct: [
+            'Buen trabajo. ',
+            'Las palabras casa y taza riman con: asa',
+          ],
         },
       },
     },
@@ -69,11 +72,14 @@ export const Lesson12: Lesson = {
           },
           {
             text: 'Plato. plato',
-            image: 'plato'
-          }
+            image: 'plato',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo.', 'Las palabras zapato y plato riman con: ato'],
+          correct: [
+            'Buen trabajo.',
+            'Las palabras zapato y plato riman con: ato',
+          ],
         },
       },
     },

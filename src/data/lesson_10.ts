@@ -44,15 +44,18 @@ export const Lesson10: Lesson = {
         buttons: [
           {
             text: 'Manzana. Man  , zana',
-            image: 'manzana'
+            image: 'manzana',
           },
           {
             text: 'Campana. Cam  , pana',
-            image: 'campana'
-          }
+            image: 'campana',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo.', 'Las palabras manzana y campana riman con: ana'],
+          correct: [
+            'Buen trabajo.',
+            'Las palabras manzana y campana riman con: ana',
+          ],
         },
       },
     },
@@ -65,15 +68,18 @@ export const Lesson10: Lesson = {
         buttons: [
           {
             text: 'Espejo . Es  , pejo',
-            image: 'espejo'
+            image: 'espejo',
           },
           {
             text: 'Conejo. Co  , nejo',
-            image: 'conejo'
-          }
+            image: 'conejo',
+          },
         ],
         feedback: {
-          correct: ['Buen trabajo.', 'Las palabras espejo y conejo riman con: eejo'],
+          correct: [
+            'Buen trabajo.',
+            'Las palabras espejo y conejo riman con: eejo',
+          ],
         },
       },
     },
@@ -219,7 +225,8 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras Conejo y espejo riman con: eejo.',
+          correct:
+            'Buen trabajo. Las palabras Conejo y espejo riman con: eejo.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -256,7 +263,8 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras manzana, campana e iguana riman con: ana.',
+          correct:
+            'Buen trabajo. Las palabras manzana, campana e iguana riman con: ana.',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

@@ -1,3 +1,5 @@
+//
+
 import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';

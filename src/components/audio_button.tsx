@@ -1,3 +1,5 @@
+//
+
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
@@ -22,10 +24,7 @@ export const AudioButton = ({ text, onPress, isSelected }: Props) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={[
-        styles.button,
-        isSelected && { backgroundColor: 'lightgreen' },
-      ]}
+      style={[styles.button, isSelected && { backgroundColor: 'lightgreen' }]}
     >
       <Text>{text}</Text>
     </TouchableOpacity>

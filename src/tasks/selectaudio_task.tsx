@@ -1,3 +1,5 @@
+//
+
 import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { ImageButton, IconButton } from '@/components';
@@ -96,13 +98,18 @@ export const SelectAudioTask = (props: Props) => {
           },
         ]}
       >
-        <InSuperSelectAdvTask {...props} isAnimatingOptions={isAnimatingOptions} />
+        <InSuperSelectAdvTask
+          {...props}
+          isAnimatingOptions={isAnimatingOptions}
+        />
       </Animated.View>
     </View>
   );
 };
 
-const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) => {
+const InSuperSelectAdvTask = (
+  props: Props & { isAnimatingOptions: boolean },
+) => {
   const [options, setOptions] = useState<Option[]>([]);
   const { play } = useAudio();
   const { speak } = useSpeech();
@@ -133,7 +140,7 @@ const InSuperSelectAdvTask = (props: Props & { isAnimatingOptions: boolean }) =>
       };
       animateAndSpeak();
     }
-  }, [props.isAnimatingOptions]);
+  }, [animations, props.isAnimatingOptions, props.options]);
 
   const handleOptionPress = async (option: Option) => {
     await speak(option.text);

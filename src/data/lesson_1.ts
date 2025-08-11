@@ -153,11 +153,11 @@ export const Lesson1: Lesson = {
         buttons: [
           {
             text: 'Ave canta.',
-            image: 'ave'
+            image: 'ave',
           },
           {
             text: 'Canta ave.',
-            image: 'ave2'
+            image: 'ave2',
           },
         ],
         feedback: {
@@ -181,7 +181,7 @@ export const Lesson1: Lesson = {
           },
           {
             text: 'Brillante anillo.',
-            image: 'anillo2'
+            image: 'anillo2',
           },
         ],
         feedback: {
@@ -247,79 +247,83 @@ export const Lesson1: Lesson = {
     },
     {
       id: 11,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
       data: {
-        instruction: "El árbol es alto",
-        instruction2: "El arco es alto",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "arbol",
-        staticImage2: "arco",
+        instruction: 'El árbol es alto',
+        instruction2: 'El arco es alto',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'arbol',
+        staticImage2: 'arco',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "árbol",
-            image: "arbol",
-            correct: true
+            text: 'árbol',
+            image: 'arbol',
+            correct: true,
           },
           {
-            text: "arco",
-            image: "arco",
-            correct: true
+            text: 'arco',
+            image: 'arco',
+            correct: true,
           },
           {
-            text: "ave",
-            image: "ave",
-            correct: false
+            text: 'ave',
+            image: 'ave',
+            correct: false,
           },
           {
-            text: "aro",
-            image: "aro",
-            correct: false
-          }
-        ]
-      }
+            text: 'aro',
+            image: 'aro',
+            correct: false,
+          },
+        ],
+      },
     },
     {
       id: 12,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
-        data: {
-        instruction: "El avión vuela.",
-        instruction2: "El ave vuela.",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "avion",
-        staticImage2: "ave",
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
+      data: {
+        instruction: 'El avión vuela.',
+        instruction2: 'El ave vuela.',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'avion',
+        staticImage2: 'ave',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son avión y ave.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son avión y ave.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "avión",
-            image: "avion",
-            correct: true
+            text: 'avión',
+            image: 'avion',
+            correct: true,
           },
           {
-            text: "ave",
-            image: "ave",
-            correct: true
+            text: 'ave',
+            image: 'ave',
+            correct: true,
           },
           {
-            text: "uva",
-            image: "uva",
-            correct: false
+            text: 'uva',
+            image: 'uva',
+            correct: false,
           },
           {
-            text: "arco",
-            image: "arco",
-            correct: false
-          }
-        ]
-      }
+            text: 'arco',
+            image: 'arco',
+            correct: false,
+          },
+        ],
+      },
     },
   ],
 };

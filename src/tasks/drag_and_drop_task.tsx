@@ -1,11 +1,7 @@
+//
+
 import { useEffect, useRef, useState } from 'react';
-import {
-  Animated,
-  Dimensions,
-  StyleSheet,
-  useWindowDimensions,
-  View,
-} from 'react-native';
+import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import {
   Gesture,
   GestureDetector,

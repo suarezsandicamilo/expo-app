@@ -247,79 +247,83 @@ export const Lesson3: Lesson = {
     },
     {
       id: 11,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
       data: {
-        instruction: "El pato nada.",
-        instruction2: "El gato nada",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "pato",
-        staticImage2: "gato",
+        instruction: 'El pato nada.',
+        instruction2: 'El gato nada',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'pato',
+        staticImage2: 'gato',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son pato y gato.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son pato y gato.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "Pato",
-            image: "pato",
-            correct: true
+            text: 'Pato',
+            image: 'pato',
+            correct: true,
           },
           {
-            text: "Gato",
-            image: "gato",
-            correct: true
+            text: 'Gato',
+            image: 'gato',
+            correct: true,
           },
           {
-            text: "Olla",
-            image: "olla",
-            correct: false
+            text: 'Olla',
+            image: 'olla',
+            correct: false,
           },
           {
-            text: "Isla",
-            image: "isla",
-            correct: false
-          }
-        ]
-      }
+            text: 'Isla',
+            image: 'isla',
+            correct: false,
+          },
+        ],
+      },
     },
     {
       id: 12,
-      type: "super_select",
-      instructions: ["Presiona el botón y escucha las oraciones"],
-        data: {
-        instruction: "La cuna es azul.",
-        instruction2: "La luna es azul.",
-        instruction3: "Selecciona las cartas que tienen las palabras que cambiaron",
-        staticImage: "cuna",
-        staticImage2: "luna",
+      type: 'super_select',
+      instructions: ['Presiona el botón y escucha las oraciones'],
+      data: {
+        instruction: 'La cuna es azul.',
+        instruction2: 'La luna es azul.',
+        instruction3:
+          'Selecciona las cartas que tienen las palabras que cambiaron',
+        staticImage: 'cuna',
+        staticImage2: 'luna',
         feedback: {
-          correct: "¡Buen trabajo!  Las palabras que cambiaron son cuna y luna.",
-          incorrect: "Casi, intenta otra vez."
+          correct:
+            '¡Buen trabajo!  Las palabras que cambiaron son cuna y luna.',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "cuna",
-            image: "cuna",
-            correct: true
+            text: 'cuna',
+            image: 'cuna',
+            correct: true,
           },
           {
-            text: "luna",
-            image: "luna",
-            correct: true
+            text: 'luna',
+            image: 'luna',
+            correct: true,
           },
           {
-            text: "pato",
-            image: "pato",
-            correct: false
+            text: 'pato',
+            image: 'pato',
+            correct: false,
           },
           {
-            text: "edificio",
-            image: "edificio",
-            correct: false
-          }
-        ]
-      }
+            text: 'edificio',
+            image: 'edificio',
+            correct: false,
+          },
+        ],
+      },
     },
   ],
 };

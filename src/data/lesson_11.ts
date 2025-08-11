@@ -44,12 +44,12 @@ export const Lesson11: Lesson = {
         buttons: [
           {
             text: 'Gato. Ga  , to',
-            image: 'gato'
+            image: 'gato',
           },
           {
             text: 'Pato. Pa  , to',
-            image: 'pato'
-          }
+            image: 'pato',
+          },
         ],
         feedback: {
           correct: ['Buen trabajo.', 'Las palabras gato y pato riman con: ato'],
@@ -65,12 +65,12 @@ export const Lesson11: Lesson = {
         buttons: [
           {
             text: 'Luna . Lu  , na',
-            image: 'luna'
+            image: 'luna',
           },
           {
             text: 'Cuna. Ku  , na',
-            image: 'cuna'
-          }
+            image: 'cuna',
+          },
         ],
         feedback: {
           correct: ['Buen trabajo.', 'Las palabras luna y cuna riman con: una'],

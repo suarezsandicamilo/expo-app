@@ -87,9 +87,7 @@ export const Lesson7: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
@@ -109,72 +107,70 @@ export const Lesson7: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
     {
       id: 7,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "I",
-        instruction3: "GLU",
-        instruction4: "",
-        instruction5: "",
-        staticImage: "iglu",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'I',
+        instruction3: 'GLU',
+        instruction4: '',
+        instruction5: '',
+        staticImage: 'iglu',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es iglú",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es iglú',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "insecto",
-            correct: false
+            text: 'insecto',
+            correct: false,
           },
           {
-            text: "iglú",
-            correct: true
+            text: 'iglú',
+            correct: true,
           },
           {
-            text: "iglesia",
-            correct: false
-          }
-        ]
+            text: 'iglesia',
+            correct: false,
+          },
+        ],
       },
     },
     {
       id: 8,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "o",
-        instruction3: "lla",
-        instruction4: "",
-        instruction5: "",
-        staticImage: "olla",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'o',
+        instruction3: 'lla',
+        instruction4: '',
+        instruction5: '',
+        staticImage: 'olla',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es olla",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es olla',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "ola",
-            correct: false
+            text: 'ola',
+            correct: false,
           },
           {
-            text: "olla",
-            correct: true
+            text: 'olla',
+            correct: true,
           },
           {
-            text: "ojo",
-            correct: false
-          }
-        ]
+            text: 'ojo',
+            correct: false,
+          },
+        ],
       },
     },
     {
@@ -264,8 +260,7 @@ export const Lesson7: Lesson = {
         text: 'escalera',
         staticImage: 'escalera',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra escalera no tiene la sílaba la',
+          correct: 'Buen trabajo. La palabra escalera no tiene la sílaba la',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -283,8 +278,7 @@ export const Lesson7: Lesson = {
         text: 'edificio',
         staticImage: 'edificio',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra edificio no tiene la sílaba e',
+          correct: 'Buen trabajo. La palabra edificio no tiene la sílaba e',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

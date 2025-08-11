@@ -87,9 +87,7 @@ export const Lesson5: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
@@ -109,72 +107,70 @@ export const Lesson5: Lesson = {
           },
         ],
         feedback: {
-          correct: [
-            '¡Buen trabajo!',
-          ],
+          correct: ['¡Buen trabajo!'],
         },
       },
     },
     {
       id: 7,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "u",
-        instruction3: "vah",
-        instruction4: "",
-        instruction5: "",
-        staticImage: "uva",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'u',
+        instruction3: 'vah',
+        instruction4: '',
+        instruction5: '',
+        staticImage: 'uva',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es uvah",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es uvah',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "oso",
-            correct: false
+            text: 'oso',
+            correct: false,
           },
           {
-            text: "uvah",
-            correct: true
+            text: 'uvah',
+            correct: true,
           },
           {
-            text: "aro",
-            correct: false
-          }
-        ]
+            text: 'aro',
+            correct: false,
+          },
+        ],
       },
     },
     {
       id: 8,
       type: 'selectaudio',
-      instructions: ["Toca el botón y escucha las sílabas."],
+      instructions: ['Toca el botón y escucha las sílabas.'],
       data: {
-        instruction: "Qué palabra se forma al juntar las sílabas,",
-        instruction2: "a",
-        instruction3: "ni",
-        instruction4: " yo",
-        instruction5: "",
-        staticImage: "anillo",
+        instruction: 'Qué palabra se forma al juntar las sílabas,',
+        instruction2: 'a',
+        instruction3: 'ni',
+        instruction4: ' yo',
+        instruction5: '',
+        staticImage: 'anillo',
         feedback: {
-          correct: "¡Buen trabajo! El resultado es anillo",
-          incorrect: "Casi, intenta otra vez."
+          correct: '¡Buen trabajo! El resultado es anillo',
+          incorrect: 'Casi, intenta otra vez.',
         },
         options: [
           {
-            text: "abeja",
-            correct: false
+            text: 'abeja',
+            correct: false,
           },
           {
-            text: "anillo",
-            correct: true
+            text: 'anillo',
+            correct: true,
           },
           {
-            text: "avión",
-            correct: false
-          }
-        ]
+            text: 'avión',
+            correct: false,
+          },
+        ],
       },
     },
     {
@@ -264,8 +260,7 @@ export const Lesson5: Lesson = {
         text: 'barco',
         staticImage: 'barco',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra barco no tiene la sílaba ca',
+          correct: 'Buen trabajo. La palabra barco no tiene la sílaba ca',
           incorrect: 'Casi, intenta otra vez.',
         },
       },
@@ -283,8 +278,7 @@ export const Lesson5: Lesson = {
         text: 'martillo',
         staticImage: 'martillo',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra martillo sí tiene la sílaba mar',
+          correct: 'Buen trabajo. La palabra martillo sí tiene la sílaba mar',
           incorrect: 'Casi, intenta otra vez.',
         },
       },

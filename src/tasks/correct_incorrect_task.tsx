@@ -1,3 +1,5 @@
+//
+
 import { useRef, useState } from 'react';
 import { Animated, StyleSheet, View, useWindowDimensions } from 'react-native';
 import { ImageButton, IconButton } from '@/components';
@@ -155,7 +157,8 @@ const InRhymeSelectTask = (props: Props) => {
         <View
           style={{
             margin: width * 0.02,
-            borderColor: selectedOption === 'Sí' ? Colors['green-3'] : 'transparent',
+            borderColor:
+              selectedOption === 'Sí' ? Colors['green-3'] : 'transparent',
             borderWidth: 2,
             borderRadius: 8,
           }}
@@ -181,7 +184,8 @@ const InRhymeSelectTask = (props: Props) => {
         <View
           style={{
             margin: width * 0.02,
-            borderColor: selectedOption === 'No' ? Colors['red-3'] : 'transparent',
+            borderColor:
+              selectedOption === 'No' ? Colors['red-3'] : 'transparent',
             borderWidth: 2,
             borderRadius: 8,
           }}
