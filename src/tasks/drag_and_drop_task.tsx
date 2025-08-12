@@ -82,7 +82,7 @@ export const DragAndDropTask = (props: Props) => {
               Animated.timing(anim, {
                 toValue: 0,
                 duration: 250,
-                useNativeDriver: false,
+                useNativeDriver: true,
               }).start();
             }}
           />
@@ -200,7 +200,7 @@ const Drag = (props: DragProps) => {
 
       Animated.spring(anim, {
         toValue: { x: 0, y: 0 },
-        useNativeDriver: false,
+        useNativeDriver: true,
       }).start();
     });
 

@@ -15,7 +15,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // App
 
-import { CreditsScreen, EndScreen, HomeScreen, LessonScreen, CoverScreen } from '@/screens';
+import {
+  CoverScreen,
+  CreditsScreen,
+  EndScreen,
+  HomeScreen,
+  LessonScreen,
+} from '@/screens';
 import { RootStackParamList } from '@/shared';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -23,7 +29,6 @@ const RootStack = createNativeStackNavigator<RootStackParamList>();
 const App = () => {
   const [ready] = useFonts({
     PatrickHand: require('./assets/fonts/PatrickHand-Regular.ttf'),
-    Baloo: require('./assets/fonts/Baloo2-Regular.ttf'),
   });
 
   if (!ready) {

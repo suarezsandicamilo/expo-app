@@ -68,7 +68,7 @@ const InLessonScreen = (props: Props) => {
     Animated.timing(anim, {
       toValue: -500,
       duration: 500,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
 
     await delay(500);
@@ -78,7 +78,7 @@ const InLessonScreen = (props: Props) => {
     Animated.timing(anim, {
       toValue: 0,
       duration: 500,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
   };
 

@@ -23,7 +23,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'cover'>;
 export const CoverScreen = (props: Props) => {
   return (
     <LockProvider>
-      <Cover opacity={0.9}>
+      <Cover opacity={0.8}>
         <InCoverScreen {...props} />
       </Cover>
     </LockProvider>

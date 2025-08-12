@@ -60,12 +60,12 @@ const ProgressPathButton = (props: Props) => {
         Animated.timing(anim, {
           toValue: 1.2,
           duration: 1000,
-          useNativeDriver: false,
+          useNativeDriver: true,
         }),
         Animated.timing(anim, {
           toValue: 1,
           duration: 1000,
-          useNativeDriver: false,
+          useNativeDriver: true,
         }),
       ]),
     ).start();
