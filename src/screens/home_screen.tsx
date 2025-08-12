@@ -21,8 +21,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Colors } from '@/constants';
 import { Cover, IconButton } from '@/components';
+import { Colors } from '@/constants';
 import { LockProvider } from '@/contexts';
 import { Lessons } from '@/data';
 import { Db } from '@/db';
@@ -103,6 +103,12 @@ export const InHomeScreen = (props: Props) => {
       <StatusBar style="auto" backgroundColor={Colors['theme-1']} />
       <View style={styles.container_2}>
         <IconButton
+          name="arrow-back"
+          onPress={() => {
+            props.navigation.navigate('cover');
+          }}
+        />
+        <IconButton
           name="menu"
           onPress={() => {
             props.navigation.navigate('credits');
@@ -127,8 +133,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-end',
-    paddingRight: 24,
+    justifyContent: 'space-between',
+    paddingHorizontal: 24,
     width: '100%',
   },
   container_3: {

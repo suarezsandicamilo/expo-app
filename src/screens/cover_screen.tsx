@@ -6,7 +6,11 @@ import React from 'react';
 
 // React Native
 
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+
+// Expo
+
+import { StatusBar } from 'expo-status-bar';
 
 // React Navigation
 
@@ -14,7 +18,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 // App
 
-import { Button, Cover, IconButton } from '@/components';
+import { Cover, IconButton } from '@/components';
+import { Colors } from '@/constants';
 import { LockProvider } from '@/contexts';
 import { RootStackParamList } from '@/shared';
 
@@ -33,8 +38,11 @@ export const CoverScreen = (props: Props) => {
 export const InCoverScreen = (props: Props) => {
   return (
     <>
+      <StatusBar style="auto" backgroundColor={Colors['theme-1']} />
       <Image source={require('@/../assets/icon.png')} style={styles.image} />
-      <Button text="Fono Aventura" active={false} />
+      <View style={styles.container}>
+        <Text style={styles.text}>Fono Aventura</Text>
+      </View>
       <IconButton
         name="arrow-forward"
         size={96}
@@ -47,6 +55,14 @@ export const InCoverScreen = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    backgroundColor: Colors['theme-1'],
+    borderRadius: 8,
+    height: 72,
+    justifyContent: 'center',
+    width: 288,
+  },
   image: {
     alignItems: 'center',
     borderRadius: 32,
@@ -56,5 +72,11 @@ const styles = StyleSheet.create({
     padding: 12,
     resizeMode: 'center',
     width: 192,
+  },
+  text: {
+    color: Colors['text-2'],
+    fontFamily: 'PatrickHand',
+    fontSize: 32,
+    textTransform: 'uppercase',
   },
 });

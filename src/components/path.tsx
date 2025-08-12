@@ -59,8 +59,6 @@ export const Path = (props: Props) => {
       Object.fromEntries(Lessons.map((lesson) => [lesson.id, false])),
     );
 
-    console.info('Progress: ', JSON.stringify(p, undefined, 2));
-
     setProgress(p);
   }, []);
 
