@@ -13,7 +13,7 @@ import { useLock } from './use_lock';
 export const useAudio = () => {
   const { setIsLocked } = useLock();
 
-  const play = async (key: SoundKey, ms = 1000) => {
+  const play = async (key: SoundKey, ms = 2000) => {
     try {
       const source = Sounds[key];
 

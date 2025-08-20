@@ -77,7 +77,7 @@ export const Lesson3: Lesson = {
       type: 'select',
       instructions: ['Toca el botón y escucha la oración.'],
       data: {
-        instructions: ['La cuna es azul.'],
+        instructions: ['La cuna es celeste.'],
         button: {
           text: 'Selecciona la carta que tiene la palabra que escuchaste.',
         },
@@ -136,7 +136,7 @@ export const Lesson3: Lesson = {
           'Toca las burbujas y cuenta el número de palabras en la oración.',
         ],
         button: {
-          text: 'La cuna es azul.',
+          text: 'La cuna es celeste.',
           image: 'cuna',
         },
         count: 4,
@@ -176,11 +176,11 @@ export const Lesson3: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Cuna azul',
+            text: 'Cuna celeste',
             image: 'cuna',
           },
           {
-            text: 'Azul cuna.',
+            text: 'Celeste cuna.',
             image: 'cuna2',
           },
         ],
@@ -226,11 +226,11 @@ export const Lesson3: Lesson = {
       data: {
         buttons: [
           {
-            text: 'La cuna es azul',
+            text: 'La cuna es celeste',
             image: 'cuna',
           },
           {
-            text: 'La luna es azul',
+            text: 'La luna es celeste',
             image: 'luna',
           },
         ],
@@ -290,8 +290,8 @@ export const Lesson3: Lesson = {
       type: 'super_select',
       instructions: ['Presiona el botón y escucha las oraciones'],
       data: {
-        instruction: 'La cuna es azul.',
-        instruction2: 'La luna es azul.',
+        instruction: 'La cuna es celeste.',
+        instruction2: 'La luna es celeste.',
         instruction3:
           'Selecciona las cartas que tienen las palabras que cambiaron',
         staticImage: 'cuna',
