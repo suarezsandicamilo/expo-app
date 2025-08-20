@@ -76,27 +76,31 @@ export const InCreditsScreen = (props: Props) => {
                   Dra. María Marta Camacho Álvarez
                 </Text>
                 <Text style={styles.text}>
+                  - Coordinadora del proyecto TC-722, UCR
+                </Text>
+                <Text style={styles.text}>
                   Dra. María de los Ángeles Carpio Brenes
                 </Text>
-                <Text style={styles.text}>Lcda. Carmen Hernández Rojas</Text>
                 <Text style={styles.text}>
-                  Dra. María Marta Camacho Álvarez. UCR. Coordinadora del
-                  proyecto ENLACE (TC-722)
+                  - Profesional en Educación Especial, UCR
                 </Text>
                 <Text style={styles.text}>
-                  Dra. María de los Ángeles Carpio Brenes. UCR. Especialista en
-                  Educación Especial y creadora del Método Pifo
+                  Lda. Carmen Hernández Rojas
                 </Text>
                 <Text style={styles.text}>
-                  Licda. Carmen Hernández Rojas. UCR. Especialista en
-                  computación e informática.
+                  - Profesional en Computación e Informática, UCR
                 </Text>
                 <Text style={styles.text}>
-                  Dra. Marielos Murillo Rojas. UCR. Especialista en Lingüística
+                  Dra. Marielos Murillo Rojas
                 </Text>
                 <Text style={styles.text}>
-                  M.Sc. Esteban Aguilar Pérez. Asesor de Español DRE
-                  Desamparados MEP.
+                  - Profesional en Lingüística, UCR
+                </Text>
+                <Text style={styles.text}>
+                  M. Esteban Aguilar Pérez
+                </Text>
+                <Text style={styles.text}>
+                  - Asesor de Español, DRE, MEP
                 </Text>
               </View>
             </View>
@@ -149,6 +153,7 @@ const styles = StyleSheet.create({
     fontFamily: 'PatrickHand',
     fontSize: 16,
     marginLeft: 24,
+    maxWidth: 312,
     width: '100%',
   },
 });
