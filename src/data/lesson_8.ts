@@ -82,7 +82,7 @@ export const Lesson8: Lesson = {
             image: 'plato',
           },
           {
-            text: 'Ahora al revés. TO  , PLA.',
+            text: 'Ahora en otro orden. TO  , PLA.',
             image: 'plato2',
           },
         ],
@@ -102,7 +102,7 @@ export const Lesson8: Lesson = {
             image: 'estufa',
           },
           {
-            text: 'Ahora al revés. FA  , TU  , ES',
+            text: 'Ahora en otro orden. FA  , TU  , ES',
             image: 'estufa2',
           },
         ],

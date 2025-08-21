@@ -164,7 +164,7 @@ export const Lesson1: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra ave',
-            'Y luego escuchamos la oración al revés.',
+            'Y luego escuchamos la oración en otro orden.',
           ],
         },
       },
@@ -188,7 +188,7 @@ export const Lesson1: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra anillo',
-            'Y luego escuchamos la oración al revés.',
+            'Y luego escuchamos la oración en otro orden.',
           ],
         },
       },

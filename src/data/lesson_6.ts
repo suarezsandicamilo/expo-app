@@ -82,7 +82,7 @@ export const Lesson6: Lesson = {
             image: 'escoba',
           },
           {
-            text: 'Ahora al revés. Bah  , co  , es.',
+            text: 'Ahora en otro orden. Bah  , co  , es.',
             image: 'escoba2',
           },
         ],
@@ -102,7 +102,7 @@ export const Lesson6: Lesson = {
             image: 'ardilla',
           },
           {
-            text: 'Ahora al revés. Lla  , di  , ar.',
+            text: 'Ahora en otro orden. Lla  , di  , ar.',
             image: 'ardilla2',
           },
         ],
