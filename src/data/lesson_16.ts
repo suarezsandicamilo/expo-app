@@ -168,7 +168,7 @@ export const Lesson16: Lesson = {
           },
           {
             text: 'Útiles',
-            image: 'útiles',
+            image: 'utiles',
             correct: true,
           },
           {

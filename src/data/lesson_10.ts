@@ -234,7 +234,7 @@ export const Lesson10: Lesson = {
       instructions: ['Toca el botón'],
       data: {
         instructions: ['¿La palabra manzana rima con campana? ¿Sí o no?'],
-        correct_answer: 'sí',
+        correct_answer: 'Sí',
         text: 'Manzana',
         image: 'manzana',
         feedback: {

@@ -122,7 +122,7 @@ export const Lesson4: Lesson = {
           'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La oruga se mueva',
+          text: 'La oruga se mueve',
           image: 'oruga',
         },
         count: 4,

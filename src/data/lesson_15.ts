@@ -28,7 +28,7 @@ export const Lesson15: Lesson = {
       data: {
         button: {
           text: 'Iglú',
-          image: 'iglú',
+          image: 'iglu',
         },
         feedback: {
           correct: '¡Buen trabajo! La palabra iglú comienza con i',
@@ -159,7 +159,7 @@ export const Lesson15: Lesson = {
         options: [
           {
             text: 'Iglú',
-            image: 'iglú',
+            image: 'iglu',
             correct: true,
           },
           {
@@ -208,7 +208,7 @@ export const Lesson15: Lesson = {
         instructions: ['¿La palabra iglú comienza con i? ¿Sí o no?'],
         correct_answer: 'Sí',
         text: 'Iglú',
-        image: 'iglú',
+        image: 'iglu',
         feedback: {
           correct: '¡Buen trabajo!',
           incorrect: 'Casi, intenta otra vez',
