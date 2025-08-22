@@ -42,12 +42,8 @@ type Option = {
 
 type Props = {
   next: () => void;
-  instruction: string;
-  instruction2: string;
-  instruction3: string;
-  instruction4: string;
-  instruction5: string;
-  staticImage: ImageKey;
+  instructions: string[];
+  image: ImageKey;
   feedback: {
     correct: string;
     incorrect: string;
@@ -68,11 +64,9 @@ export const SelectAudioTask = (props: Props) => {
           name="volume-up"
           size={Math.min(width, height) * 0.45} // Tamaño proporcional
           onPress={async () => {
-            await speak(props.instruction);
-            await speak(props.instruction2);
-            await speak(props.instruction3);
-            await speak(props.instruction4);
-            await speak(props.instruction5);
+            for (const instruction of props.instructions) {
+              await speak(instruction);
+            }
 
             Animated.timing(anim, {
               duration: 250,
@@ -85,7 +79,7 @@ export const SelectAudioTask = (props: Props) => {
           style={{ marginBottom: height * 0.03 }}
         />
         <ImageButton
-          source={props.staticImage as ImageKey}
+          source={props.image as ImageKey}
           size={Math.min(width, height) * 0.4} // Tamaño proporcional
         />
       </View>

@@ -39,28 +39,19 @@ const styles = StyleSheet.create({
   },
 });
 
-type Word = {
-  text: string;
-  image: ImageKey;
-};
-
 type Props = {
   next: () => void;
-  instruction: string;
-  instruction2: string;
-  instruction3: string;
-  instruction4: string;
+  instructions: string[];
   correct_answer: string;
   text: string;
-  staticImage?: ImageKey;
+  image?: ImageKey;
   feedback: {
     correct: string;
     incorrect: string;
   };
-  words?: Word[];
 };
 
-export const Correct_IncorrectTask = (props: Props) => {
+export const CorrectIncorrectTask = (props: Props) => {
   const anim = useRef(new Animated.Value(-500)).current;
   const { speak } = useSpeech();
   const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
@@ -72,15 +63,8 @@ export const Correct_IncorrectTask = (props: Props) => {
           name="volume-up"
           size={Math.min(width, height) * 0.5} // Tamaño proporcional
           onPress={async () => {
-            await speak(props.instruction);
-            if (props.instruction2) {
-              await speak(props.instruction2);
-            }
-            if (props.instruction3) {
-              await speak(props.instruction3);
-            }
-            if (props.instruction4) {
-              await speak(props.instruction4);
+            for (const instruction of props.instructions) {
+              await speak(instruction);
             }
             await speak(props.text);
 
@@ -93,17 +77,11 @@ export const Correct_IncorrectTask = (props: Props) => {
           style={{ marginBottom: height * 0.03 }} // Margen dinámico
         />
         <ImageButton
-          source={props.staticImage as ImageKey}
+          source={props.image as ImageKey}
           size={Math.min(width, height) * 0.5} // Tamaño proporcional
           onPress={async () => {
-            if (props.instruction2) {
-              await speak(props.instruction2);
-            }
-            if (props.instruction3) {
-              await speak(props.instruction3);
-            }
-            if (props.instruction4) {
-              await speak(props.instruction4);
+            for (const instruction of props.instructions) {
+              await speak(instruction);
             }
             await speak(props.text);
           }}

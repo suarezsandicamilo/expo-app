@@ -53,11 +53,8 @@ type Option = {
 
 type Props = {
   next: () => void;
-  instruction: string;
-  instruction2: string;
-  instruction3: string;
-  staticImage: ImageKey;
-  staticImage2: ImageKey;
+  instructions: string[];
+  images: [ImageKey, ImageKey];
   feedback: {
     correct: string;
     incorrect: string;
@@ -77,11 +74,11 @@ export const SuperSelectTask = (props: Props) => {
 
   const playTaskAudio = async () => {
     setHighlightedCard(0);
-    await speak(props.instruction);
+    await speak(props.instructions[0]);
     setHighlightedCard(1);
-    await speak(props.instruction2);
+    await speak(props.instructions[1]);
     setHighlightedCard(null);
-    await speak(props.instruction3);
+    await speak(props.instructions[2]);
     Animated.timing(anim, {
       duration: 250,
       toValue: 0,
@@ -126,11 +123,7 @@ export const SuperSelectTask = (props: Props) => {
   };
 
   const handleImagePress = async (index: number) => {
-    if (index === 0) {
-      await speak(props.instruction);
-    } else if (index === 1) {
-      await speak(props.instruction2);
-    }
+    await speak(props.instructions[index]);
   };
 
   return (
@@ -144,7 +137,7 @@ export const SuperSelectTask = (props: Props) => {
       <View
         style={[styles.largeCardContainer, { marginVertical: height * 0.01 }]}
       >
-        {[props.staticImage, props.staticImage2].map(
+        {props.images.map(
           (image, index) =>
             image && (
               <View

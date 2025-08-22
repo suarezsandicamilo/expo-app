@@ -1,15 +1,15 @@
 //
 
 export type TaskType =
-  | 'tap'
-  | 'select'
-  | 'drag_and_drop'
+  | 'correct_incorrect'
   | 'count'
-  | 'super_tap'
+  | 'drag_and_drop'
+  | 'select'
+  | 'select_audio'
   | 'super_select'
   | 'super_select_adv'
-  | 'correct_incorrect'
-  | 'selectaudio';
+  | 'super_tap'
+  | 'tap';
 
 export type Task = {
   id: number;

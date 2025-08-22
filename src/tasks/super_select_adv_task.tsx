@@ -18,7 +18,6 @@ type Props = {
   button: {
     text: string[];
   };
-  count: number;
   options: Option[];
   feedback: {
     correct: string;
