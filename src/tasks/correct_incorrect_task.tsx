@@ -94,13 +94,13 @@ export const CorrectIncorrectTask = (props: Props) => {
           { transform: [{ translateX: anim }], marginTop: height * 0.02 },
         ]}
       >
-        <InRhymeSelectTask {...props} />
+        <InCorrectIncorrectTask {...props} />
       </Animated.View>
     </View>
   );
 };
 
-const InRhymeSelectTask = (props: Props) => {
+const InCorrectIncorrectTask = (props: Props) => {
   const { speak } = useSpeech();
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const { play } = useAudio();

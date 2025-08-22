@@ -167,10 +167,7 @@ export const Lesson4: Lesson = {
         feedback: {
           correct: [
             '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'ojo',
-            'I',
-            'oveja',
+            'Las palabras que cambiaron entre las oraciones fueron ojo y oveja',
           ],
         },
       },
@@ -193,10 +190,7 @@ export const Lesson4: Lesson = {
         feedback: {
           correct: [
             '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'ángel',
-            'I',
-            'ovillo',
+            'Las palabras que cambiaron entre las oraciones fueron ángel y ovillo',
           ],
         },
       },
