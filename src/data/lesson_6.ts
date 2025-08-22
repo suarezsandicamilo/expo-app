@@ -44,7 +44,7 @@ export const Lesson6: Lesson = {
           '¿Si en la palabra estrella, cambiamos trella, por pada, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -83,7 +83,7 @@ export const Lesson6: Lesson = {
           '¿Si en la palabra enano, cambiamos nano, por rizo, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

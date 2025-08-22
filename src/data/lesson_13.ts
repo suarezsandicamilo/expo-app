@@ -42,7 +42,7 @@ export const Lesson13: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que comienza con a'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -79,7 +79,7 @@ export const Lesson13: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que comienza con a'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -116,7 +116,7 @@ export const Lesson13: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con a'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -154,7 +154,7 @@ export const Lesson13: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con a'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

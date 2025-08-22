@@ -44,7 +44,7 @@ export const Lesson8: Lesson = {
           '¿Si en la palabra oveja, cambiamos veja, por reja, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -83,7 +83,7 @@ export const Lesson8: Lesson = {
           '¿Si en la palabra taza, cambiamos ta, por ca, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

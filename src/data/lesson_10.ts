@@ -42,7 +42,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con illa'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -79,7 +79,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con ante'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -160,7 +160,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con eejo'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -197,7 +197,7 @@ export const Lesson10: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con ana'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

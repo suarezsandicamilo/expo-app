@@ -44,7 +44,7 @@ export const Lesson7: Lesson = {
           '¿Si a la palabra is, le agregamos la, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -83,7 +83,7 @@ export const Lesson7: Lesson = {
           '¿Si a la palabra o, le agregamos so, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

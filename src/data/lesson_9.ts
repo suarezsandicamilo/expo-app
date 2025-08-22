@@ -42,7 +42,7 @@ export const Lesson9: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con eja'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -79,7 +79,7 @@ export const Lesson9: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con arco'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -158,7 +158,7 @@ export const Lesson9: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con eja'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -195,7 +195,7 @@ export const Lesson9: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con arco'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

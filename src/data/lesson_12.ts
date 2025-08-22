@@ -42,7 +42,7 @@ export const Lesson12: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con ruga'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -80,7 +80,7 @@ export const Lesson12: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con ato'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -157,7 +157,7 @@ export const Lesson12: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con asa'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -194,7 +194,7 @@ export const Lesson12: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con ato'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

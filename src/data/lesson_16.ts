@@ -44,7 +44,7 @@ export const Lesson16: Lesson = {
           '¿Si en la palabra olla, cambiamos o, por e, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -83,7 +83,7 @@ export const Lesson16: Lesson = {
           '¿Si en la palabra ojo, cambiamos o, por a, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -120,7 +120,7 @@ export const Lesson16: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con o'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -158,7 +158,7 @@ export const Lesson16: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con u'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

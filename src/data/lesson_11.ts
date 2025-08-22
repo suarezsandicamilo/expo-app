@@ -42,7 +42,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con ecto'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -79,7 +79,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que rima con una'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -156,7 +156,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con una'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -193,7 +193,7 @@ export const Lesson11: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que riman con ato'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

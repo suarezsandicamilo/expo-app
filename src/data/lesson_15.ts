@@ -42,7 +42,7 @@ export const Lesson15: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que comienza con e'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -79,7 +79,7 @@ export const Lesson15: Lesson = {
       data: {
         instructions: ['Selecciona la palabra que comienza con i'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -116,7 +116,7 @@ export const Lesson15: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con e'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -154,7 +154,7 @@ export const Lesson15: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con i'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

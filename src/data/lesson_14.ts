@@ -44,7 +44,7 @@ export const Lesson14: Lesson = {
           '¿Si en la palabra abeja, cambiamos a, por o, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -83,7 +83,7 @@ export const Lesson14: Lesson = {
           '¿Si en la palabra ala, cambiamos a, por o, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -120,7 +120,7 @@ export const Lesson14: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con e'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -158,7 +158,7 @@ export const Lesson14: Lesson = {
       data: {
         instructions: ['Selecciona las palabras que comienzan con e'],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {

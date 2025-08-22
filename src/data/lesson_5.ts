@@ -44,7 +44,7 @@ export const Lesson5: Lesson = {
           '¿Si a la palabra zapa, le agregamos to, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
@@ -80,10 +80,10 @@ export const Lesson5: Lesson = {
       instructions: ['Toca el botón'],
       data: {
         instructions: [
-          '¿Si a la palabra uti, le agregamos les, qué palabra formamos?',
+          '¿Si a la palabra úti, le agregamos les, qué palabra formamos?',
         ],
         button: {
-          text: '',
+          text: ' ',
         },
         options: [
           {
