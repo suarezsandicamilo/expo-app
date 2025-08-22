@@ -80,7 +80,7 @@ export const Lesson5: Lesson = {
       instructions: ['Toca el botón'],
       data: {
         instructions: [
-          '¿Si a la palabra úti, le agregamos les, qué palabra formamos?',
+          '¿Si a la palabra uni, le agregamos cornio, qué palabra formamos?',
         ],
         button: {
           text: ' ',
@@ -89,12 +89,12 @@ export const Lesson5: Lesson = {
           {
             text: 'Útiles',
             image: 'utiles',
-            correct: true,
+            correct: false,
           },
           {
             text: 'Unicornio',
             image: 'unicornio',
-            correct: false,
+            correct: true,
           },
           {
             text: 'Estufa',
@@ -108,7 +108,7 @@ export const Lesson5: Lesson = {
           },
         ],
         feedback: {
-          correct: '¡Buen trabajo! La palabra es útiles',
+          correct: '¡Buen trabajo! La palabra es unicornio',
           incorrect: 'Casi, intenta otra vez',
         },
       },

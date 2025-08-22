@@ -180,7 +180,7 @@ export const Lesson7: Lesson = {
             image: 'cuna',
           },
           {
-            text: 'Ahora en otro orden, na, cu',
+            text: 'Ahora en otro orden, na, ku',
             image: 'cuna2',
           },
         ],

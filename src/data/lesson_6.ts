@@ -176,11 +176,11 @@ export const Lesson6: Lesson = {
       data: {
         buttons: [
           {
-            text: 'Ar, di, lla',
+            text: 'Ar, di, ya',
             image: 'ardilla',
           },
           {
-            text: 'Ahora en otro orden, lla, di, ar',
+            text: 'Ahora en otro orden, ya, di, ar',
             image: 'ardilla2',
           },
         ],

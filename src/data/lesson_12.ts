@@ -73,7 +73,6 @@ export const Lesson12: Lesson = {
       },
     },
     {
-      // eja, arco, illa, ante, ecto, una, ruga, ato
       id: 4,
       type: 'select',
       instructions: ['Toca el botón'],
@@ -141,7 +140,7 @@ export const Lesson12: Lesson = {
             image: 'zapato',
           },
           {
-            text: 'Plato, plato',
+            text: 'Plato, pla, to',
             image: 'plato',
           },
         ],
