@@ -1,6 +1,6 @@
 {
   "name": "tc-722",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start --go",
