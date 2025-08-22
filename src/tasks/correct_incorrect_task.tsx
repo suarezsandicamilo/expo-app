@@ -137,8 +137,8 @@ const InRhymeSelectTask = (props: Props) => {
             margin: width * 0.02,
             borderColor:
               selectedOption === 'Sí' ? Colors['green-3'] : 'transparent',
-            borderWidth: 2,
-            borderRadius: 8,
+            borderWidth: 4,
+            borderRadius: 16,
           }}
         >
           <IconButton
@@ -148,6 +148,7 @@ const InRhymeSelectTask = (props: Props) => {
               const option = 'Sí';
               await handleSelection(option);
               await validateSelection(option);
+              setSelectedOption(null);
             }}
             style={(state) => ({
               alignItems: 'center',
@@ -164,8 +165,8 @@ const InRhymeSelectTask = (props: Props) => {
             margin: width * 0.02,
             borderColor:
               selectedOption === 'No' ? Colors['red-3'] : 'transparent',
-            borderWidth: 2,
-            borderRadius: 8,
+            borderWidth: 4,
+            borderRadius: 16,
           }}
         >
           <IconButton
@@ -175,6 +176,7 @@ const InRhymeSelectTask = (props: Props) => {
               const option = 'No';
               await handleSelection(option);
               await validateSelection(option);
+              setSelectedOption(null);
             }}
             style={(state) => ({
               alignItems: 'center',
