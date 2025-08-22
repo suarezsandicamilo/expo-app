@@ -73,38 +73,39 @@ export const Lesson12: Lesson = {
       },
     },
     {
-      id: 4, // AGARRAR UN SELECT DE OTRA LECCION
+      // eja, arco, illa, ante, ecto, una, ruga, ato
+      id: 4,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: ['Selecciona la palabra que rima con <>'],
+        instructions: ['Selecciona la palabra que rima con ato'],
         button: {
-          text: '<>',
+          text: '',
         },
         options: [
           {
-            text: '<>',
-            image: '<>',
+            text: 'Gato',
+            image: 'gato',
+            correct: true,
+          },
+          {
+            text: 'Luna',
+            image: 'luna',
             correct: false,
           },
           {
-            text: '<>',
-            image: '<>',
+            text: 'Olla',
+            image: 'olla',
             correct: false,
           },
           {
-            text: '<>',
-            image: '<>',
-            correct: false,
-          },
-          {
-            text: '<>',
-            image: '<>',
+            text: 'Esquimal',
+            image: 'esquimal',
             correct: false,
           },
         ],
         feedback: {
-          correct: '¡Buen trabajo! La palabra <> rima con <>',
+          correct: '¡Buen trabajo! La palabra gato rima con ato',
           incorrect: 'Casi, intenta otra vez',
         },
       },
