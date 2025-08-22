@@ -10,137 +10,53 @@ export const Lesson12: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Zapato. Za  , pato.',
+          text: 'Zapato, za, pato',
           image: 'zapato',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra zapato rima con: ato.',
+          correct: '¡Buen trabajo! La palabra zapato rima con ato',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'casa. ca  , sa.',
+          text: 'Casa, ca, sa',
           image: 'casa',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra casa rima con: asa',
+          correct: '¡Buen trabajo! La palabra casa rima con asa',
         },
       },
     },
     {
       id: 3,
-      type: 'super_tap',
-      instructions: ['Toca las cartas y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'casa. ca  , sa.',
-            image: 'casa',
-          },
-          {
-            text: 'Taza. Ta  , za',
-            image: 'taza',
-          },
-        ],
-        feedback: {
-          correct: [
-            'Buen trabajo. ',
-            'Las palabras casa y taza riman con: asa',
-          ],
-        },
-      },
-    },
-    {
-      id: 4,
-      type: 'super_tap',
-      instructions: ['Toca las cartas y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'Zapato. Za  , pato.',
-            image: 'zapato',
-          },
-          {
-            text: 'Plato. plato',
-            image: 'plato',
-          },
-        ],
-        feedback: {
-          correct: [
-            'Buen trabajo.',
-            'Las palabras zapato y plato riman con: ato',
-          ],
-        },
-      },
-    },
-    {
-      id: 5,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra casa rima con taza? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'Sí',
-        text: 'casa',
-        staticImage: 'casa',
-        feedback: {
-          correct: 'Buen trabajo. La palabra casa rima con taza',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 6,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra ojo rima con pato? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'No',
-        text: 'ojo',
-        staticImage: 'ojo',
-        feedback: {
-          correct: 'Buen trabajo. La palabra ojo no rima con pato.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 7,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona la palabra que rima con ruga'],
         button: {
-          text: 'Selecciona la palabra que rima con: ruga',
+          text: '',
         },
         options: [
           {
-            text: 'oruga',
+            text: 'Oruga',
             image: 'oruga',
             correct: true,
           },
           {
-            text: 'zapato',
+            text: 'Zapato',
             image: 'zapato',
             correct: false,
           },
           {
-            text: 'unicornio',
+            text: 'Unicornio',
             image: 'unicornio',
             correct: false,
           },
@@ -151,8 +67,122 @@ export const Lesson12: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Oruga rima con: ruga.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra oruga rima con ruga',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 4, // AGARRAR UN SELECT DE OTRA LECCION
+      type: 'select',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['Selecciona la palabra que rima con <>'],
+        button: {
+          text: '<>',
+        },
+        options: [
+          {
+            text: '<>',
+            image: '<>',
+            correct: false,
+          },
+          {
+            text: '<>',
+            image: '<>',
+            correct: false,
+          },
+          {
+            text: '<>',
+            image: '<>',
+            correct: false,
+          },
+          {
+            text: '<>',
+            image: '<>',
+            correct: false,
+          },
+        ],
+        feedback: {
+          correct: '¡Buen trabajo! La palabra <> rima con <>',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 5,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Casa, ca, sa',
+            image: 'casa',
+          },
+          {
+            text: 'Taza, ta, za',
+            image: 'taza',
+          },
+        ],
+        feedback: {
+          correct: ['¡Buen trabajo! Las palabras casa y taza riman con asa'],
+        },
+      },
+    },
+    {
+      id: 6,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Zapato, za, pato',
+            image: 'zapato',
+          },
+          {
+            text: 'Plato, plato',
+            image: 'plato',
+          },
+        ],
+        feedback: {
+          correct: ['¡Buen trabajo! Las palabras zapato y plato riman con ato'],
+        },
+      },
+    },
+    {
+      id: 7,
+      type: 'super_select_adv',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['Selecciona las palabras que riman con asa'],
+        button: {
+          text: '',
+        },
+        options: [
+          {
+            text: 'Taza',
+            image: 'taza',
+            correct: true,
+          },
+          {
+            text: 'Casa',
+            image: 'casa',
+            correct: true,
+          },
+          {
+            text: 'Asno',
+            image: 'asno',
+            correct: false,
+          },
+          {
+            text: 'Plato',
+            image: 'plato',
+            correct: false,
+          },
+        ],
+        feedback: {
+          correct: '¡Buen trabajo! Las palabras taza y casa riman con asa',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -161,72 +191,65 @@ export const Lesson12: Lesson = {
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que riman con ato'],
         button: {
-          text: ['Selecciona las palabras que riman con: asa'],
+          text: '',
         },
         options: [
           {
-            text: 'taza',
-            image: 'taza',
-            correct: true,
-          },
-          {
-            text: 'casa',
-            image: 'casa',
-            correct: true,
-          },
-          {
-            text: 'asno',
-            image: 'asno',
-            correct: false,
-          },
-          {
-            text: 'plato',
-            image: 'plato',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct: 'Buen trabajo. Las palabras taza y casa riman con: asa.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 9,
-      type: 'super_select_adv',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: ['Selecciona las palabras que riman con: ato'],
-        },
-        options: [
-          {
-            text: 'plato',
+            text: 'Plato',
             image: 'plato',
             correct: true,
           },
           {
-            text: 'escalera',
+            text: 'Escalera',
             image: 'escalera',
             correct: false,
           },
           {
-            text: 'zapato',
+            text: 'Zapato',
             image: 'zapato',
             correct: true,
           },
           {
-            text: 'insecto',
+            text: 'Insecto',
             image: 'insecto',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras plato y zapato riman con: ato.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! Las palabras plato y zapato riman con ato',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 9,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra casa rima con taza? ¿Sí o no?'],
+        correct_answer: 'Sí',
+        text: 'Casa',
+        image: 'casa',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 10,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra ojo rima con pato? ¿Sí o no?'],
+        correct_answer: 'No',
+        text: 'Ojo',
+        image: 'ojo',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },

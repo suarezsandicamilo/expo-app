@@ -10,123 +10,39 @@ export const Lesson10: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Manzana. Man  , zana.',
+          text: 'Manzana, man, zana',
           image: 'manzana',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra manzana rima con: ana.',
+          correct: '¡Buen trabajo! La palabra manzana rima con ana',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Espejo. Es  , pejo.',
+          text: 'Espejo, es, pejo',
           image: 'espejo',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra espejo rima con: eejo',
+          correct: '¡Buen trabajo! La palabra espejo rima con eejo',
         },
       },
     },
     {
       id: 3,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'Manzana. Man  , zana',
-            image: 'manzana',
-          },
-          {
-            text: 'Campana. Cam  , pana',
-            image: 'campana',
-          },
-        ],
-        feedback: {
-          correct: [
-            'Buen trabajo.',
-            'Las palabras manzana y campana riman con: ana',
-          ],
-        },
-      },
-    },
-    {
-      id: 4,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'Espejo . Es  , pejo',
-            image: 'espejo',
-          },
-          {
-            text: 'Conejo. Co  , nejo',
-            image: 'conejo',
-          },
-        ],
-        feedback: {
-          correct: [
-            'Buen trabajo.',
-            'Las palabras espejo y conejo riman con: eejo',
-          ],
-        },
-      },
-    },
-    {
-      id: 5,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra Manzana rima con campana? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'Sí',
-        text: 'Manzana',
-        staticImage: 'manzana',
-        feedback: {
-          correct: 'Buen trabajo. La palabra manzana rima con campana',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 6,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra Iguana rima con espejo? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'No',
-        text: 'Iguana',
-        staticImage: 'iguana',
-        feedback: {
-          correct: 'Buen trabajo. La palabra iguana no rima con espejo.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 7,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona la palabra que rima con illa'],
         button: {
-          text: 'Selecciona la palabra que rima con: illa',
+          text: '',
         },
         options: [
           {
@@ -151,19 +67,19 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Ardilla rima con: illa.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra ardilla rima con illa',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 8,
+      id: 4,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona la palabra que rima con ante'],
         button: {
-          text: 'Selecciona la palabra que rima con: ante',
+          text: '',
         },
         options: [
           {
@@ -188,19 +104,63 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Elefante rima con: ante.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra elefante rima con ante',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 9,
+      id: 5,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Manzana, man, zana',
+            image: 'manzana',
+          },
+          {
+            text: 'Campana, cam, pana',
+            image: 'campana',
+          },
+        ],
+        feedback: {
+          correct: [
+            '¡Buen trabajo! Las palabras manzana y campana riman con ana',
+          ],
+        },
+      },
+    },
+    {
+      id: 6,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Espejo, es, pejo',
+            image: 'espejo',
+          },
+          {
+            text: 'Conejo, co, nejo',
+            image: 'conejo',
+          },
+        ],
+        feedback: {
+          correct: [
+            '¡Buen trabajo! Las palabras espejo y conejo riman con eejo',
+          ],
+        },
+      },
+    },
+    {
+      id: 7,
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que riman con eejo'],
         button: {
-          text: ['Selecciona las palabras que riman con: eejo'],
+          text: '',
         },
         options: [
           {
@@ -225,20 +185,19 @@ export const Lesson10: Lesson = {
           },
         ],
         feedback: {
-          correct:
-            'Buen trabajo. Las palabras Conejo y espejo riman con: eejo.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! Las palabras conejo y espejo riman con eejo',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 10,
+      id: 8,
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que riman con ana'],
         button: {
-          text: ['Selecciona las palabras que riman con: ana'],
+          text: '',
         },
         options: [
           {
@@ -264,8 +223,38 @@ export const Lesson10: Lesson = {
         ],
         feedback: {
           correct:
-            'Buen trabajo. Las palabras manzana, campana e iguana riman con: ana.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras manzana, campana e iguana riman con ana',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 9,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra manzana rima con campana? ¿Sí o no?'],
+        correct_answer: 'sí',
+        text: 'Manzana',
+        image: 'manzana',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 10,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra iguana rima con espejo? ¿Sí o no?'],
+        correct_answer: 'No',
+        text: 'Iguana',
+        image: 'iguana',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },

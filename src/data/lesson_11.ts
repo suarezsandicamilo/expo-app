@@ -10,117 +10,39 @@ export const Lesson11: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Gato. Ga  , to.',
+          text: 'Gato, ga, to',
           image: 'gato',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra gato rima con: ato.',
+          correct: '¡Buen trabajo! La palabra gato rima con ato',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Luna. Lu  , na.',
+          text: 'Luna, lu, na',
           image: 'luna',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra luna rima con: una',
+          correct: '¡Buen trabajo! La palabra luna rima con una',
         },
       },
     },
     {
       id: 3,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'Gato. Ga  , to',
-            image: 'gato',
-          },
-          {
-            text: 'Pato. Pa  , to',
-            image: 'pato',
-          },
-        ],
-        feedback: {
-          correct: ['Buen trabajo.', 'Las palabras gato y pato riman con: ato'],
-        },
-      },
-    },
-    {
-      id: 4,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las palabras'],
-      data: {
-        instructions: [''],
-        buttons: [
-          {
-            text: 'Luna . Lu  , na',
-            image: 'luna',
-          },
-          {
-            text: 'Cuna. Ku  , na',
-            image: 'cuna',
-          },
-        ],
-        feedback: {
-          correct: ['Buen trabajo.', 'Las palabras luna y cuna riman con: una'],
-        },
-      },
-    },
-    {
-      id: 5,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra Gato rima con pato? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'Sí',
-        text: 'Gato',
-        staticImage: 'gato',
-        feedback: {
-          correct: 'Buen trabajo. La palabra gato rima con pato',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 6,
-      type: 'correct_incorrect',
-      instructions: ['Toca el botón'],
-      data: {
-        instruction: '¿La palabra isla rima con pato? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
-        correct_answer: 'No',
-        text: 'Isla',
-        staticImage: 'isla',
-        feedback: {
-          correct: 'Buen trabajo. La palabra isla no rima con pato.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 7,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona la palabra que rima con ecto'],
         button: {
-          text: 'Selecciona la palabra que rima con: ecto',
+          text: '',
         },
         options: [
           {
@@ -145,19 +67,19 @@ export const Lesson11: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Insecto rima con: ecto.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra insecto rima con ecto',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 8,
+      id: 4,
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona la palabra que rima con una'],
         button: {
-          text: 'Selecciona la palabra que rima con: una.',
+          text: '',
         },
         options: [
           {
@@ -182,19 +104,59 @@ export const Lesson11: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Luna rima con: una.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra luna rima con una',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 9,
+      id: 5,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Gato, ga, to',
+            image: 'gato',
+          },
+          {
+            text: 'Pato, pa, to',
+            image: 'pato',
+          },
+        ],
+        feedback: {
+          correct: ['¡Buen trabajo! Las palabras gato y pato riman con ato'],
+        },
+      },
+    },
+    {
+      id: 6,
+      type: 'super_tap',
+      instructions: ['Toca las cartas y escucha las palabras'],
+      data: {
+        buttons: [
+          {
+            text: 'Luna, lu, na',
+            image: 'luna',
+          },
+          {
+            text: 'Cuna, ku, na',
+            image: 'cuna',
+          },
+        ],
+        feedback: {
+          correct: ['¡Buen trabajo! Las palabras luna y cuna riman con una'],
+        },
+      },
+    },
+    {
+      id: 7,
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que riman con una'],
         button: {
-          text: ['Selecciona las palabras que riman con: una'],
+          text: '',
         },
         options: [
           {
@@ -208,56 +170,86 @@ export const Lesson11: Lesson = {
             correct: true,
           },
           {
-            text: 'isla',
+            text: 'Isla',
             image: 'isla',
             correct: false,
           },
           {
-            text: 'cuna',
+            text: 'Cuna',
             image: 'cuna',
             correct: true,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras luna y cuna riman con: una.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! Las palabras luna y cuna riman con una',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
-      id: 10,
+      id: 8,
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que riman con ato'],
         button: {
-          text: ['Selecciona las palabras que riman con: ato'],
+          text: '',
         },
         options: [
           {
-            text: 'gato',
+            text: 'Gato',
             image: 'gato',
             correct: true,
           },
           {
-            text: 'escalera',
+            text: 'Escalera',
             image: 'escalera',
             correct: false,
           },
           {
-            text: 'pato',
+            text: 'Pato',
             image: 'pato',
             correct: true,
           },
           {
-            text: 'insecto',
+            text: 'Insecto',
             image: 'insecto',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras gato y pato riman con: ato.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! Las palabras gato y pato riman con ato',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 9,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra gato rima con pato? ¿Sí o no?'],
+        correct_answer: 'Sí',
+        text: 'Gato',
+        image: 'gato',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 10,
+      type: 'correct_incorrect',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: ['¿La palabra isla rima con pato? ¿Sí o no?'],
+        correct_answer: 'No',
+        text: 'Isla',
+        image: 'isla',
+        feedback: {
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
