@@ -1,24 +1,25 @@
 //
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Animated, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { IconButton, ImageButton } from '@/components';
 import { useAudio, useSpeech } from '@/hooks';
 import { ImageKey } from '../../assets/images';
 import { Colors } from '@/constants';
+import { shuffle } from '@/shared';
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     backgroundColor: Colors['background-1'],
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     width: '100%',
   },
   largeCardContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: 10,
+    justifyContent: 'space-around',
+    width: '100%',
   },
   largeCard: {
     alignItems: 'center',
@@ -30,7 +31,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginTop: 20,
   },
   instruction: {
     textAlign: 'center',
@@ -38,10 +38,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   buttonContainer: {
-    marginTop: 10,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
     marginBottom: 20,
+    width: '100%',
   },
 });
 
@@ -71,6 +71,11 @@ export const SuperSelectTask = (props: Props) => {
   const { play } = useAudio();
   const anim = useRef(new Animated.Value(-500)).current;
   const { width, height } = useWindowDimensions(); // Obtener dimensiones de la pantalla
+  const options = useRef(props.options);
+
+  useEffect(() => {
+    options.current = shuffle(props.options);
+  }, [props.options]);
 
   const playTaskAudio = async () => {
     setHighlightedCard(0);
@@ -128,12 +133,14 @@ export const SuperSelectTask = (props: Props) => {
 
   return (
     <View style={[styles.container, { paddingHorizontal: width * 0.05 }]}>
-      <IconButton
-        name="volume-up"
-        size={Math.min(width, height) * 0.2} // Tamaño proporcional
-        onPress={playTaskAudio}
-        style={{ marginBottom: height * 0.01 }}
-      />
+      <View style={styles.largeCardContainer}>
+        <IconButton
+          name="volume-up"
+          size={Math.min(width, height) * 0.2} // Tamaño proporcional
+          onPress={playTaskAudio}
+          style={{ marginBottom: height * 0.01 }}
+        />
+      </View>
       <View
         style={[styles.largeCardContainer, { marginVertical: height * 0.01 }]}
       >
@@ -144,7 +151,10 @@ export const SuperSelectTask = (props: Props) => {
                 key={index}
                 style={[
                   styles.largeCard,
-                  highlightedCard === index && { borderColor: 'yellow' },
+                  highlightedCard === index && {
+                    borderColor: Colors['star-1'],
+                    borderRadius: 12,
+                  },
                 ]}
               >
                 <ImageButton
@@ -165,7 +175,7 @@ export const SuperSelectTask = (props: Props) => {
           },
         ]}
       >
-        {props.options?.map((option) => {
+        {options.current.map((option) => {
           const isSelected = selectedOptions.has(option.text);
 
           return (
