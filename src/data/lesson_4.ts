@@ -10,39 +10,41 @@ export const Lesson4: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
           text: 'La oveja es blanca',
           image: 'oveja',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'El ojo parpadea.',
+          text: 'El ojo parpadea',
           image: 'ojo',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 3,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['El ángel brilla'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'El ángel brilla',
         },
         options: [
           {
@@ -67,19 +69,21 @@ export const Lesson4: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra ángel.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra ángel',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 4,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['La oveja es blanca'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'La oveja es blanca',
         },
         options: [
           {
@@ -104,103 +108,55 @@ export const Lesson4: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra oveja.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra oveja',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 5,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La oruga se mueve.',
+          text: 'La oruga se mueva',
           image: 'oruga',
         },
         count: 4,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras',
         },
       },
     },
     {
       id: 6,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La oveja es blanca.',
+          text: 'La oveja es blanca',
           image: 'oveja',
         },
         count: 4,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras',
         },
       },
     },
     {
       id: 7,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
-            text: 'Ángel brilla',
-            image: 'angel',
-          },
-          {
-            text: 'Brilla ángel.',
-            image: 'angel2',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Primero escuchamos una oración con la palabra ángel',
-            'Y luego escuchamos la oración en otro orden.',
-          ],
-        },
-      },
-    },
-    {
-      id: 8,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'Oveja blanca.',
-            image: 'oveja',
-          },
-          {
-            text: 'Blanca oveja.',
-            image: 'oveja2',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Primero escuchamos una oración con la palabra oveja',
-            'Y luego escuchamos la oración en otro orden.',
-          ],
-        },
-      },
-    },
-    {
-      id: 9,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'El ojo parpadea.',
+            text: 'El ojo parpadea',
             image: 'ojo',
           },
           {
@@ -213,16 +169,16 @@ export const Lesson4: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'ojo',
-            'y',
+            'I',
             'oveja',
           ],
         },
       },
     },
     {
-      id: 10,
+      id: 8,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
@@ -230,7 +186,7 @@ export const Lesson4: Lesson = {
             image: 'angel',
           },
           {
-            text: 'El ovillo brilla.',
+            text: 'El ovillo brilla',
             image: 'ovillo',
           },
         ],
@@ -239,46 +195,46 @@ export const Lesson4: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'ángel',
-            'y',
+            'I',
             'ovillo',
           ],
         },
       },
     },
     {
-      id: 11,
+      id: 9,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El ojo parpadea.',
-        instruction2: ' La oveja parpadea.',
-        instruction3:
+        instructions: [
+          'El ojo parpadea',
+          'La oveja parpadea',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'ojo',
-        staticImage2: 'oveja',
+        ],
+        images: ['ojo', 'oveja'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son ojo y oveja.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron ojo y oveja',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
-            text: 'ojo',
+            text: 'Ojo',
             image: 'ojo',
             correct: true,
           },
           {
-            text: 'oveja',
+            text: 'Oveja',
             image: 'oveja',
             correct: true,
           },
           {
-            text: 'oruga',
+            text: 'Oruga',
             image: 'oruga',
             correct: false,
           },
           {
-            text: 'ovillo',
+            text: 'Ovillo',
             image: 'ovillo',
             correct: false,
           },
@@ -286,39 +242,39 @@ export const Lesson4: Lesson = {
       },
     },
     {
-      id: 12,
+      id: 10,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El ángel brilla.',
-        instruction2: 'El ovillo brilla',
-        instruction3:
+        instructions: [
+          'El ángel brilla',
+          'El ovillo brilla',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'angel',
-        staticImage2: 'ovillo',
+        ],
+        images: ['angel', 'ovillo'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son ángel y ovillo.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron ángel y ovillo',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
-            text: 'ovillo',
+            text: 'Ovillo',
             image: 'ovillo',
             correct: true,
           },
           {
-            text: 'ángel',
+            text: 'Ángel',
             image: 'angel',
             correct: true,
           },
           {
-            text: 'oreja',
+            text: 'Oreja',
             image: 'oreja',
             correct: false,
           },
           {
-            text: 'oveja',
+            text: 'Oveja',
             image: 'oveja',
             correct: false,
           },

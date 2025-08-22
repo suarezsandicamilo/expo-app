@@ -10,39 +10,41 @@ export const Lesson3: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'El gato maúlla.',
+          text: 'El gato maúlla',
           image: 'gato',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'La luna brilla.',
+          text: 'La luna brilla',
           image: 'luna',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 3,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['El pato nada'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'El pato nada',
         },
         options: [
           {
@@ -67,19 +69,21 @@ export const Lesson3: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra pato.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra pato',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 4,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['La cuna es celeste.'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'La cuna es celeste',
         },
         options: [
           {
@@ -104,18 +108,18 @@ export const Lesson3: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra cuna.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra cuna',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 5,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
           text: 'El pato nada',
@@ -123,40 +127,40 @@ export const Lesson3: Lesson = {
         },
         count: 3,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene tres palabras.',
+          correct: '¡Buen trabajo! La oración tiene tres palabras',
         },
       },
     },
     {
       id: 6,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La cuna es celeste.',
+          text: 'La cuna es celeste',
           image: 'cuna',
         },
         count: 4,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras',
         },
       },
     },
     {
       id: 7,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
-            text: 'Gato maúlla.',
+            text: 'Gato maúlla',
             image: 'gato',
           },
           {
-            text: 'Maúlla gato.',
+            text: 'Maúlla gato',
             image: 'gato2',
           },
         ],
@@ -164,7 +168,7 @@ export const Lesson3: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra gato',
-            'Y luego escuchamos la oración en otro orden.',
+            'Y después escuchamos la oración en otro orden',
           ],
         },
       },
@@ -172,7 +176,7 @@ export const Lesson3: Lesson = {
     {
       id: 8,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
@@ -180,7 +184,7 @@ export const Lesson3: Lesson = {
             image: 'cuna',
           },
           {
-            text: 'Celeste cuna.',
+            text: 'Celeste cuna',
             image: 'cuna2',
           },
         ],
@@ -188,78 +192,26 @@ export const Lesson3: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra cuna',
-            'Y luego escuchamos la oración en otro orden.',
+            'Y después escuchamos la oración en otro orden',
           ],
         },
       },
     },
     {
       id: 9,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'El pato nada',
-            image: 'pato',
-          },
-          {
-            text: 'El gato nada.',
-            image: 'gato',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'pato',
-            'y',
-            'gato',
-          ],
-        },
-      },
-    },
-    {
-      id: 10,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'La cuna es celeste',
-            image: 'cuna',
-          },
-          {
-            text: 'La luna es celeste',
-            image: 'luna',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'cuna',
-            'y',
-            'luna',
-          ],
-        },
-      },
-    },
-    {
-      id: 11,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El pato nada.',
-        instruction2: 'El gato nada',
-        instruction3:
+        instructions: [
+          'El pato nada',
+          'El gato nada',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'pato',
-        staticImage2: 'gato',
+        ],
+        images: ['pato', 'gato'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son pato y gato.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron pato y gato',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
@@ -286,39 +238,39 @@ export const Lesson3: Lesson = {
       },
     },
     {
-      id: 12,
+      id: 10,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'La cuna es celeste.',
-        instruction2: 'La luna es celeste.',
-        instruction3:
+        instructions: [
+          'La cuna es celeste',
+          'La luna es celeste',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'cuna',
-        staticImage2: 'luna',
+        ],
+        images: ['cuna', 'luna'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son cuna y luna.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron cuna y luna',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
-            text: 'cuna',
+            text: 'Cuna',
             image: 'cuna',
             correct: true,
           },
           {
-            text: 'luna',
+            text: 'Luna',
             image: 'luna',
             correct: true,
           },
           {
-            text: 'pato',
+            text: 'Pato',
             image: 'pato',
             correct: false,
           },
           {
-            text: 'edificio',
+            text: 'Edificio',
             image: 'edificio',
             correct: false,
           },

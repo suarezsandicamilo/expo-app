@@ -10,39 +10,41 @@ export const Lesson2: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'La araña teje.',
+          text: 'La araña teje',
           image: 'araña',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'El conejo salta.',
+          text: 'El conejo salta',
           image: 'conejo',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 3,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['La araña teje'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'La araña teje',
         },
         options: [
           {
@@ -67,19 +69,21 @@ export const Lesson2: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra araña.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra araña',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 4,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['El conejo salta.'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'El conejo salta',
         },
         options: [
           {
@@ -104,99 +108,51 @@ export const Lesson2: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra conejo.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra conejo',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 5,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La araña teje.',
+          text: 'La araña teje',
           image: 'araña',
         },
         count: 3,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene tres palabras.',
+          correct: '¡Buen trabajo! La oración tiene tres palabras',
         },
       },
     },
     {
       id: 6,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'Campana amarilla.',
+          text: 'Campana amarilla',
           image: 'campana',
         },
         count: 2,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene dos palabras.',
+          correct: '¡Buen trabajo! La oración tiene dos palabras',
         },
       },
     },
     {
       id: 7,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'Araña teje.',
-            image: 'araña',
-          },
-          {
-            text: 'Teje araña.',
-            image: 'araña2',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Primero escuchamos una oración con la palabra araña',
-            'Y luego escuchamos la oración en otro orden.',
-          ],
-        },
-      },
-    },
-    {
-      id: 8,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'Campana amarilla.',
-            image: 'campana',
-          },
-          {
-            text: 'Amarilla campana.',
-            image: 'campana2',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Primero escuchamos una oración con la palabra campana',
-            'Y luego escuchamos la oración en otro orden.',
-          ],
-        },
-      },
-    },
-    {
-      id: 9,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
@@ -204,7 +160,7 @@ export const Lesson2: Lesson = {
             image: 'espada',
           },
           {
-            text: 'El enano tiene la escoba.',
+            text: 'El enano tiene la escoba',
             image: 'escoba',
           },
         ],
@@ -213,24 +169,24 @@ export const Lesson2: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'espada',
-            'i',
+            'I',
             'escoba',
           ],
         },
       },
     },
     {
-      id: 10,
+      id: 8,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
-            text: 'La araña mira la estrella.',
+            text: 'La araña mira la estrella',
             image: 'araña',
           },
           {
-            text: 'La ardilla mira la estrella.',
+            text: 'La ardilla mira la estrella',
             image: 'ardilla',
           },
         ],
@@ -239,27 +195,27 @@ export const Lesson2: Lesson = {
             '¡Buen trabajo!',
             'Las palabras que cambiaron entre las oraciones fueron',
             'araña',
-            'i',
+            'I',
             'ardilla',
           ],
         },
       },
     },
     {
-      id: 11,
+      id: 9,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El enano tiene la espada',
-        instruction2: 'El enano tiene la escoba',
-        instruction3:
+        instructions: [
+          'El enano tiene la espada',
+          'El enano tiene la escoba',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'espada',
-        staticImage2: 'escoba',
+        ],
+        images: ['espada', 'escoba'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son espada y escoba.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron espada y escoba',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
@@ -286,20 +242,20 @@ export const Lesson2: Lesson = {
       },
     },
     {
-      id: 12,
+      id: 10,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'La araña mira la estrella.',
-        instruction2: 'La ardilla mira la estrella.',
-        instruction3:
+        instructions: [
+          'La araña mira la estrella',
+          'La ardilla mira la estrella',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'araña',
-        staticImage2: 'ardilla',
+        ],
+        images: ['araña', 'ardilla'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son araña y ardilla.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron araña y ardilla',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
@@ -308,17 +264,17 @@ export const Lesson2: Lesson = {
             correct: true,
           },
           {
-            text: 'ardilla',
+            text: 'Ardilla',
             image: 'ardilla',
             correct: true,
           },
           {
-            text: 'conejo',
+            text: 'Conejo',
             image: 'conejo',
             correct: false,
           },
           {
-            text: 'iguana',
+            text: 'Iguana',
             image: 'iguana',
             correct: false,
           },

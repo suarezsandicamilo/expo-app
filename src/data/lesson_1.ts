@@ -10,39 +10,41 @@ export const Lesson1: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
           text: 'El ave canta',
           image: 'ave',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         button: {
-          text: 'La abeja zumba.',
+          text: 'La abeja zumba',
           image: 'abeja',
         },
         feedback: {
-          correct: 'Buen trabajo.',
+          correct: '¡Buen trabajo!',
         },
       },
     },
     {
       id: 3,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['El árbol es alto'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'El árbol es alto',
         },
         options: [
           {
@@ -67,19 +69,21 @@ export const Lesson1: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra árbol.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra árbol',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 4,
       type: 'select',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca el botón y escucha la oración'],
       data: {
-        instructions: ['El oso duerme'],
+        instructions: [
+          'Selecciona la carta que tiene la palabra que escuchaste',
+        ],
         button: {
-          text: 'Selecciona la carta que tiene la palabra que escuchaste.',
+          text: 'El oso duerme',
         },
         options: [
           {
@@ -104,59 +108,59 @@ export const Lesson1: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La oracion incluye la palabra oso.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La oración tiene la palabra oso',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
     {
       id: 5,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'La abeja zumba.',
+          text: 'La abeja zumba',
           image: 'abeja',
         },
         count: 3,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene tres palabras.',
+          correct: '¡Buen trabajo! La oración tiene tres palabras',
         },
       },
     },
     {
       id: 6,
       type: 'count',
-      instructions: ['Toca el botón y escucha la oración.'],
+      instructions: ['Toca la carta y escucha la oración'],
       data: {
         instructions: [
-          'Toca las burbujas y cuenta el número de palabras en la oración.',
+          'Toca las burbujas y cuenta el número de palabras en la oración',
         ],
         button: {
-          text: 'El anillo es brillante.',
+          text: 'El anillo es brillante',
           image: 'anillo',
         },
         count: 4,
         feedback: {
-          correct: '¡Buen trabajo! La oración tiene cuatro palabras.',
+          correct: '¡Buen trabajo! La oración tiene cuatro palabras',
         },
       },
     },
     {
       id: 7,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
-            text: 'Ave canta.',
+            text: 'Ave canta',
             image: 'ave',
           },
           {
-            text: 'Canta ave.',
+            text: 'Canta ave',
             image: 'ave2',
           },
         ],
@@ -164,7 +168,7 @@ export const Lesson1: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra ave',
-            'Y luego escuchamos la oración en otro orden.',
+            'Y después escuchamos la oración en otro orden',
           ],
         },
       },
@@ -172,15 +176,15 @@ export const Lesson1: Lesson = {
     {
       id: 8,
       type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
+      instructions: ['Toca las cartas y escucha las oraciones'],
       data: {
         buttons: [
           {
-            text: 'Anillo brillante.',
+            text: 'Anillo brillante',
             image: 'anillo',
           },
           {
-            text: 'Brillante anillo.',
+            text: 'Brillante anillo',
             image: 'anillo2',
           },
         ],
@@ -188,97 +192,45 @@ export const Lesson1: Lesson = {
           correct: [
             '¡Buen trabajo!',
             'Primero escuchamos una oración con la palabra anillo',
-            'Y luego escuchamos la oración en otro orden.',
+            'Y después escuchamos la oración en otro orden',
           ],
         },
       },
     },
     {
       id: 9,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'El árbol es alto.',
-            image: 'arbol',
-          },
-          {
-            text: 'El arco es alto.',
-            image: 'arco',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'árbol',
-            'i',
-            'arco',
-          ],
-        },
-      },
-    },
-    {
-      id: 10,
-      type: 'super_tap',
-      instructions: ['Toca los botones y escucha las oraciones.'],
-      data: {
-        buttons: [
-          {
-            text: 'El avión vuela.',
-            image: 'avion',
-          },
-          {
-            text: 'El ave vuela.',
-            image: 'ave',
-          },
-        ],
-        feedback: {
-          correct: [
-            '¡Buen trabajo!',
-            'Las palabras que cambiaron entre las oraciones fueron',
-            'avión',
-            'i',
-            'ave',
-          ],
-        },
-      },
-    },
-    {
-      id: 11,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El árbol es alto',
-        instruction2: 'El arco es alto',
-        instruction3:
+        instructions: [
+          'El árbol es alto',
+          'El arco es alto',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'arbol',
-        staticImage2: 'arco',
+        ],
+        images: ['arbol', 'arco'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son árbol y arco.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron árbol y arco',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
-            text: 'árbol',
+            text: 'Árbol',
             image: 'arbol',
             correct: true,
           },
           {
-            text: 'arco',
+            text: 'Arco',
             image: 'arco',
             correct: true,
           },
           {
-            text: 'ave',
+            text: 'Ave',
             image: 'ave',
             correct: false,
           },
           {
-            text: 'aro',
+            text: 'Aro',
             image: 'aro',
             correct: false,
           },
@@ -286,39 +238,39 @@ export const Lesson1: Lesson = {
       },
     },
     {
-      id: 12,
+      id: 10,
       type: 'super_select',
-      instructions: ['Presiona el botón y escucha las oraciones'],
+      instructions: ['Toca el botón y escucha las oraciones'],
       data: {
-        instruction: 'El avión vuela.',
-        instruction2: 'El ave vuela.',
-        instruction3:
+        instructions: [
+          'El avión vuela',
+          'El ave vuela',
           'Selecciona las cartas que tienen las palabras que cambiaron',
-        staticImage: 'avion',
-        staticImage2: 'ave',
+        ],
+        images: ['avion', 'ave'],
         feedback: {
           correct:
-            '¡Buen trabajo!  Las palabras que cambiaron son avión y ave.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras que cambiaron fueron avión y ave',
+          incorrect: 'Casi, intenta otra vez',
         },
         options: [
           {
-            text: 'avión',
+            text: 'Avión',
             image: 'avion',
             correct: true,
           },
           {
-            text: 'ave',
+            text: 'Ave',
             image: 'ave',
             correct: true,
           },
           {
-            text: 'uva',
+            text: 'Uva',
             image: 'uva',
             correct: false,
           },
           {
-            text: 'arco',
+            text: 'Arco',
             image: 'arco',
             correct: false,
           },
