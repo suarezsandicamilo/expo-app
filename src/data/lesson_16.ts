@@ -10,28 +10,28 @@ export const Lesson16: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Oveja. Oo  , veja.',
+          text: 'Oveja',
           image: 'oveja',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra oveja empieza con o.',
+          correct: '¡Buen trabajo! La palabra oveja comienza con o',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Uva. Uu  , va.',
+          text: 'Uva',
           image: 'uva',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra uva empieza con u.',
+          correct: '¡Buen trabajo! La palabra uva comienza con u',
         },
       },
     },
@@ -40,35 +40,37 @@ export const Lesson16: Lesson = {
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: [
+          '¿Si en la palabra olla, cambiamos o, por e, qué palabra formamos?',
+        ],
         button: {
-          text: 'Selecciona la palabra que empieza con o.',
+          text: '',
         },
         options: [
           {
-            text: 'Oveja',
-            image: 'oveja',
+            text: 'Ella',
+            image: 'ella',
             correct: true,
           },
           {
-            text: 'Árbol',
-            image: 'arbol',
+            text: 'Isla',
+            image: 'isla',
             correct: false,
           },
           {
-            text: 'Estrella',
-            image: 'estrella',
+            text: 'Iglesia',
+            image: 'iglesia',
             correct: false,
           },
           {
-            text: 'Imán',
-            image: 'iman',
+            text: 'Insecto',
+            image: 'insecto',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra oveja empieza con o.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra es ella',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -77,35 +79,37 @@ export const Lesson16: Lesson = {
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: [
+          '¿Si en la palabra ojo, cambiamos o, por a, qué palabra formamos?',
+        ],
         button: {
-          text: 'Selecciona la palabra que empieza con u.',
+          text: '',
         },
         options: [
           {
-            text: 'Uva',
-            image: 'uva',
+            text: 'Ajo',
+            image: 'ajo',
             correct: true,
           },
           {
-            text: 'Espada',
-            image: 'espada',
+            text: 'Útiles',
+            image: 'utiles',
             correct: false,
           },
           {
-            text: 'Escoba',
-            image: 'escoba',
+            text: 'Unicornio',
+            image: 'unicornio',
             correct: false,
           },
           {
-            text: 'Iguana',
-            image: 'iguana',
+            text: 'Uña',
+            image: 'uña',
             correct: false,
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra uva empieza con u.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra es ajo',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -114,9 +118,9 @@ export const Lesson16: Lesson = {
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que comienzan con o'],
         button: {
-          text: ['Selecciona las palabras que empiezan con o.'],
+          text: '',
         },
         options: [
           {
@@ -142,8 +146,8 @@ export const Lesson16: Lesson = {
         ],
         feedback: {
           correct:
-            'Buen trabajo. Las palabras oveja, ovillo y oruga empiezan con o.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras oveja, ovillo y oruga comienzan con o',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -152,9 +156,9 @@ export const Lesson16: Lesson = {
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que comienzan con u'],
         button: {
-          text: ['Selecciona las palabras que empiezan con u.'],
+          text: '',
         },
         options: [
           {
@@ -164,7 +168,7 @@ export const Lesson16: Lesson = {
           },
           {
             text: 'Útiles',
-            image: 'utiles',
+            image: 'útiles',
             correct: true,
           },
           {
@@ -179,8 +183,8 @@ export const Lesson16: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. Las palabras uva y útiles empiezan con u.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! Las palabras uva y útiles comienzan con u',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -189,16 +193,13 @@ export const Lesson16: Lesson = {
       type: 'correct_incorrect',
       instructions: ['Toca el botón'],
       data: {
-        instruction: '¿La palabra oveja empieza con o? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
+        instructions: ['¿La palabra oveja comienza con o? ¿Sí o no?'],
         correct_answer: 'Sí',
         text: 'Oveja',
-        staticImage: 'oveja',
+        image: 'oveja',
         feedback: {
-          correct: 'Buen trabajo. La palabra oveja empieza con o.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -207,90 +208,13 @@ export const Lesson16: Lesson = {
       type: 'correct_incorrect',
       instructions: ['Toca el botón'],
       data: {
-        instruction: '¿La palabra uva empieza con u? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
+        instructions: ['¿La palabra uva comienza con u? ¿Sí o no?'],
         correct_answer: 'Sí',
         text: 'Uva',
-        staticImage: 'uva',
+        image: 'uva',
         feedback: {
-          correct: 'Buen trabajo. La palabra uva empieza con u.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 9,
-      type: 'select',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: '¿Si en la palabra, aro, cambiamos la a, por una o, qué palabra formamos?',
-        },
-        options: [
-          {
-            text: 'Oro',
-            image: 'oro',
-            correct: true,
-          },
-          {
-            text: 'Ovillo',
-            image: 'ovillo',
-            correct: false,
-          },
-          {
-            text: 'Oruga',
-            image: 'oruga',
-            correct: false,
-          },
-          {
-            text: 'Ojo',
-            image: 'ojo',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct: 'Buen trabajo. La palabra es oro.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 10,
-      type: 'select',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
-        button: {
-          text: '¿Si en la palabra, ojo, cambiamos la o, por una a, qué palabra formamos?',
-        },
-        options: [
-          {
-            text: 'Ajo',
-            image: 'ajo',
-            correct: true,
-          },
-          {
-            text: 'Útiles',
-            image: 'utiles',
-            correct: false,
-          },
-          {
-            text: 'Unicornio',
-            image: 'unicornio',
-            correct: false,
-          },
-          {
-            text: 'Uña',
-            image: 'uña',
-            correct: false,
-          },
-        ],
-        feedback: {
-          correct: 'Buen trabajo. La palabra es ajo.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },

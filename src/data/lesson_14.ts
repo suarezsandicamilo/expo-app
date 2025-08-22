@@ -10,28 +10,28 @@ export const Lesson14: Lesson = {
     {
       id: 1,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Estrella. Ee  , strella.',
+          text: 'Estrella',
           image: 'estrella',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra estrella empieza con e.',
+          correct: '¡Buen trabajo! La palabra estrella comienza con e',
         },
       },
     },
     {
       id: 2,
       type: 'tap',
-      instructions: ['Toca la carta y escucha la palabra.'],
+      instructions: ['Toca la carta y escucha la palabra'],
       data: {
         button: {
-          text: 'Elefante. Ee  , lefante.',
+          text: 'Elefante',
           image: 'elefante',
         },
         feedback: {
-          correct: 'Buen trabajo. La palabra elefante empieza con e.',
+          correct: '¡Buen trabajo! La palabra elefante comienza con e',
         },
       },
     },
@@ -40,61 +40,26 @@ export const Lesson14: Lesson = {
       type: 'select',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
-        button: {
-          text: 'Selecciona la palabra que empieza con e.',
-        },
-        options: [
-          {
-            text: 'Estrella',
-            image: 'estrella',
-            correct: true,
-          },
-          {
-            text: 'Iguana',
-            image: 'iguana',
-            correct: false,
-          },
-          {
-            text: 'Araña',
-            image: 'araña',
-            correct: false,
-          },
-          {
-            text: 'Ardilla',
-            image: 'ardilla',
-            correct: false,
-          },
+        instructions: [
+          '¿Si en la palabra abeja, cambiamos a, por o, qué palabra formamos?',
         ],
-        feedback: {
-          correct: 'Buen trabajo. La palabra estrella empieza con e.',
-          incorrect: 'Casi, intenta otra vez.',
-        },
-      },
-    },
-    {
-      id: 4,
-      type: 'select',
-      instructions: ['Toca el botón'],
-      data: {
-        instructions: [''],
         button: {
-          text: 'Selecciona la palabra que empieza con e.',
+          text: '',
         },
         options: [
           {
-            text: 'Elefante',
-            image: 'elefante',
+            text: 'Oveja',
+            image: 'oveja',
             correct: true,
           },
           {
-            text: 'Ardilla',
-            image: 'ardilla',
+            text: 'Avión',
+            image: 'avion',
             correct: false,
           },
           {
-            text: 'Iguana',
-            image: 'iguana',
+            text: 'Uva',
+            image: 'uva',
             correct: false,
           },
           {
@@ -104,8 +69,47 @@ export const Lesson14: Lesson = {
           },
         ],
         feedback: {
-          correct: 'Buen trabajo. La palabra elefante empieza con e.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo! La palabra es oveja',
+          incorrect: 'Casi, intenta otra vez',
+        },
+      },
+    },
+    {
+      id: 4,
+      type: 'select',
+      instructions: ['Toca el botón'],
+      data: {
+        instructions: [
+          '¿Si en la palabra ala, cambiamos a, por o, qué palabra formamos?',
+        ],
+        button: {
+          text: '',
+        },
+        options: [
+          {
+            text: 'Ola',
+            image: 'ola',
+            correct: true,
+          },
+          {
+            text: 'Abeja',
+            image: 'abeja',
+            correct: false,
+          },
+          {
+            text: 'Árbol',
+            image: 'arbol',
+            correct: false,
+          },
+          {
+            text: 'Anillo',
+            image: 'anillo',
+            correct: false,
+          },
+        ],
+        feedback: {
+          correct: '¡Buen trabajo! La palabra es ola',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -114,9 +118,9 @@ export const Lesson14: Lesson = {
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que comienzan con e'],
         button: {
-          text: ['Selecciona las palabras que empiezan con e.'],
+          text: '',
         },
         options: [
           {
@@ -142,8 +146,8 @@ export const Lesson14: Lesson = {
         ],
         feedback: {
           correct:
-            'Buen trabajo. Las palabras estrella, espada y escoba empiezan con e.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras estrella, espada y escoba comienzan con e',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -152,9 +156,9 @@ export const Lesson14: Lesson = {
       type: 'super_select_adv',
       instructions: ['Toca el botón'],
       data: {
-        instructions: [''],
+        instructions: ['Selecciona las palabras que comienzan con e'],
         button: {
-          text: ['Selecciona las palabras que empiezan con e.'],
+          text: '',
         },
         options: [
           {
@@ -180,8 +184,8 @@ export const Lesson14: Lesson = {
         ],
         feedback: {
           correct:
-            'Buen trabajo. Las palabras elefante, espejo y enano empiezan con e.',
-          incorrect: 'Casi, intenta otra vez.',
+            '¡Buen trabajo! Las palabras elefante, espejo y enano comienzan con e',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -190,16 +194,13 @@ export const Lesson14: Lesson = {
       type: 'correct_incorrect',
       instructions: ['Toca el botón'],
       data: {
-        instruction: '¿La palabra estrella empieza con e? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
+        instructions: ['¿La palabra estrella comienza con e? ¿Sí o no?'],
         correct_answer: 'Sí',
         text: 'Estrella',
-        staticImage: 'estrella',
+        image: 'estrella',
         feedback: {
-          correct: 'Buen trabajo. La palabra estrella empieza con e.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
@@ -208,17 +209,13 @@ export const Lesson14: Lesson = {
       type: 'correct_incorrect',
       instructions: ['Toca el botón'],
       data: {
-        instruction: '¿La palabra ardilla empieza con e? ¿Sí o no?',
-        instruction2: '',
-        instruction3: '',
-        instruction4: '',
+        instructions: ['¿La palabra ardilla comienza con e? ¿Sí o no?'],
         correct_answer: 'No',
         text: 'Ardilla',
-        staticImage: 'ardilla',
+        image: 'ardilla',
         feedback: {
-          correct:
-            'Buen trabajo. La palabra ardilla no empieza con e, empieza con a.',
-          incorrect: 'Casi, intenta otra vez.',
+          correct: '¡Buen trabajo!',
+          incorrect: 'Casi, intenta otra vez',
         },
       },
     },
